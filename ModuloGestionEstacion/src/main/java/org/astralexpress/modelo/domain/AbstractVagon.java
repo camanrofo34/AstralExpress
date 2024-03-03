@@ -14,6 +14,10 @@ public abstract class AbstractVagon {
     public AbstractVagon(String idVagon) {
         this.idVagon = idVagon;
     }
+    
+    public AbstractVagon() {
+        this.idVagon = "";
+    }
 
     public String getIdVagon() {
         return idVagon;
@@ -22,5 +26,7 @@ public abstract class AbstractVagon {
     public void setIdVagon(String idVagon) {
         this.idVagon = idVagon;
     }
+    
+    
     
 }

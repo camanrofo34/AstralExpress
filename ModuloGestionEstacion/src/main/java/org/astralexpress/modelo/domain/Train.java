@@ -6,6 +6,7 @@ package org.astralexpress.modelo.domain;
 
 import org.astralexpress.modelo.interfaces.TrainMethods;
 import org.model.LinkedList.singly.LinkedList;
+import org.model.util.iterator.Iterator;
 
 /**
  *
@@ -13,13 +14,13 @@ import org.model.LinkedList.singly.LinkedList;
  */
 public class Train implements TrainMethods{
     private String trainName;
-    private int idTrain;
+    private String idTrain;
     private int capacity;
     private double mileage;
     private Brand brand;
     private LinkedList<AbstractVagon> vagons;
 
-    public Train(String trainName, int idTrain, int capacity, double mileage, Brand brand) {
+    public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand) {
         this.trainName = trainName;
         this.idTrain = idTrain;
         this.capacity = capacity;
@@ -36,11 +37,11 @@ public class Train implements TrainMethods{
         this.trainName = trainName;
     }
 
-    public int getIdTrain() {
+    public String getIdTrain() {
         return idTrain;
     }
 
-    public void setIdTrain(int idTrain) {
+    public void setIdTrain(String idTrain) {
         this.idTrain = idTrain;
     }
 
@@ -75,29 +76,30 @@ public class Train implements TrainMethods{
     public void setVagons(LinkedList<AbstractVagon> vagons) {
         this.vagons = vagons;
     }
-    
-    
 
     @Override
     public AbstractVagon consultVagon(String idVagon) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Iterator<AbstractVagon> iterator = vagons.iterator();
+        while(iterator.hasNext()){
+            AbstractVagon vagon = iterator.next();
+            if (vagon.getIdVagon().equals(idVagon)) return vagon;
+        }
+        return new AbstractVagon(){};
     }
 
     @Override
     public boolean addVagon(AbstractVagon vagon) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return vagons.add(vagon);
     }
 
     @Override
     public boolean removeVagon(String idVagon) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return vagons.remove(vagon -> vagon.getIdVagon().equals(idVagon));
     }
 
     @Override
     public void initVagones() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
     
 }

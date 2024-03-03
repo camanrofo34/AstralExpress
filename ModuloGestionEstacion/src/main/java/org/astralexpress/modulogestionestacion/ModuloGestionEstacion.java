@@ -4,6 +4,9 @@
 
 package org.astralexpress.modulogestionestacion;
 
+import org.astralexpress.controlador.LoginControlator;
+import org.astralexpress.vista.LoginView;
+
 /**
  *
  * @author admin
@@ -11,6 +14,7 @@ package org.astralexpress.modulogestionestacion;
 public class ModuloGestionEstacion {
 
     public static void main(String[] args) {
-
+        LoginControlator LC = new LoginControlator(new LoginView());
+        LC.init();
     }
 }

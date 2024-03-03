@@ -11,7 +11,7 @@ import org.model.array.Array;
  * @author PC 4060TI
  */
 public class AbstractPerson {
-        protected String names;
+    protected String names;
     protected String lastNames;
     protected Array<String> phoneNumbers;
 

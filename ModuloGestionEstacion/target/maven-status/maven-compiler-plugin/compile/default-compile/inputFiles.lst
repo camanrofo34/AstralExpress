@@ -1,3 +1,5 @@
+D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\shared\FileJsonAdapter.java
+D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\controlador\LoginJwing.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\domain\PassengersVagon.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\domain\Employee.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\controlador\LoginControlator.java
@@ -17,5 +19,6 @@ D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\do
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\controlador\TrainModuleControlator.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\vista\CentralModuleView.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\domain\Seat.java
+D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\AstralExpressModel.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\vista\LoginView.java
 D:\AstralExpress\ModuloGestionEstacion\src\main\java\org\astralexpress\modelo\interfaces\TrainMethods.java

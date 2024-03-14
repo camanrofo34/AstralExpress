@@ -4,18 +4,16 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.model.queue.array.Queue;
+import org.model.array.Array;
 
 /**
  *
  * @author PC 4060TI
  */
-public class PassengersVagon extends AbstractVagon {
+public class PassengerContact extends AbstractPerson{
 
-    Queue<Seat> seats;
-
-    public PassengersVagon(Queue<Seat> seats, String idVagon) {
-        super(idVagon);
-        this.seats = seats;
+    public PassengerContact(String names, String lastNames, Array<String> phoneNumbers) {
+        super(names, lastNames, phoneNumbers);
     }
+    
 }

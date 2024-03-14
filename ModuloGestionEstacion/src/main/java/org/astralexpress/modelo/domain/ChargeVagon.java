@@ -18,4 +18,8 @@ public class ChargeVagon extends AbstractVagon{
         this.luggages = luggages;
     }
     
+    public static ChargeVagon getNullChargeVagon(){
+        return new ChargeVagon(new Array<>(1), "");
+    }
+    
 }

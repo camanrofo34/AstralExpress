@@ -4,7 +4,6 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.astralexpress.modelo.interfaces.TrainMethods;
 import org.model.LinkedList.singly.LinkedList;
 import org.model.util.iterator.Iterator;
 
@@ -12,7 +11,7 @@ import org.model.util.iterator.Iterator;
  *
  * @author PC 4060TI
  */
-public class Train implements TrainMethods{
+public class Train {
     private String trainName;
     private String idTrain;
     private int capacity;
@@ -77,7 +76,6 @@ public class Train implements TrainMethods{
         this.vagons = vagons;
     }
 
-    @Override
     public AbstractVagon consultVagon(String idVagon) {
         Iterator<AbstractVagon> iterator = vagons.iterator();
         while(iterator.hasNext()){
@@ -87,17 +85,14 @@ public class Train implements TrainMethods{
         return new AbstractVagon(){};
     }
 
-    @Override
     public boolean addVagon(AbstractVagon vagon) {
         return vagons.add(vagon);
     }
 
-    @Override
     public boolean removeVagon(String idVagon) {
         return vagons.remove(vagon -> vagon.getIdVagon().equals(idVagon));
     }
 
-    @Override
     public void initVagones() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

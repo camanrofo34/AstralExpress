@@ -4,7 +4,9 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.model.array.Array;
+import org.model.io.array.Array;
+
+
 
 /**
  *
@@ -14,6 +16,10 @@ public class PassengerContact extends AbstractPerson{
 
     public PassengerContact(String names, String lastNames, Array<String> phoneNumbers) {
         super(names, lastNames, phoneNumbers);
+    }
+    
+    public static PassengerContact returnEmptyPassengerContact(){
+        return new PassengerContact("", "", new Array<>(1));
     }
     
 }

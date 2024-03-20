@@ -8,7 +8,9 @@ package org.astralexpress.modelo.repositorio;
  *
  * @author PC 4060TI
  */
-public class ChargeVagonEntity {
-    String idVagon;
-    
+public class PassengerContactEntity implements Serializable{
+    String id;
+    String names;
+    String lastNames;
+    String phoneNumbers;
 }

@@ -40,4 +40,18 @@ public class LuggageRepository implements Serializable{
         return luggages;
     }
     
+        public List<Luggage> getLuggagesByIdPssenger(String idPassenger){
+        LuggageEntity[] luggageEntity = fileJson.getObjects("", LuggageEntity[].class);
+        Array<LuggageEntity> luggagesEntity = new Array<>(luggageEntity);
+        List<Luggage> luggages = new LinkedList<>();
+        Iterator<LuggageEntity> iterator = luggagesEntity.iterator();
+        while (iterator.hasNext()){
+            LuggageEntity luggage = iterator.next();
+            if (luggage.idVagon.equals(idPassenger)){
+                luggages.add(new Luggage(luggage.idPassenger, luggage.idVagon));
+            }
+        }
+        return luggages;
+    }
+    
 }

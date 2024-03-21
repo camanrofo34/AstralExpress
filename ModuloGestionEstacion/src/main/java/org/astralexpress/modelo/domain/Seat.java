@@ -9,8 +9,17 @@ package org.astralexpress.modelo.domain;
  * @author PC 4060TI
  */
 public class Seat {
+
     private String idSeat;
-    private Class Class;
-    
-    private enum Class { Estandar, Ejecutivo, Premium }
+    private Classe Class;
+
+    public Seat(String idSeat, Classe Classe) {
+        this.idSeat = idSeat;
+        this.Class = Classe;
+    }
+
+    public static Seat returnNullSeat() {
+        return new Seat ("", Classe.findByPriority(-1));
+    }
+
 }

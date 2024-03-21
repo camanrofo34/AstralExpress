@@ -16,15 +16,14 @@ public class TrainEntity implements Serializable{
     String capacity;
     String mileage;
     String brand;
-    String idVagons;
 
-    public TrainEntity(String trainName, String idTrain, String capacity, String mileage, String brand, String idVagons) {
+
+    public TrainEntity(String trainName, String idTrain, String capacity, String mileage, String brand) {
         this.trainName = trainName;
         this.idTrain = idTrain;
         this.capacity = capacity;
         this.mileage = mileage;
         this.brand = brand;
-        this.idVagons = idVagons;
     }
     
 }

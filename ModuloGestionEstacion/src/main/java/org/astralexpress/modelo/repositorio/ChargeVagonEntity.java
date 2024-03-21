@@ -4,11 +4,18 @@
  */
 package org.astralexpress.modelo.repositorio;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public class ChargeVagonEntity {
+public class ChargeVagonEntity implements Serializable{
     String idVagon;
+
+    public ChargeVagonEntity(String idVagon) {
+        this.idVagon = idVagon;
+    }
+    
     
 }

@@ -4,7 +4,7 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.model.LinkedList.singly.LinkedList;
+import org.model.LinkedList.doubly.LinkedList;
 import org.model.util.iterator.Iterator;
 
 /**
@@ -26,6 +26,19 @@ public class Train {
         this.mileage = mileage;
         this.brand = brand;
         this.vagons = new LinkedList<>();
+    }
+
+    public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand, LinkedList<AbstractVagon> vagons) {
+        this.trainName = trainName;
+        this.idTrain = idTrain;
+        this.capacity = capacity;
+        this.mileage = mileage;
+        this.brand = brand;
+        this.vagons = vagons;
+    }
+    
+    public static Train getNullTrain(){
+        return new Train("", "",0, 0.0, Brand.getBrandByName(""));
     }
 
     public String getTrainName() {

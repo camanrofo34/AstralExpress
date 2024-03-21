@@ -4,7 +4,9 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.model.array.Array;
+import org.model.io.array.Array;
+
+
 
 /**
  *

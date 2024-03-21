@@ -4,7 +4,7 @@
  */
 package org.astralexpress.modelo.domain;
 
-import org.model.queue.array.Queue;
+import org.model.priorityQueue.list.PriorityQueue;
 
 /**
  *
@@ -12,10 +12,14 @@ import org.model.queue.array.Queue;
  */
 public class PassengersVagon extends AbstractVagon {
 
-    Queue<Seat> seats;
+    PriorityQueue<Seat> seats;
 
-    public PassengersVagon(Queue<Seat> seats, String idVagon) {
+    public PassengersVagon(PriorityQueue<Seat> seats, String idVagon) {
         super(idVagon);
         this.seats = seats;
+    }
+    
+    public static PassengersVagon returnNullPassengersVagon(){
+        return new PassengersVagon(new PriorityQueue<>(3), "");
     }
 }

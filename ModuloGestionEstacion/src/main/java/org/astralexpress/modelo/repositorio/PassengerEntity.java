@@ -14,10 +14,18 @@ public class PassengerEntity implements Serializable{
     String idPassenger;
     String idType;
     String homeAdress;
+    String names;
+    String lastNames;
+    String phoneNumbers;
 
-    public PassengerEntity(String idPassenger, String idType, String homeAdress) {
+    public PassengerEntity(String idPassenger, String idType, String homeAdress, String names, String lastNames, String phoneNumbers) {
         this.idPassenger = idPassenger;
         this.idType = idType;
         this.homeAdress = homeAdress;
-    }   
+        this.names = names;
+        this.lastNames = lastNames;
+        this.phoneNumbers = phoneNumbers;
+    }
+   
+        
 }

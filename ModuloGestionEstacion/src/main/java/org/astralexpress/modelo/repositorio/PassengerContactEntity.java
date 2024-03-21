@@ -4,6 +4,8 @@
  */
 package org.astralexpress.modelo.repositorio;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
@@ -13,4 +15,12 @@ public class PassengerContactEntity implements Serializable{
     String names;
     String lastNames;
     String phoneNumbers;
+
+    public PassengerContactEntity(String id, String names, String lastNames, String phoneNumbers) {
+        this.id = id;
+        this.names = names;
+        this.lastNames = lastNames;
+        this.phoneNumbers = phoneNumbers;
+    }
+    
 }

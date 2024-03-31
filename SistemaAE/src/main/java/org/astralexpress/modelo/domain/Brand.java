@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo.domain;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public enum Brand {
+public enum Brand implements Serializable{
     Mercedez_Benz,
     Arnold;
     

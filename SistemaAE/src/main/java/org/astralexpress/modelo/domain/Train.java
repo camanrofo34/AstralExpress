@@ -4,6 +4,7 @@
  */
 package org.astralexpress.modelo.domain;
 
+import java.io.Serializable;
 import org.model.LinkedList.doubly.LinkedList;
 import org.model.util.iterator.Iterator;
 
@@ -11,7 +12,7 @@ import org.model.util.iterator.Iterator;
  *
  * @author PC 4060TI
  */
-public class Train {
+public class Train implements Serializable{
     private String trainName;
     private String idTrain;
     private int capacity;

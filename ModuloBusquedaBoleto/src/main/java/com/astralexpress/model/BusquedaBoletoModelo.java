@@ -6,8 +6,8 @@ package com.astralexpress.model;
 
 /**
  *
- * @author admin
+ * @author PC 4060TI
  */
-public class BoletoJDBC {
+public class BusquedaBoletoModelo {
     
 }

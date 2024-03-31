@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo.domain;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public class Seat {
+public class Seat implements Serializable{
 
     private String idSeat;
     private Classe Class;

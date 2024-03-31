@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.astralexpress.modelo;
+package org.astralexpress.modelo.observer;
 
 /**
  *
  * @author PC 4060TI
  */
-public class ModuloModel extends AbstractModel{
-    
-    public ModuloModel(String uri) {
-        super(uri);
+public abstract class Observer<E> {
+    protected E subject;
+
+    public Observer(E subject) {
+        this.subject = subject;
     }
     
-    
-    
+    public abstract void update();
 }

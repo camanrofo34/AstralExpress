@@ -12,7 +12,7 @@ import org.model.io.array.Array;
  *
  * @author PC 4060TI
  */
-public class AbstractPerson {
+public abstract class AbstractPerson {
     protected String names;
     protected String lastNames;
     protected Array<String> phoneNumbers;

@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo.domain;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public abstract class AbstractVagon {
+public abstract class AbstractVagon implements Serializable{
     protected String idVagon;
 
     public AbstractVagon(String idVagon) {

@@ -5,7 +5,7 @@
 package org.astralexpress.controlador;
 
 import org.astralexpress.modelo.ModuloModel;
-import org.astralexpress.vista.Modulo;
+import org.astralexpress.vista.ModuloView;
 
 /**
  *
@@ -13,13 +13,16 @@ import org.astralexpress.vista.Modulo;
  */
 public class ModuloController {
     ModuloModel MM;
-    Modulo MV;
+    ModuloView MV;
 
-    public ModuloController(ModuloModel MM, Modulo MV) {
+    public ModuloController(ModuloModel MM, ModuloView MV) {
         this.MM = MM;
         this.MV = MV;
     }
     
-    
+    public void start(){
+        MV.initComponents();
+    }
+
     
 }

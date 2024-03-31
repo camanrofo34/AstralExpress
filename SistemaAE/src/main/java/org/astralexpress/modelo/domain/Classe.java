@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo.domain;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public enum Classe {
+public enum Classe implements Serializable{
     Estandar(0), Ejecutivo(1), Premium(2);
 
     private int prioridad;

@@ -10,6 +10,7 @@ D:\AstralExpress\SistemaAE\src\main\java\Main.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Passenger.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\PassengersVagon.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\TrainEntity.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Ticket.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\vista\ServerView.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\AstralExpressModel.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\ChargeVagonRepository.java
@@ -17,6 +18,7 @@ D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Abstrac
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\ChargeVagon.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\LoginManager.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\ChargeVagonEntity.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\StationRepository.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\observer\Observer.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\SeatRepository.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Employee.java
@@ -25,8 +27,10 @@ D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\Pa
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\controlador\AstralExpressController.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Classe.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Seat.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\TicketEntity.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\EmployeeEntity.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\shared\FileJsonInterface.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Station.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\UserRepository.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\Train.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\UserEntity.java
@@ -34,7 +38,9 @@ D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\Pa
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\messenger\Messenger.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\PassengerContactRepository.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\SeatEntity.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\StationEntity.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\shared\FileJsonAdapter.java
+D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\TicketRepository.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\domain\LoginManagerInterface.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\PassengerContactEntity.java
 D:\AstralExpress\SistemaAE\src\main\java\org\astralexpress\modelo\repositorio\LuggageRepository.java

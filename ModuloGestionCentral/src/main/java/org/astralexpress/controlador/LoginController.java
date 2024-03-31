@@ -11,14 +11,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.astralexpress.modelo.LoginModel;
 import org.astralexpress.modelo.ModuloModel;
+import org.astralexpress.modelo.RMISettings;
 import org.astralexpress.vista.LoginView;
 import org.astralexpress.vista.Modulo;
+import org.astralexpress.vista.ModuloView;
 
 /**
  *
  * @author PC 4060TI
  */
 public class LoginController {
+
     LoginModel LM;
     LoginView LV;
 
@@ -26,16 +29,21 @@ public class LoginController {
         this.LM = LM;
         this.LV = LV;
     }
-    
-    public void start(){
+
+    public void start() {
         LV.initComponents(event -> {
+            String username = LV.getjTextField1();
+            String password = LV.getjTextField2();
+            if (username.isBlank() || password.isBlank()){
+                LM.getMessenger().setMessage("Por favor ingresar los datos correspondientes");
+                return null;
+            }
             try {
-               boolean loged = LM.login(LV.getjTextField1(), LV.getjTextField2());
-               if (loged){
-                   System.out.println("Si");
-               } else{
-                   System.out.println("No");
-               }
+                boolean tried = LM.login(username, password);
+                if (tried){
+                    ModuloController MC = new ModuloController(new ModuloModel(RMISettings.getInstance().getRMIAddress()), new ModuloView());
+                    MC.start();
+                }
             } catch (MalformedURLException ex) {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
             } catch (NotBoundException ex) {
@@ -46,5 +54,5 @@ public class LoginController {
             return null;
         });
     }
-    
+
 }

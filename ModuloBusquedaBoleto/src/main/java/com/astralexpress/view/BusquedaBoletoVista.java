@@ -11,13 +11,11 @@ import com.astralexpress.controlador.BusquedaBoletoControlador;
  * @author admin
  */
 public class BusquedaBoletoVista extends javax.swing.JFrame {
-    BusquedaBoletoControlador BBC;
     /**
      * Creates new form BusquedaBoleto
      */
     public BusquedaBoletoVista() {
-        initComponents();
-        BBC=new BusquedaBoletoControlador(this);        
+        initComponents();   
     }
 
     /**
@@ -99,14 +97,11 @@ public class BusquedaBoletoVista extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(173, 173, 173)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(FieldLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(FieldBusqueda)))
-                .addGap(48, 48, 48)
+                .addGap(186, 186, 186)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FieldLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FieldBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addComponent(Respuesta)
                 .addGap(98, 98, 98)
                 .addComponent(BotonBusqueda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -136,7 +131,7 @@ public class BusquedaBoletoVista extends javax.swing.JFrame {
     }//GEN-LAST:event_FieldBusquedaActionPerformed
 
     private void BotonBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBusquedaActionPerformed
-        BBC.buscarBoleto();
+
     }//GEN-LAST:event_BotonBusquedaActionPerformed
 
     /**

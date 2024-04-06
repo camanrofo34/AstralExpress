@@ -13,7 +13,6 @@ import org.astralexpress.modelo.LoginModel;
 import org.astralexpress.modelo.ModuloModel;
 import org.astralexpress.modelo.RMISettings;
 import org.astralexpress.vista.LoginView;
-import org.astralexpress.vista.Modulo;
 import org.astralexpress.vista.ModuloView;
 
 /**

@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo.repositorio;
 
+import java.io.Serializable;
+
 /**
  *
  * @author PC 4060TI
  */
-public class LuggageEntity {
+public class LuggageEntity implements Serializable {
     String idPassenger;
     String idVagon;
 }

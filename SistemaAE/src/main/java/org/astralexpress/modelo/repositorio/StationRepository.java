@@ -24,7 +24,7 @@ public class StationRepository {
     }
     
     public Station getStation(String idStation) {
-        StationEntity[] stationsEntity = fileJson.getObjects("", StationEntity[].class);
+        StationEntity[] stationsEntity = fileJson.getObjects(pathFile, StationEntity[].class);
         Array<StationEntity> stationEntity = new Array<>(stationsEntity);
         Iterator<StationEntity> iterator = stationEntity.iterator();
         while (iterator.hasNext()) {

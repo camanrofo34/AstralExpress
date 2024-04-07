@@ -5,15 +5,25 @@
 package org.astralexpress.controlador;
 
 import org.astralexpress.modelo.AbstractModel;
+import org.astralexpress.modelo.UsersModel;
+import org.astralexpress.vista.UsersView;
 
 /**
  *
  * @author admin
  */
-public class UsersController extends AbstractModel{
-    
-    public UsersController(String uri) {
-        super(uri);
+public class UsersController{
+
+    UsersModel UM;
+    UsersView UV;
+
+    public UsersController(UsersModel UM, UsersView UV){
+        this.UM = UM;
+        this.UV = UV;
+    }
+
+    public void start(){
+        UV.initComponents();
     }
     
 }

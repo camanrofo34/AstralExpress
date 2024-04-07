@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class PassengersVagonEntity implements Serializable{
     String idVagon;
 
-    public PassengersVagonEntity(String idVagon, String idSeatInit) {
+    public PassengersVagonEntity(String idVagon) {
         this.idVagon = idVagon;
     }
     

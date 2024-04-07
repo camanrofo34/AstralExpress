@@ -4,14 +4,20 @@
  */
 package org.astralexpress.modelo;
 
+import org.astralexpress.modelo.messenger.Messenger;
+
 /**
  *
  * @author admin
  */
 public class UsersModel extends AbstractModel{
-    
+    private Messenger messenger;
     public UsersModel(String uri) {
         super(uri);
+        this.messenger = new Messenger("");
     }
-    
+
+    public Messenger getMessenger() {
+        return messenger;
+    }
 }

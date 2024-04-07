@@ -25,7 +25,7 @@ public class PassengerContactRepository {
     }
     
     public PassengerContact getPassengerContactByIdPassenger(String idPassenger){
-        PassengerContactEntity[] pCEntity = fileJson.getObjects("", PassengerContactEntity[].class);
+        PassengerContactEntity[] pCEntity = fileJson.getObjects(pathFile, PassengerContactEntity[].class);
         Array<PassengerContactEntity> pCsEntity = new Array<>(pCEntity);
         Iterator<PassengerContactEntity> iterator = pCsEntity.iterator();
         while (iterator.hasNext()){

@@ -8,7 +8,8 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import org.astralexpress.modelo.domain.LoginManagerInterface;
+
+import org.astralexpress.modelo.domain.CentralManagerInterface;
 import org.astralexpress.modelo.messenger.Messenger;
 
 /**
@@ -16,9 +17,11 @@ import org.astralexpress.modelo.messenger.Messenger;
  * @author PC 4060TI
  */
 public class LoginModel extends AbstractModel{
+
+
     
     private Messenger messenger;
-    public LoginModel(String uri) {
+    public LoginModel(String uri){
         super(uri);
         messenger = new Messenger("");
     } 
@@ -28,7 +31,8 @@ public class LoginModel extends AbstractModel{
     }
     
     public boolean login(String username, String password) throws MalformedURLException, NotBoundException, RemoteException{
-        look_up = (LoginManagerInterface) Naming.lookup(uri);   
+        CentralManagerInterface look_up = null;
+        look_up = (CentralManagerInterface) Naming.lookup(uri);
         boolean ask = look_up.login(username, password);
         if (!ask){
             messenger.setMessage("Usuario o contraseña incorrectos");

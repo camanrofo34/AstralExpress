@@ -5,7 +5,6 @@
 package org.astralexpress.modelo.repositorio;
 
 import org.astralexpress.modelo.domain.Classe;
-import org.astralexpress.modelo.domain.PassengersVagon;
 import org.astralexpress.modelo.domain.Seat;
 import org.astralexpress.shared.FileJsonAdapter;
 import org.astralexpress.shared.FileJsonInterface;
@@ -27,27 +26,27 @@ public class SeatRepository {
     }
     
     public Seat getSeat(String idSeat) {
-        SeatEntity[] seatsEntity = fileJson.getObjects("", SeatEntity[].class);
+        SeatEntity[] seatsEntity = fileJson.getObjects(pathFile, SeatEntity[].class);
         Array<SeatEntity> seatEntity = new Array<>(seatsEntity);
         Iterator<SeatEntity> iterator = seatEntity.iterator();
         while (iterator.hasNext()) {
             SeatEntity seatE = iterator.next();
             if (seatE.idSeat.equals(idSeat)) {
-                return new Seat(seatE.idSeat, Classe.findByPriority(Integer.parseInt(seatE.Class)) );
+                return new Seat(seatE.idSeat, Classe.findByPriority(seatE.Class) );
             }
         }
         return Seat.returnNullSeat();
     }
     
     public PriorityQueue<Seat> getSeats(String idVagonPassengers) {
-        SeatEntity[] seatsEntity = fileJson.getObjects("", SeatEntity[].class);
+        SeatEntity[] seatsEntity = fileJson.getObjects(pathFile, SeatEntity[].class);
         PriorityQueue<Seat> seats = new PriorityQueue<>(3);
         Array<SeatEntity> seatEntity = new Array<>(seatsEntity);
         Iterator<SeatEntity> iterator = seatEntity.iterator();
         while (iterator.hasNext()) {
             SeatEntity seatE = iterator.next();
             if (seatE.idSeat.startsWith(idVagonPassengers)) {
-                seats.insert( Integer.parseInt(seatE.Class),new Seat(seatE.idSeat, Classe.findByPriority(Integer.parseInt(seatE.Class)) ));
+                seats.insert( Integer.parseInt(seatE.Class),new Seat(seatE.idSeat, Classe.findByPriority(seatE.Class) ));
             }
         }
         return seats;

@@ -6,13 +6,14 @@ package org.astralexpress.modelo.domain;
 
 import org.model.io.array.Array;
 
+import java.io.Serializable;
 
 
 /**
  *
  * @author admin
  */
-public class Passenger extends AbstractPerson{
+public class Passenger extends AbstractPerson implements Serializable{
     private String idPassenger;
     private String idType;
     private String homeAdress;

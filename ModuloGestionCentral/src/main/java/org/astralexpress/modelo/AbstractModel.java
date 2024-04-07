@@ -4,15 +4,12 @@
  */
 package org.astralexpress.modelo;
 
-import org.astralexpress.modelo.domain.LoginManagerInterface;
 
 /**
  *
  * @author PC 4060TI
  */
 public abstract class AbstractModel {
-
-    protected static LoginManagerInterface look_up;
     protected String uri;
     public AbstractModel(String uri) {
         this.uri = uri;

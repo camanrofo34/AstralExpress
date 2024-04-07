@@ -13,6 +13,7 @@ import org.model.io.LinkedList.LinkedList;
 import org.model.io.array.Array;
 import org.model.util.collection.Collection;
 import org.model.util.iterator.Iterator;
+import org.model.util.list.List;
 
 /**
  *
@@ -29,14 +30,14 @@ public class TrainRepository {
     }
 
     public Train getTrain(String idTrain) {
-        TrainEntity[] trainsEntity = fileJson.getObjects("", TrainEntity[].class);
+        TrainEntity[] trainsEntity = fileJson.getObjects(pathFile, TrainEntity[].class);
         Array<TrainEntity> trainEntity = new Array<>(trainsEntity);
         Iterator<TrainEntity> iterator = trainEntity.iterator();
         while (iterator.hasNext()) {
             TrainEntity trainE = iterator.next();
             if (trainE.idTrain.equals(idTrain)) {
-                ChargeVagonRepository CVR = new ChargeVagonRepository("");
-                PassengersVagonRepository PVR = new PassengersVagonRepository("");
+                ChargeVagonRepository CVR = new ChargeVagonRepository("src\\main\\java\\org\\astralexpress/database/chargeVagon.json");
+                PassengersVagonRepository PVR = new PassengersVagonRepository("src\\main\\java\\org\\astralexpress/database/passengerVagon.json");
                 LinkedList<AbstractVagon> vagons = new LinkedList<>();
                 vagons.add((Collection) CVR.getChargeVagons(idTrain));
                 vagons.add((Collection) PVR.getPassangerVagons(idTrain));
@@ -46,20 +47,19 @@ public class TrainRepository {
         return Train.getNullTrain();
     }
     
-    public LinkedList<Train> getTrains() {
-        LinkedList<Train> trains = new LinkedList<>();
-        TrainEntity[] trainsEntity = fileJson.getObjects("", TrainEntity[].class);
+    public List<Train> getTrains() {
+        List<Train> trains = new LinkedList<>();
+        TrainEntity[] trainsEntity = fileJson.getObjects(pathFile, TrainEntity[].class);
         Array<TrainEntity> trainEntity = new Array<>(trainsEntity);
         Iterator<TrainEntity> iterator = trainEntity.iterator();
         while (iterator.hasNext()) {
             TrainEntity trainE = iterator.next();
-                ChargeVagonRepository CVR = new ChargeVagonRepository("");
-                PassengersVagonRepository PVR = new PassengersVagonRepository("");
+                ChargeVagonRepository CVR = new ChargeVagonRepository("src\\main\\java\\org\\astralexpress/database/chargeVagon.json");
+                PassengersVagonRepository PVR = new PassengersVagonRepository("src\\main\\java\\org\\astralexpress/database/passengerVagon.json");
                 LinkedList<AbstractVagon> vagons = new LinkedList<>();
                 vagons.add((Collection) CVR.getChargeVagons(trainE.idTrain));
                 vagons.add((Collection) PVR.getPassangerVagons(trainE.idTrain));
                 trains.add(new Train(trainE.trainName, trainE.idTrain, Integer.parseInt(trainE.capacity), Double.parseDouble(trainE.mileage), Brand.getBrandByName(trainE.brand), vagons));
-           
         }
         return trains;
     }

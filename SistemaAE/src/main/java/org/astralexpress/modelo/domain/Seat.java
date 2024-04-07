@@ -21,7 +21,7 @@ public class Seat implements Serializable{
     }
 
     public static Seat returnNullSeat() {
-        return new Seat ("", Classe.findByPriority(-1));
+        return new Seat ("", Classe.findByPriority("Estandar"));
     }
 
 }

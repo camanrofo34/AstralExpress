@@ -6,8 +6,8 @@ package org.astralexpress.modelo;
 
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
-import org.astralexpress.modelo.domain.LoginManager;
-import org.astralexpress.modelo.domain.LoginManagerInterface;
+import org.astralexpress.modelo.domain.CentralManager;
+import org.astralexpress.modelo.domain.CentralManagerInterface;
 import org.astralexpress.modelo.messenger.Messenger;
 
 /**
@@ -36,7 +36,7 @@ public class AstralExpressModel {
     public boolean deploy() {
         try {
             System.setProperty("java.rmi.server.hostname", ip);
-            LoginManagerInterface service = new LoginManager();
+            CentralManagerInterface service = new CentralManager();
             LocateRegistry.createRegistry(Integer.parseInt(port));
             Naming.rebind(uri, service);
             messenger.setMessage("Server Status: Running");

@@ -8,8 +8,8 @@ import java.io.Serializable;
 import org.astralexpress.modelo.domain.Luggage;
 import org.astralexpress.shared.FileJsonAdapter;
 import org.astralexpress.shared.FileJsonInterface;
-import org.model.LinkedList.singly.LinkedList;
-import org.model.array.Array;
+import org.model.io.LinkedList.LinkedList;
+import org.model.io.array.Array;
 import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
@@ -27,7 +27,7 @@ public class LuggageRepository implements Serializable{
     }
     
     public List<Luggage> getLuggagesByIdVagon(String idVagon){
-        LuggageEntity[] luggageEntity = fileJson.getObjects("", LuggageEntity[].class);
+        LuggageEntity[] luggageEntity = fileJson.getObjects(pathFile, LuggageEntity[].class);
         Array<LuggageEntity> luggagesEntity = new Array<>(luggageEntity);
         List<Luggage> luggages = new LinkedList<>();
         Iterator<LuggageEntity> iterator = luggagesEntity.iterator();
@@ -41,7 +41,7 @@ public class LuggageRepository implements Serializable{
     }
     
         public List<Luggage> getLuggagesByIdPssenger(String idPassenger){
-        LuggageEntity[] luggageEntity = fileJson.getObjects("", LuggageEntity[].class);
+        LuggageEntity[] luggageEntity = fileJson.getObjects(pathFile, LuggageEntity[].class);
         Array<LuggageEntity> luggagesEntity = new Array<>(luggageEntity);
         List<Luggage> luggages = new LinkedList<>();
         Iterator<LuggageEntity> iterator = luggagesEntity.iterator();
@@ -53,5 +53,5 @@ public class LuggageRepository implements Serializable{
         }
         return luggages;
     }
-    
+
 }

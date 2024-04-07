@@ -1,0 +1,41 @@
+[{
+  "idPassenger": 1,
+  "idVagon": 1
+},
+  {
+    "idPassenger": 2,
+    "idVagon": 2
+  },
+  {
+    "idPassenger": 3,
+    "idVagon": 3
+  },
+  {
+    "idPassenger": 4,
+    "idVagon": 4
+  },
+  {
+    "idPassenger": 5,
+    "idVagon": 5
+  },
+  {
+    "idPassenger": 6,
+    "idVagon": 6
+  },
+  {
+    "idPassenger": 7,
+    "idVagon": 7
+  },
+  {
+    "idPassenger": 8,
+    "idVagon": 8
+  },
+  {
+    "idPassenger": 9,
+    "idVagon": 9
+  },
+  {
+    "idPassenger": 10,
+    "idVagon": 10
+  }
+]

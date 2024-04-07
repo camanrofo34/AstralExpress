@@ -8,9 +8,9 @@ import java.io.Serializable;
 import org.astralexpress.modelo.domain.Employee;
 import org.astralexpress.modelo.domain.User;
 import org.astralexpress.shared.FileJsonAdapter;
+import org.model.io.LinkedList.LinkedList;
 import org.model.util.iterator.Iterator;
 import org.astralexpress.shared.FileJsonInterface;
-import org.model.LinkedList.singly.LinkedList;
 import org.model.io.array.Array;
 import org.model.util.list.List;
 
@@ -47,7 +47,7 @@ public class UserRepository implements Serializable{
         Array<UserEntity> usersEntity = new Array<>(userEntity);
         List<User> users = new LinkedList<>();
         Iterator<UserEntity> iterator = usersEntity.iterator();
-        EmployeeRepository employeeRepository = new EmployeeRepository("../../database/employee.json");
+        EmployeeRepository employeeRepository = new EmployeeRepository("src\\main\\java\\org\\astralexpress\\database\\employee.json");
         while (iterator.hasNext()){
             UserEntity user = iterator.next();
             Employee employee = employeeRepository.getEmployee(user.person);

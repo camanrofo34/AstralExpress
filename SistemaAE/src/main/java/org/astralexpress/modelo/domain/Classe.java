@@ -26,11 +26,9 @@ public enum Classe implements Serializable{
     public void setPrioridad(int prioridad) {
         this.prioridad = prioridad;
     }
-    
-    
-      public static Classe findByPriority(int prioridad) {
+    public static Classe findByPriority(String prioridad) {
         for (Classe clase : Classe.values()) {
-            if (clase.getPrioridad()== prioridad) {
+            if (clase.getPrioridad()== Integer.parseInt(prioridad)) {
                 return clase;
             }
         }

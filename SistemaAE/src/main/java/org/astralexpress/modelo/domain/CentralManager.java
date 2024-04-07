@@ -6,16 +6,19 @@ package org.astralexpress.modelo.domain;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+
+import org.astralexpress.modelo.repositorio.TrainRepository;
 import org.astralexpress.modelo.repositorio.UserRepository;
+import org.model.util.list.List;
 
 /**
  *
  * @author PC 4060TI
  */
-public class LoginManager extends UnicastRemoteObject implements LoginManagerInterface{
+public class CentralManager extends UnicastRemoteObject implements CentralManagerInterface {
     
     
-    public LoginManager () throws RemoteException{
+    public CentralManager() throws RemoteException{
         super();
     }
     
@@ -27,5 +30,11 @@ public class LoginManager extends UnicastRemoteObject implements LoginManagerInt
             return false;
         }
         return user.getPassword().equals(password);
+    }
+
+    @Override
+    public List<Train> getTrains() throws RemoteException {
+        TrainRepository trainRepository = new TrainRepository("src\\main\\java\\org\\astralexpress\\database\\trains.json");
+        return trainRepository.getTrains();
     }
 }

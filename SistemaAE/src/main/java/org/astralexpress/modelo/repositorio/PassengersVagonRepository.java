@@ -8,10 +8,11 @@ import org.astralexpress.modelo.domain.PassengersVagon;
 import org.astralexpress.modelo.domain.Seat;
 import org.astralexpress.shared.FileJsonAdapter;
 import org.astralexpress.shared.FileJsonInterface;
-import org.model.LinkedList.doubly.LinkedList;
+import org.model.io.LinkedList.LinkedList;
 import org.model.io.array.Array;
 import org.model.priorityQueue.list.PriorityQueue;
 import org.model.util.iterator.Iterator;
+import org.model.util.list.List;
 
 /**
  *
@@ -28,10 +29,10 @@ public class PassengersVagonRepository {
     }
 
     public PassengersVagon getPassangerVagon(String idVagon) {
-        PassengersVagonEntity[] passengersVagonEntity = fileJson.getObjects("", PassengersVagonEntity[].class);
+        PassengersVagonEntity[] passengersVagonEntity = fileJson.getObjects(pathFile, PassengersVagonEntity[].class);
         Array<PassengersVagonEntity> passengerVagonsEntity = new Array<>(passengersVagonEntity);
         Iterator<PassengersVagonEntity> iterator = passengerVagonsEntity.iterator();
-        SeatRepository seatRepository = new SeatRepository("../../database/.json");
+        SeatRepository seatRepository = new SeatRepository("src\\main\\java\\org\\astralexpress/database/seat.json");
         while (iterator.hasNext()) {
             PassengersVagonEntity passengersVagonE = iterator.next();
             PriorityQueue<Seat> seats = seatRepository.getSeats(idVagon);
@@ -42,12 +43,12 @@ public class PassengersVagonRepository {
         return PassengersVagon.returnNullPassengersVagon();
     }
 
-    public LinkedList<PassengersVagon> getPassangerVagons(String idTrain) {
-        PassengersVagonEntity[] passengersVagonEntity = fileJson.getObjects("", PassengersVagonEntity[].class);
-        LinkedList<PassengersVagon> passengersVagon = new LinkedList<>();
+    public List<PassengersVagon> getPassangerVagons(String idTrain) {
+        PassengersVagonEntity[] passengersVagonEntity = fileJson.getObjects(pathFile, PassengersVagonEntity[].class);
+        List<PassengersVagon> passengersVagon = new LinkedList<>();
         Array<PassengersVagonEntity> passengerVagonsEntity = new Array<>(passengersVagonEntity);
         Iterator<PassengersVagonEntity> iterator = passengerVagonsEntity.iterator();
-        SeatRepository seatRepository = new SeatRepository("../../database/.json");
+        SeatRepository seatRepository = new SeatRepository("src\\main\\java\\org\\astralexpress/database/seat.json");
         while (iterator.hasNext()) {
             PassengersVagonEntity passengersVagonE = iterator.next();
             if (passengersVagonE.idVagon.startsWith(idTrain)) {

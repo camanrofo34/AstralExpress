@@ -4,8 +4,19 @@
  */
 package org.astralexpress.controlador;
 
+import org.astralexpress.modelo.RMISettings;
 import org.astralexpress.modelo.TrainsModel;
+import org.astralexpress.modelo.UsersModel;
+import org.astralexpress.modelo.domain.Train;
 import org.astralexpress.vista.TrainsView;
+import org.astralexpress.vista.UsersView;
+import org.model.array.Array;
+import org.model.io.LinkedList.LinkedList;
+
+import java.net.MalformedURLException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.util.function.UnaryOperator;
 
 /**
  *
@@ -20,7 +31,18 @@ public class TrainsController {
         this.TM = TM;
     }
     
-    public void start(){
-        TV.initComponents();
+    public void start() throws MalformedURLException, NotBoundException, RemoteException {
+        TV.initComponents(new Array<>(new UnaryOperator[]{
+                event -> {
+
+                     return null;
+                },
+                event -> {
+                    return null;
+                },
+                event -> {
+                    return null;
+                }
+        }), (LinkedList<Train>) TM.getTrains());
     }
 }

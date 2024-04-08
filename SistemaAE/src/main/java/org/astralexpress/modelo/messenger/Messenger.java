@@ -4,15 +4,15 @@
  */
 package org.astralexpress.modelo.messenger;
 
-import java.io.Serializable;
 import org.astralexpress.modelo.observer.Observer;
 import org.model.array.Array;
 
+import java.io.Serializable;
+
 /**
- *
  * @author PC 4060TI
  */
-public class Messenger implements Serializable{
+public class Messenger implements Serializable {
     private String message;
     private Array<Observer<Messenger>> observers;
 
@@ -29,14 +29,14 @@ public class Messenger implements Serializable{
         this.message = message;
         notifyAllObservers();
     }
-    
-    public void attach(Observer<Messenger> observer){
+
+    public void attach(Observer<Messenger> observer) {
         observers.add(observer);
     }
-    
-    public void notifyAllObservers(){
+
+    public void notifyAllObservers() {
         observers.forEach(observer -> {
-            if (observer != null){
+            if (observer != null) {
                 observer.update();
             }
             return null;

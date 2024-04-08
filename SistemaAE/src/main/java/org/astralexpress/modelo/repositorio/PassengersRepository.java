@@ -13,7 +13,6 @@ import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
 /**
- *
  * @author PC 4060TI
  */
 public class PassengersRepository {
@@ -34,12 +33,12 @@ public class PassengersRepository {
         while (iterator.hasNext()) {
             PassengerEntity passenger = iterator.next();
             if (passenger.idPassenger.equals(idPassenger)) {
-                return new Passenger(passenger.idPassenger, passenger.idType, passenger.homeAdress, PCR.getPassengerContactByIdPassenger(idPassenger),passenger.names, passenger.lastNames, new Array<>(passenger.phoneNumbers.split(",")) );
+                return new Passenger(passenger.idPassenger, passenger.idType, passenger.homeAdress, PCR.getPassengerContactByIdPassenger(idPassenger), passenger.names, passenger.lastNames, new Array<>(passenger.phoneNumbers.split(",")));
             }
         }
         return Passenger.returnNullPassenger();
     }
-    
+
     public List<Passenger> getPassengers() {
         List<Passenger> passengers = new LinkedList<>();
         PassengerContactRepository PCR = new PassengerContactRepository("src\\main\\java\\org\\astralexpress/database/passengerContact.json");
@@ -48,7 +47,7 @@ public class PassengersRepository {
         Iterator<PassengerEntity> iterator = passengerEntities.iterator();
         while (iterator.hasNext()) {
             PassengerEntity passenger = iterator.next();
-            passengers.add(new Passenger(passenger.idPassenger, passenger.idType, passenger.homeAdress, PCR.getPassengerContactByIdPassenger(passenger.idPassenger),passenger.names, passenger.lastNames, new Array<String>(passenger.phoneNumbers.split(","))));
+            passengers.add(new Passenger(passenger.idPassenger, passenger.idType, passenger.homeAdress, PCR.getPassengerContactByIdPassenger(passenger.idPassenger), passenger.names, passenger.lastNames, new Array<String>(passenger.phoneNumbers.split(","))));
         }
         return passengers;
     }

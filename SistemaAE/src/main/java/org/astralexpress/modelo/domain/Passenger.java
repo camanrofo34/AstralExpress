@@ -10,10 +10,9 @@ import java.io.Serializable;
 
 
 /**
- *
  * @author admin
  */
-public class Passenger extends AbstractPerson implements Serializable{
+public class Passenger extends AbstractPerson implements Serializable {
     private String idPassenger;
     private String idType;
     private String homeAdress;
@@ -26,11 +25,10 @@ public class Passenger extends AbstractPerson implements Serializable{
         this.homeAdress = homeAdress;
         this.passengerContact = passengerContact;
     }
-    
-    public static Passenger returnNullPassenger(){
+
+    public static Passenger returnNullPassenger() {
         return new Passenger("", "", "", PassengerContact.returnEmptyPassengerContact(), "", "", new Array<>(1));
     }
 
-    
-    
+
 }

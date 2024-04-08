@@ -7,10 +7,9 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class Station implements Serializable{
+public class Station implements Serializable {
     private String idStation;
     private String stationName;
 
@@ -18,9 +17,9 @@ public class Station implements Serializable{
         this.idStation = idStation;
         this.stationName = stationName;
     }
-    
-    public static Station returnNullStation(){
+
+    public static Station returnNullStation() {
         return new Station("", "");
     }
-    
+
 }

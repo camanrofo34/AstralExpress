@@ -1,9 +1,11 @@
-[{
-  "idVagon": "1"
-},
+[
+  {
+    "idVagon": "1"
+  },
   {
     "idVagon": "2"
   },
   {
     "idVagon": "3"
-  }]
+  }
+]

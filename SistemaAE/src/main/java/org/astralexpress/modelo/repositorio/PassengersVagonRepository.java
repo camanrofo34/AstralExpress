@@ -15,7 +15,6 @@ import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
 /**
- *
  * @author PC 4060TI
  */
 public class PassengersVagonRepository {

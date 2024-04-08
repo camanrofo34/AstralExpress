@@ -7,7 +7,6 @@ package org.astralexpress.modelo.domain;
 import org.model.priorityQueue.list.PriorityQueue;
 
 /**
- *
  * @author PC 4060TI
  */
 public class PassengersVagon extends AbstractVagon {
@@ -18,8 +17,8 @@ public class PassengersVagon extends AbstractVagon {
         super(idVagon);
         this.seats = seats;
     }
-    
-    public static PassengersVagon returnNullPassengersVagon(){
+
+    public static PassengersVagon returnNullPassengersVagon() {
         return new PassengersVagon(new PriorityQueue<>(3), "");
     }
 }

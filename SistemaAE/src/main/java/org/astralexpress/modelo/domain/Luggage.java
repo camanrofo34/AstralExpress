@@ -7,7 +7,6 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
 public class Luggage implements Serializable {
@@ -18,6 +17,6 @@ public class Luggage implements Serializable {
         this.idPassenger = idPassenger;
         this.idVagon = idVagon;
     }
-    
-    
+
+
 }

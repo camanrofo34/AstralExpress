@@ -6,16 +6,18 @@ package org.astralexpress.modelo.domain;
 
 import org.model.util.list.List;
 
+import java.io.IOException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
- *
  * @author PC 4060TI
  */
-public interface CentralManagerInterface extends Remote{
-    
+public interface CentralManagerInterface extends Remote {
+
     public boolean login(String username, String password) throws RemoteException;
 
     public List<Train> getTrains() throws RemoteException;
+
+    public boolean addTrain (String trainName, int capacity, Brand brand) throws IOException;
 }

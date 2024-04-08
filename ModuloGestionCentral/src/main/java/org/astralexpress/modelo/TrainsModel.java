@@ -4,11 +4,13 @@
  */
 package org.astralexpress.modelo;
 
+import org.astralexpress.modelo.domain.Brand;
 import org.astralexpress.modelo.domain.CentralManagerInterface;
 import org.astralexpress.modelo.domain.Train;
 import org.astralexpress.modelo.messenger.Messenger;
 import org.model.util.list.List;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -29,6 +31,11 @@ public class TrainsModel extends AbstractModel{
     public List<Train> getTrains() throws MalformedURLException, NotBoundException, RemoteException {
         CentralManagerInterface lookUp = (CentralManagerInterface) Naming.lookup(uri);
         return lookUp.getTrains();
+    }
+
+    public boolean addTrain(String trainName, int capacity, Brand brand) throws IOException, NotBoundException {
+        CentralManagerInterface lookUp = (CentralManagerInterface) Naming.lookup(uri);
+        return lookUp.addTrain(trainName, capacity, brand);
     }
 
     public Messenger getMessenger() {

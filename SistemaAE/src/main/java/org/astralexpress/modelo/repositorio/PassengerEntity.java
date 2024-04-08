@@ -7,10 +7,9 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class PassengerEntity implements Serializable{
+public class PassengerEntity implements Serializable {
     String idPassenger;
     String idType;
     String homeAdress;
@@ -26,6 +25,6 @@ public class PassengerEntity implements Serializable{
         this.lastNames = lastNames;
         this.phoneNumbers = phoneNumbers;
     }
-   
-        
+
+
 }

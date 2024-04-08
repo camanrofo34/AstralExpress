@@ -1,15 +1,7 @@
-[{"trainName":"Tobago-Crown Point Airport",
-  "idTrain":1,
-  "capacity":69,
-  "mileage":5,
-  "brand":"Mercedez_Benz"
-},
-  {"trainName":"Saint-Yan Airport",
-    "idTrain":2,
-    "capacity":55,
-    "mileage":60,
-    "brand":"Mercedez_Benz"
-  },
-  {"trainName":"Biarritz-Anglet-Bayonne Airport","idTrain":3,"capacity":85,"mileage":92,"brand":"Mercedez_Benz"},
-  {"trainName":"Napaskiak Airport","idTrain":4,"capacity":84,"mileage":1,"brand":"Mercedez_Benz"},
-  {"trainName":"Shire Inda Selassie Airport","idTrain":5,"capacity":91,"mileage":11,"brand":"Arnold"}]
+[{
+  "trainName": "jTextField1",
+  "idTrain": "1000",
+  "capacity": "4",
+  "mileage": "0.0",
+  "brand": "Mercedez_Benz"
+}]

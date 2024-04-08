@@ -7,17 +7,16 @@ package org.astralexpress.modelo.observer;
 import java.io.Serializable;
 
 /**
- *
- * @author PC 4060TI
  * @param <E>
+ * @author PC 4060TI
  */
-public abstract class Observer<E extends Serializable> implements Serializable{
+public abstract class Observer<E extends Serializable> implements Serializable {
     protected E subject;
 
     public Observer(E subject) {
         this.subject = subject;
     }
-    
+
     public abstract void update();
-    
+
 }

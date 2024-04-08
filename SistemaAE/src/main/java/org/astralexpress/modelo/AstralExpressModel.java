@@ -4,17 +4,17 @@
  */
 package org.astralexpress.modelo;
 
-import java.rmi.Naming;
-import java.rmi.registry.LocateRegistry;
 import org.astralexpress.modelo.domain.CentralManager;
 import org.astralexpress.modelo.domain.CentralManagerInterface;
 import org.astralexpress.modelo.messenger.Messenger;
 
+import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
+
 /**
- *
  * @author PC 4060TI
  */
-public class AstralExpressModel {   
+public class AstralExpressModel {
     private String ip;
     private String port;
     private String serviceName;

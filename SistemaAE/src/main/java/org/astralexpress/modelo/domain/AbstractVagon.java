@@ -7,16 +7,15 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public abstract class AbstractVagon implements Serializable{
+public abstract class AbstractVagon implements Serializable {
     protected String idVagon;
 
     public AbstractVagon(String idVagon) {
         this.idVagon = idVagon;
     }
-    
+
     public AbstractVagon() {
         this.idVagon = "";
     }
@@ -28,7 +27,6 @@ public abstract class AbstractVagon implements Serializable{
     public void setIdVagon(String idVagon) {
         this.idVagon = idVagon;
     }
-    
-    
-    
+
+
 }

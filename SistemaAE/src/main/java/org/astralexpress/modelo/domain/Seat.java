@@ -7,10 +7,9 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class Seat implements Serializable{
+public class Seat implements Serializable {
 
     private String idSeat;
     private Classe Class;
@@ -21,7 +20,7 @@ public class Seat implements Serializable{
     }
 
     public static Seat returnNullSeat() {
-        return new Seat ("", Classe.findByPriority("Estandar"));
+        return new Seat("", Classe.findByPriority("Estandar"));
     }
 
 }

@@ -5,19 +5,15 @@
 package org.astralexpress.shared;
 
 /**
- *
  * @author PC 4060TI
  */
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FileJsonAdapter<E> implements FileJsonInterface<E> {
     private static FileJsonAdapter<?> instance;

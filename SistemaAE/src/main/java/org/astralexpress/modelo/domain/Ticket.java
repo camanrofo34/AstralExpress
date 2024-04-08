@@ -7,11 +7,10 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
 public class Ticket implements Serializable {
-    
+
     private Train train;
     private AbstractVagon vagon;
     private Seat seat;
@@ -29,14 +28,14 @@ public class Ticket implements Serializable {
         this.passenger = passenger;
         this.Value = Value;
     }
-    
-    public static Ticket returnNullTicket(){
-        return new Ticket(Train.getNullTrain(), 
-                PassengersVagon.returnNullPassengersVagon(), 
-                Seat.returnNullSeat(), 
-                Station.returnNullStation(), 
-                Station.returnNullStation(), 
-                Passenger.returnNullPassenger(), 
+
+    public static Ticket returnNullTicket() {
+        return new Ticket(Train.getNullTrain(),
+                PassengersVagon.returnNullPassengersVagon(),
+                Seat.returnNullSeat(),
+                Station.returnNullStation(),
+                Station.returnNullStation(),
+                Passenger.returnNullPassenger(),
                 0.0);
     }
 
@@ -95,7 +94,6 @@ public class Ticket implements Serializable {
     public void setValue(double Value) {
         this.Value = Value;
     }
-    
-    
-    
+
+
 }

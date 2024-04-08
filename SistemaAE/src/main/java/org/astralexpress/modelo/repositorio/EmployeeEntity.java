@@ -5,10 +5,8 @@
 package org.astralexpress.modelo.repositorio;
 
 import java.io.Serializable;
-import org.model.array.Array;
 
 /**
- *
  * @author admin
  */
 public class EmployeeEntity implements Serializable {
@@ -23,6 +21,6 @@ public class EmployeeEntity implements Serializable {
         this.lastNames = lastNames;
         this.phoneNumbers = phoneNumbers;
     }
-    
-    
+
+
 }

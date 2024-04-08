@@ -8,6 +8,7 @@ package org.astralexpress.vista;
  *
  * @author admin
  */
+
 import org.astralexpress.modelo.domain.Train;
 import org.astralexpress.modelo.messenger.Messenger;
 import org.astralexpress.modelo.observer.Observer;
@@ -16,7 +17,6 @@ import org.model.io.LinkedList.LinkedList;
 import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
-import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.function.UnaryOperator;
 
@@ -30,6 +30,7 @@ public class TrainsView extends Observer<Messenger> {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private final javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
@@ -53,6 +54,7 @@ public class TrainsView extends Observer<Messenger> {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jFrame1 = new javax.swing.JFrame();
         subject.attach(this);
     }
@@ -96,6 +98,7 @@ public class TrainsView extends Observer<Messenger> {
 
         jLabel4.setText("TrainsModule");
 
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -117,9 +120,12 @@ public class TrainsView extends Observer<Messenger> {
                                                 .addContainerGap()
                                                 .addComponent(jButton1)
                                                 .addGap(44, 44, 44)
-                                                .addComponent(jButton2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                                                .addComponent(jButton3)))
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel5)
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addComponent(jButton2)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                                                                .addComponent(jButton3)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(32, 32, 32))
@@ -150,7 +156,9 @@ public class TrainsView extends Observer<Messenger> {
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(jLabel3))
-                                                .addGap(130, 130, 130)
+                                                .addGap(75, 75, 75)
+                                                .addComponent(jLabel5)
+                                                .addGap(39, 39, 39)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(jButton1)
                                                         .addComponent(jButton2)
@@ -170,14 +178,28 @@ public class TrainsView extends Observer<Messenger> {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        startTable((LinkedList<Train>) trains);
+
         jFrame1.pack();
+        startTable((LinkedList<Train>) trains);
         jFrame1.setVisible(true);
     }
 
+    public String getTrainName() {
+        return jTextField1.getText();
+    }
+
+    public String getTrainCapacity() {
+        return jTextField2.getText();
+    }
+
+    public String getTrainBrand() {
+        return jComboBox1.getSelectedItem().toString();
+    }
+
+
     @Override
     public void update() {
-
+        jLabel5.setText(subject.getMessage());
     }
 
     private void startTable(LinkedList<Train> trains){

@@ -16,7 +16,6 @@ import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
 /**
- *
  * @author PC 4060TI
  */
 public class TrainRepository {
@@ -46,7 +45,7 @@ public class TrainRepository {
         }
         return Train.getNullTrain();
     }
-    
+
     public List<Train> getTrains() {
         List<Train> trains = new LinkedList<>();
         TrainEntity[] trainsEntity = fileJson.getObjects(pathFile, TrainEntity[].class);
@@ -54,13 +53,18 @@ public class TrainRepository {
         Iterator<TrainEntity> iterator = trainEntity.iterator();
         while (iterator.hasNext()) {
             TrainEntity trainE = iterator.next();
-                ChargeVagonRepository CVR = new ChargeVagonRepository("src\\main\\java\\org\\astralexpress/database/chargeVagon.json");
-                PassengersVagonRepository PVR = new PassengersVagonRepository("src\\main\\java\\org\\astralexpress/database/passengerVagon.json");
-                LinkedList<AbstractVagon> vagons = new LinkedList<>();
-                vagons.add((Collection) CVR.getChargeVagons(trainE.idTrain));
-                vagons.add((Collection) PVR.getPassangerVagons(trainE.idTrain));
-                trains.add(new Train(trainE.trainName, trainE.idTrain, Integer.parseInt(trainE.capacity), Double.parseDouble(trainE.mileage), Brand.getBrandByName(trainE.brand), vagons));
+            ChargeVagonRepository CVR = new ChargeVagonRepository("src\\main\\java\\org\\astralexpress/database/chargeVagon.json");
+            PassengersVagonRepository PVR = new PassengersVagonRepository("src\\main\\java\\org\\astralexpress/database/passengerVagon.json");
+            LinkedList<AbstractVagon> vagons = new LinkedList<>();
+            vagons.add((Collection) CVR.getChargeVagons(trainE.idTrain));
+            vagons.add((Collection) PVR.getPassangerVagons(trainE.idTrain));
+            trains.add(new Train(trainE.trainName, trainE.idTrain, Integer.parseInt(trainE.capacity), Double.parseDouble(trainE.mileage), Brand.getBrandByName(trainE.brand), vagons));
         }
         return trains;
+    }
+
+    public boolean addTrain(Train train) {
+        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().name());
+        return fileJson.writeObject(pathFile, trainEntity);
     }
 }

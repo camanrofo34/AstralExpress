@@ -11,7 +11,6 @@ import org.model.io.array.Array;
 import org.model.util.iterator.Iterator;
 
 /**
- *
  * @author PC 4060TI
  */
 public class StationRepository {
@@ -22,7 +21,7 @@ public class StationRepository {
         this.pathFile = pathFile;
         this.fileJson = FileJsonAdapter.getInstance();
     }
-    
+
     public Station getStation(String idStation) {
         StationEntity[] stationsEntity = fileJson.getObjects(pathFile, StationEntity[].class);
         Array<StationEntity> stationEntity = new Array<>(stationsEntity);

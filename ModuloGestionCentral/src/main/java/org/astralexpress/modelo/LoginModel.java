@@ -31,8 +31,7 @@ public class LoginModel extends AbstractModel{
     }
     
     public boolean login(String username, String password) throws MalformedURLException, NotBoundException, RemoteException{
-        CentralManagerInterface look_up = null;
-        look_up = (CentralManagerInterface) Naming.lookup(uri);
+        CentralManagerInterface look_up = (CentralManagerInterface) Naming.lookup(uri);
         boolean ask = look_up.login(username, password);
         if (!ask){
             messenger.setMessage("Usuario o contraseña incorrectos");

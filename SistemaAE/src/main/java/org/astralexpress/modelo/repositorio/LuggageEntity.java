@@ -7,7 +7,6 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
 public class LuggageEntity implements Serializable {

@@ -7,10 +7,9 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author admin
  */
-public class UserEntity implements Serializable{
+public class UserEntity implements Serializable {
     String username;
     String password;
     String person;
@@ -20,5 +19,5 @@ public class UserEntity implements Serializable{
         this.password = password;
         this.person = person;
     }
-    
+
 }

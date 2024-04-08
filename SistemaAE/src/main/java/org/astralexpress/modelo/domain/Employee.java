@@ -4,18 +4,17 @@
  */
 package org.astralexpress.modelo.domain;
 
-import java.io.Serializable;
 import org.model.io.array.Array;
 
+import java.io.Serializable;
 
 
 /**
- *
  * @author admin
  */
-public class Employee extends AbstractPerson implements Serializable{
+public class Employee extends AbstractPerson implements Serializable {
     private String idEmployee;
-    
+
     public Employee() {
         this.idEmployee = "";
     }
@@ -46,5 +45,4 @@ public class Employee extends AbstractPerson implements Serializable{
     }
 
 
-    
 }

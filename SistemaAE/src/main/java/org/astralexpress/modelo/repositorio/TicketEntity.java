@@ -7,11 +7,10 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class TicketEntity implements Serializable{
-    
+public class TicketEntity implements Serializable {
+
     String idTrain;
     String idVagon;
     String idSeat;
@@ -29,7 +28,6 @@ public class TicketEntity implements Serializable{
         this.idPassenger = idPassenger;
         this.value = value;
     }
-    
-    
-    
+
+
 } 

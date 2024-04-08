@@ -7,10 +7,9 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author admin
  */
-public class User implements Serializable{
+public class User implements Serializable {
     private String username;
     private String password;
     private AbstractPerson person;
@@ -19,6 +18,11 @@ public class User implements Serializable{
         this.username = username;
         this.password = password;
         this.person = person;
+    }
+
+    public static User getNullUser() {
+        return new User("", "", new AbstractPerson() {
+        });
     }
 
     public String getUsername() {
@@ -44,9 +48,5 @@ public class User implements Serializable{
     public void setPerson(AbstractPerson person) {
         this.person = person;
     }
-    
-    public static User getNullUser(){
-        return new User ("", "", new AbstractPerson() {});
-    }
-    
+
 }

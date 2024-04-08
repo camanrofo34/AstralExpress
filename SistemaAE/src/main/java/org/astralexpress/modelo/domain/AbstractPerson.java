@@ -7,9 +7,7 @@ package org.astralexpress.modelo.domain;
 import org.model.io.array.Array;
 
 
-
 /**
- *
  * @author PC 4060TI
  */
 public abstract class AbstractPerson {

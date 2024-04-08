@@ -1,12 +1,12 @@
+import org.astralexpress.controlador.AstralExpressController;
+import org.astralexpress.modelo.AstralExpressModel;
+import org.astralexpress.vista.ServerView;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.astralexpress.controlador.AstralExpressController;
-import org.astralexpress.modelo.AstralExpressModel;
-import org.astralexpress.vista.ServerView;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,11 +14,10 @@ import org.astralexpress.vista.ServerView;
  */
 
 /**
- *
  * @author PC 4060TI
  */
 public class Main {
-        public static void main(String[] args){
+    public static void main(String[] args) {
         Properties config = new Properties();
         try (FileInputStream fin = new FileInputStream(new File("config.properties"))) {
             config.load(fin);

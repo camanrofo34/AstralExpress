@@ -11,7 +11,6 @@ import org.model.io.array.Array;
 import org.model.util.iterator.Iterator;
 
 /**
- *
  * @author PC 4060TI
  */
 public class TicketRepository {
@@ -22,7 +21,7 @@ public class TicketRepository {
         this.pathFile = pathFile;
         this.fileJson = FileJsonAdapter.getInstance();
     }
-    
+
     public Ticket getTicket(String idTicket) {
         TicketEntity[] ticketsEntity = fileJson.getObjects("", TicketEntity[].class);
         Array<TicketEntity> seatEntity = new Array<>(ticketsEntity);
@@ -31,13 +30,13 @@ public class TicketRepository {
             TicketEntity ticketE = iterator.next();
             if (ticketE.idSeat.equals(idTicket)) {
                 return new Ticket(
-                        new TrainRepository("").getTrain(ticketE.idTrain), 
-                        new PassengersVagonRepository("").getPassangerVagon(ticketE.idVagon), 
+                        new TrainRepository("").getTrain(ticketE.idTrain),
+                        new PassengersVagonRepository("").getPassangerVagon(ticketE.idVagon),
                         new SeatRepository("").getSeat(ticketE.idSeat),
                         new StationRepository("").getStation(ticketE.idDepartureStation),
                         new StationRepository("").getStation(ticketE.idArrivalStation),
                         new PassengersRepository("").getPassenger(ticketE.idPassenger),
-                        Double.parseDouble(ticketE.value)                        
+                        Double.parseDouble(ticketE.value)
                 );
             }
         }

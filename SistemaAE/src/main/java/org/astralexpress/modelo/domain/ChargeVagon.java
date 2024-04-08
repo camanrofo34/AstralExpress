@@ -5,23 +5,21 @@
 package org.astralexpress.modelo.domain;
 
 import org.model.LinkedList.doubly.LinkedList;
-import org.model.array.Array;
 import org.model.util.list.List;
 
 /**
- *
  * @author PC 4060TI
  */
-public class ChargeVagon extends AbstractVagon{
+public class ChargeVagon extends AbstractVagon {
     private List<Luggage> luggages;
 
     public ChargeVagon(List<Luggage> luggages, String idVagon) {
         super(idVagon);
         this.luggages = luggages;
     }
-    
-    public static ChargeVagon getNullChargeVagon(){
+
+    public static ChargeVagon getNullChargeVagon() {
         return new ChargeVagon(new LinkedList<>(), "");
     }
-    
+
 }

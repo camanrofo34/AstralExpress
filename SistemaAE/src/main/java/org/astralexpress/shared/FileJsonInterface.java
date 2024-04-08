@@ -5,7 +5,6 @@
 package org.astralexpress.shared;
 
 /**
- *
  * @author PC 4060TI
  */
 public interface FileJsonInterface<E> {

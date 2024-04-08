@@ -8,7 +8,6 @@ import org.astralexpress.modelo.AstralExpressModel;
 import org.astralexpress.vista.ServerView;
 
 /**
- *
  * @author PC 4060TI
  */
 public class AstralExpressController {
@@ -16,11 +15,15 @@ public class AstralExpressController {
     ServerView view;
 
     public AstralExpressController(AstralExpressModel model, ServerView view) {
-        this.model=model;
-        this.view=view;
+        this.model = model;
+        this.view = view;
     }
-    
-    public void start(){
-        view.initComponents(event -> {view.showServerStatus("Server started");model.deploy(); return null;});
+
+    public void start() {
+        view.initComponents(event -> {
+            view.showServerStatus("Server started");
+            model.deploy();
+            return null;
+        });
     }
 }

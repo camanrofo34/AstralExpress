@@ -1,7 +1,8 @@
-[{
-  "idPassenger": 1,
-  "idVagon": 1
-},
+[
+  {
+    "idPassenger": 1,
+    "idVagon": 1
+  },
   {
     "idPassenger": 2,
     "idVagon": 2

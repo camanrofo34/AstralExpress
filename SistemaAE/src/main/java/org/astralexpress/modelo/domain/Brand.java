@@ -7,19 +7,18 @@ package org.astralexpress.modelo.domain;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public enum Brand implements Serializable{
+public enum Brand implements Serializable {
     Mercedez_Benz,
     Arnold;
-    
-    public static Brand getBrandByName(String brandName){
-        for (Brand brand : Brand.values()) {
-            if (brand.equals(brandName)) {
-                return brand;
-            }
+
+    public static Brand getBrandByName(String brandName) {
+    for (Brand brand : Brand.values()) {
+        if (brand.name().equals(brandName)) {
+            return brand;
         }
-        return null;
     }
+    return null;
+}
 }

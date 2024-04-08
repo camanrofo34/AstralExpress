@@ -1,20 +1,20 @@
-[{
-  "id": 1,
+[
+  {
+    "id": 1,
     "names": "John Doe",
-  "lastNames" : "Doe",
-  "phoneNumbers": "123,123,123"
-
-},
+    "lastNames": "Doe",
+    "phoneNumbers": "123,123,123"
+  },
   {
     "id": 2,
-        "names": "Jane Doe",
-    "lastNames" : "Doe",
+    "names": "Jane Doe",
+    "lastNames": "Doe",
     "phoneNumbers": "123,123,123"
   },
   {
     "id": 3,
-        "names": "John Smith",
-    "lastNames" : "Smith",
+    "names": "John Smith",
+    "lastNames": "Smith",
     "phoneNumbers": "123,123,123"
   }
 ]

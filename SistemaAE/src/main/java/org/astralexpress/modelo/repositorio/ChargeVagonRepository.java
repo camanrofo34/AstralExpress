@@ -15,7 +15,6 @@ import org.model.util.iterator.Iterator;
 import org.model.util.list.List;
 
 /**
- *
  * @author PC 4060TI
  */
 public class ChargeVagonRepository {
@@ -81,7 +80,7 @@ public class ChargeVagonRepository {
     public void deleteChargeVagon(String idVagon) {
         ChargeVagonEntity[] chargeVagonEntities = fileJson.getObjects("", ChargeVagonEntity[].class);
         LinkedList<ChargeVagonEntity> chargeVagons = new LinkedList<>(chargeVagonEntities);
-        for (Iterator<ChargeVagonEntity> iterator = chargeVagons.iterator(); iterator.hasNext();) {
+        for (Iterator<ChargeVagonEntity> iterator = chargeVagons.iterator(); iterator.hasNext(); ) {
             ChargeVagonEntity chargeVagon = iterator.next();
             if (chargeVagon.idVagon.equals(idVagon)) {
                 chargeVagons.remove(chargeVagon);

@@ -7,10 +7,9 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class SeatEntity implements Serializable{
+public class SeatEntity implements Serializable {
     String idSeat;
     String Class;
 

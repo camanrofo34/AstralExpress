@@ -7,10 +7,9 @@ package org.astralexpress.modelo.repositorio;
 import java.io.Serializable;
 
 /**
- *
  * @author PC 4060TI
  */
-public class TrainEntity implements Serializable{
+public class TrainEntity implements Serializable {
     String trainName;
     String idTrain;
     String capacity;
@@ -25,5 +24,5 @@ public class TrainEntity implements Serializable{
         this.mileage = mileage;
         this.brand = brand;
     }
-    
+
 }

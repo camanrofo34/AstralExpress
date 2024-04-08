@@ -1,11 +1,12 @@
-[{
-  "idPassenger": "1",
-  "idType": "CC",
-  "homeAddress": "Calle 123",
-  "names": "Juan",
-  "lastNames": "Perez",
-  "phoneNumbers": "1234567"
-},
+[
+  {
+    "idPassenger": "1",
+    "idType": "CC",
+    "homeAddress": "Calle 123",
+    "names": "Juan",
+    "lastNames": "Perez",
+    "phoneNumbers": "1234567"
+  },
   {
     "idPassenger": "2",
     "idType": "CC",
@@ -21,4 +22,5 @@
     "names": "Juan",
     "lastNames": "Perez",
     "phoneNumbers": "1234567"
-  }]
+  }
+]

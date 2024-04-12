@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class FileJsonAdapter<E> {
+public class FileJsonAdapter<E> implements FileJsonInterface<E> {
     private Object fileWriterLock;
 
     private FileJsonAdapter() {

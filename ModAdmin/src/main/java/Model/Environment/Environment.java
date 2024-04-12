@@ -31,10 +31,6 @@ public class Environment {
 
             variables.add("PORT0," + port[0]);
             variables.add("SERVICE0," + service[0]);
-
-            variables.add("PORT1," + port[1]);
-            variables.add("SERVICE1," + port[1]);
-
             variables.add("JSON-PATH," + properties.getProperty("JSON-PATH"));
         } catch (Exception exception) {
             Logger.getLogger("Server").log(Level.WARNING, exception.getMessage(), exception);

@@ -1,22 +1,34 @@
 package Model.Domain.AbstractClasses;
 
 import DataStructures.Array;
+import DataStructures.Interfaces.Iterator;
 
 public abstract class AbstractPerson {
+    protected String idPerson;
     protected String names;
     protected String lastNames;
     protected Array<String> phoneNumbers;
 
     protected AbstractPerson() {
+        this.idPerson = "";
         this.names = "";
         this.lastNames = "";
         this.phoneNumbers = new Array<>(1);
     }
 
-    protected AbstractPerson(String names, String lastNames, Array<String> phoneNumbers) {
+    protected AbstractPerson(String idPerson, String names, String lastNames, Array<String> phoneNumbers) {
+        this.idPerson = idPerson;
         this.names = names;
         this.lastNames = lastNames;
         this.phoneNumbers = phoneNumbers;
+    }
+
+    public String getIdPerson() {
+        return idPerson;
+    }
+
+    public void setIdPerson(String idPerson) {
+        this.idPerson = idPerson;
     }
 
     public String getNames() {
@@ -41,5 +53,17 @@ public abstract class AbstractPerson {
 
     public void setPhoneNumbers(Array<String> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
+    }
+
+    public String getPhoneNumbersString() {
+        StringBuilder sb = new StringBuilder();
+        int size = phoneNumbers.size();
+        for (int i = 0; i < size; i++) {
+            sb.append(phoneNumbers.get(i));
+            if (i < size - 1) {
+                sb.append(",");
+            }
+        }
+        return sb.toString();
     }
 }

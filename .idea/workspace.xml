@@ -5,53 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b180b4c-d39a-467e-8543-d8013a39a8a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/ArrayInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Collection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Iterable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Iterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/StackInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Entities/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONTrain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Visitor/EmployeeVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Visitor/PassengerContactVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Visitor/PassengerVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Visitor/PersonVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractVagon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Brand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/ChargeVagon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Classe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Luggage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerVagon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Seat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Train.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Server/RMIServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/EmployeeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/PassengerContactEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/PassengerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/StationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/TrainEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/EmployeeRepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerContactRepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerRepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/UserRepoInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/LoginInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/test/java/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModuloGestionCentral/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SistemaAE/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Entities/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONTrain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +50,8 @@
       <list>
         <option value="Enum" />
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -93,7 +80,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/AstralExpress",
+    "last_opened_file_path": "C:/Users/caman/Downloads/Collage-Al-Paladar-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -106,6 +93,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Model.Interfaces.CRUD" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -127,6 +119,12 @@
       <workItem from="1712670201746" duration="2917000" />
       <workItem from="1712682582089" duration="7878000" />
       <workItem from="1712692618336" duration="7818000" />
+      <workItem from="1712793439267" duration="1257000" />
+      <workItem from="1712854520200" duration="232000" />
+      <workItem from="1712861426267" duration="81000" />
+      <workItem from="1712861517898" duration="8038000" />
+      <workItem from="1712871899060" duration="2862000" />
+      <workItem from="1712880220900" duration="2317000" />
     </task>
     <servers />
   </component>

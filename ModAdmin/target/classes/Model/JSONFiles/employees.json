@@ -1,0 +1,20 @@
+[
+  {
+    "idPerson": "E1",
+    "name": "admin1",
+    "lastNames": "admin1",
+    "phoneNumbers": "123,123,123"
+  },
+  {
+    "idPerson": "E2",
+    "name": "admin2",
+    "lastNames": "admin2",
+    "phoneNumbers": "123,123,123"
+  },
+  {
+    "idPerson": "E3",
+    "name": "admin3",
+    "lastNames": "admin3",
+    "phoneNumbers": "123,123,123"
+  }
+]

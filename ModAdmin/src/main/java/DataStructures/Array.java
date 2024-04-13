@@ -396,4 +396,8 @@ public class Array<E> implements ArrayInterface<E> {
             action.apply(elements[i]);
         }
     }
+
+    public E[] toPrimitiveArray(){
+        return elements;
+    }
 }

@@ -1,6 +1,8 @@
 package Model.Domain;
 
-public class Luggage {
+import java.io.Serializable;
+
+public class Luggage implements Serializable {
     private String idPassenger;
     private String idVagon;
 

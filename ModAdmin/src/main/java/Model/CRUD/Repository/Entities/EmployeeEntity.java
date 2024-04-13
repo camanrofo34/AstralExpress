@@ -1,24 +1,24 @@
 package Model.CRUD.Repository.Entities;
 
 public class EmployeeEntity {
-    private String idEmployee;
+    private String idPerson;
     private String names;
     private String lastNames;
     private String phoneNumbers;
 
     public EmployeeEntity(String idEmployee, String names, String lastNames, String phoneNumbers) {
-        this.idEmployee = idEmployee;
+        this.idPerson = idEmployee;
         this.names = names;
         this.lastNames = lastNames;
         this.phoneNumbers = phoneNumbers;
     }
 
-    public String getIdEmployee() {
-        return idEmployee;
+    public String getIdPerson() {
+        return idPerson;
     }
 
-    public void setIdEmployee(String idEmployee) {
-        this.idEmployee = idEmployee;
+    public void setIdPerson(String idPerson) {
+        this.idPerson = idPerson;
     }
 
     public String getNames() {

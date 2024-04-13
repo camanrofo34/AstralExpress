@@ -6,8 +6,9 @@ import DataStructures.Interfaces.List;
 import Model.Domain.AbstractClasses.AbstractVagon;
 
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Train {
+public class Train implements Serializable {
     private String trainName;
     private String idTrain;
     private int capacity;
@@ -26,7 +27,6 @@ public class Train {
 
     public Train(String trainName, int capacity, Brand brand) throws IOException {
         this.trainName = trainName;
-        this.idTrain = actualTrainId();
         this.capacity = capacity;
         this.mileage = 0.0;
         this.brand = brand;

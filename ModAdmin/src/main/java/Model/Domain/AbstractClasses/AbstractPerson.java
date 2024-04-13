@@ -1,9 +1,10 @@
 package Model.Domain.AbstractClasses;
 
 import DataStructures.Array;
-import DataStructures.Interfaces.Iterator;
 
-public abstract class AbstractPerson {
+import java.io.Serializable;
+
+public abstract class AbstractPerson implements Serializable {
     protected String idPerson;
     protected String names;
     protected String lastNames;

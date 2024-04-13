@@ -1,6 +1,8 @@
 package Model.Domain;
 
-public enum Brand {
+import java.io.Serializable;
+
+public enum Brand implements Serializable {
     Mercedez_Benz,
     Arnold;
 

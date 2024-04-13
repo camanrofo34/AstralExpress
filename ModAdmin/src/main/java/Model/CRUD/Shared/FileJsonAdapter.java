@@ -1,6 +1,8 @@
 package Model.CRUD.Shared;
 
+import DataStructures.Array;
 import DataStructures.ArrayList;
+import DataStructures.Interfaces.Iterator;
 import DataStructures.Interfaces.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -44,14 +46,18 @@ public class FileJsonAdapter<E> implements FileJsonInterface<E> {
     public Boolean writeObjects(String pathFile, List<E> objects) {
         boolean successful = false;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
+        Array<E> array = new Array<>(objects.size());
+        Iterator<E> it = objects.iterator();
+        while (it.hasNext()) {
+            array.add(it.next());
+        }
         try (FileWriter writer = new FileWriter(pathFile)) {
             synchronized (fileWriterLock) {
                 // Limpiar el archivo (eliminar todos los objetos)
                 writer.write(""); // Esto eliminará todo el contenido del archivo
 
                 // Escribir los nuevos objetos
-                gson.toJson(objects.toArray(), writer);
+                gson.toJson(array.toPrimitiveArray(), writer);
 
                 successful = true;
             }

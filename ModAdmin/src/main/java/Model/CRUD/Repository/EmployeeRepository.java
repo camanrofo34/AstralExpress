@@ -46,8 +46,8 @@ public class EmployeeRepository implements EmployeeRepoInterface {
         Iterator<EmployeeEntity> it = employees.iterator();
         while (it.hasNext()){
             EmployeeEntity employeeEntity = it.next();
-            if (employeeEntity.getIdEmployee().equals(idEmployee)){
-                return new Employee(employeeEntity.getIdEmployee(), employeeEntity.getNames(), employeeEntity.getLastNames(),
+            if (employeeEntity.getIdPerson().equals(idEmployee)){
+                return new Employee(employeeEntity.getIdPerson(), employeeEntity.getNames(), employeeEntity.getLastNames(),
                         new Array<String> (employeeEntity.getPhoneNumbers().split(",")));
             }
         }
@@ -55,8 +55,7 @@ public class EmployeeRepository implements EmployeeRepoInterface {
     }
 
     private List<EmployeeEntity> getEmployeeEntityList() {
-        List<EmployeeEntity> employees = fileJson.getObjects(pathFile, EmployeeEntity[].class);
-        return employees;
+        return fileJson.getObjects(pathFile, EmployeeEntity[].class);
     }
 
     public List<Employee> getEmployees (){
@@ -65,7 +64,7 @@ public class EmployeeRepository implements EmployeeRepoInterface {
         Iterator<EmployeeEntity> it = employees.iterator();
         while (it.hasNext()){
             EmployeeEntity employeeEntity = it.next();
-            employeesList.add(new Employee(employeeEntity.getIdEmployee(), employeeEntity.getNames(), employeeEntity.getLastNames(),
+            employeesList.add(new Employee(employeeEntity.getIdPerson(), employeeEntity.getNames(), employeeEntity.getLastNames(),
                     new Array<String> (employeeEntity.getPhoneNumbers().split(","))));
         }
         return employeesList;

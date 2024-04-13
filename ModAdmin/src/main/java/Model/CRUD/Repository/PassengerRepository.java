@@ -25,7 +25,7 @@ public class PassengerRepository implements PassengerRepoInterface {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
         PassengerContact passengerContact = passenger.getPassengerContact();
-        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
+        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
         passengerContactRepository.insert(passengerContact);
         passengers.add(passengerEntity);
         return fileJson.writeObjects(pathFile, passengers);
@@ -36,7 +36,7 @@ public class PassengerRepository implements PassengerRepoInterface {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
         PassengerContact passengerContact = passenger.getPassengerContact();
-        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
+        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
         passengerContactRepository.delete(passengerContact);
         passengers.remove(passengerEntity);
         return fileJson.writeObjects(pathFile, passengers);
@@ -46,11 +46,15 @@ public class PassengerRepository implements PassengerRepoInterface {
     public Boolean update(Passenger passenger) {
         ArrayList<PassengerEntity> passengers = (ArrayList<PassengerEntity>) fileJson.getObjects(pathFile, PassengerEntity[].class);
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
-        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
+        PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
         passengerContactRepository.update(passenger.getPassengerContact());
-        int index = passengers.indexOf(passengerEntity);
-        passengers.set(index, passengerEntity);
-        return fileJson.writeObjects(pathFile, passengers);
+        for (int i=0; i<passengers.size(); i++){
+            if (passengers.get(i).getIdPassenger().equals(passenger.getIdPerson())){
+                passengers.set(i, passengerEntity);
+                return fileJson.writeObjects(pathFile, passengers);
+            }
+        }
+        return false;
     }
 
     @Override

@@ -24,6 +24,10 @@ public class RMIServer {
         this.url = "//" + ip + ":" + port + "/" + serviceName;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
     public boolean deploy() {
         if (ip == null || port == null || serviceName == null) return false;
 

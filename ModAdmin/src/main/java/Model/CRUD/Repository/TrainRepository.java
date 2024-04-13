@@ -20,28 +20,32 @@ public class TrainRepository implements TrainRepoInterface {
     }
 
     @Override
-    public Boolean insert(TrainEntity train){
+    public Boolean insert(Train train){
         List<TrainEntity> trains = fileJson.getObjects(pathFile, TrainEntity[].class);
-        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand());
+        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString());
         trains.add(trainEntity);
         return fileJson.writeObjects(pathFile, trains);
     }
 
     @Override
-    public Boolean delete(TrainEntity train){
+    public Boolean delete(Train train){
         List<TrainEntity> trains = fileJson.getObjects(pathFile, TrainEntity[].class);
-        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand());
+        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString());
         trains.remove(trainEntity);
         return fileJson.writeObjects(pathFile, trains);
     }
 
     @Override
-    public Boolean update(TrainEntity train){
+    public Boolean update(Train train){
         ArrayList<TrainEntity> trains = (ArrayList<TrainEntity>) fileJson.getObjects(pathFile, TrainEntity[].class);
-        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand());
-        int index = trains.indexOf(trainEntity);
-        trains.set(index, trainEntity);
-        return fileJson.writeObjects(pathFile, trains);
+        TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString());
+        for (int i=0; i<trains.size(); i++){
+            if (trains.get(i).getIdTrain().equals(train.getIdTrain())){
+                trains.set(i, trainEntity);
+                return fileJson.writeObjects(pathFile, trains);
+            }
+        }
+        return false;
     }
 
     @Override
@@ -51,7 +55,7 @@ public class TrainRepository implements TrainRepoInterface {
         while (it.hasNext()){
             TrainEntity trainEntity = it.next();
             if (trainEntity.getIdTrain().equals(idTrain)){
-                return new Train(trainEntity.getTrainName(), trainEntity.getIdTrain(), Integer.parseInt(trainEntity.getCapacity()), Integer.parseInt(trainEntity.getMileage()), Brand.valueOf(trainEntity.getBrand()));
+                return new Train(trainEntity.getTrainName(), trainEntity.getIdTrain(), Integer.parseInt(trainEntity.getCapacity()), Float.parseFloat(trainEntity.getMileage()), Brand.valueOf(trainEntity.getBrand()));
             }
         }
         return Train.getNullTrain();
@@ -64,7 +68,7 @@ public class TrainRepository implements TrainRepoInterface {
         Iterator<TrainEntity> it = trains.iterator();
         while (it.hasNext()){
             TrainEntity trainEntity = it.next();
-            trainsList.add(new Train(trainEntity.getTrainName(), trainEntity.getIdTrain(), Integer.parseInt(trainEntity.getCapacity()), Integer.parseInt(trainEntity.getMileage()), Brand.valueOf(trainEntity.getBrand())));
+            trainsList.add(new Train(trainEntity.getTrainName(), trainEntity.getIdTrain(), Integer.parseInt(trainEntity.getCapacity()), Float.parseFloat(trainEntity.getMileage()), Brand.valueOf(trainEntity.getBrand())));
         }
         return trainsList;
     }

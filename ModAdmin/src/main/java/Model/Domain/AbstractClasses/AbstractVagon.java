@@ -1,6 +1,8 @@
 package Model.Domain.AbstractClasses;
 
-public abstract class AbstractVagon {
+import java.io.Serializable;
+
+public abstract class AbstractVagon implements Serializable {
     protected String idVagon;
 
     protected AbstractVagon() {

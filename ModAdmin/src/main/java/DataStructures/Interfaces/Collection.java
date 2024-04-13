@@ -1,6 +1,8 @@
 package DataStructures.Interfaces;
 
-public interface Collection<E> extends Iterable<E> {
+import java.io.Serializable;
+
+public interface Collection<E> extends Iterable<E>, Cloneable, Serializable {
     /**
      * Removes all elements from the collection.
      *

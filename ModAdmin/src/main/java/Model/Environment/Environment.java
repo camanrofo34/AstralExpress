@@ -17,7 +17,7 @@ public class Environment {
         loadVariables(getPathProperties());
     }
     private String getPathProperties() {
-        return "src/main/resources/Model/server.properties";
+        return "ModAdmin\\src\\main\\resources\\Model\\server.properties";
     }
 
     private void loadVariables(String path) {
@@ -27,11 +27,12 @@ public class Environment {
             String[] port = (properties.getProperty("PORTS")).split(",");
             String[] service = (properties.getProperty("SERVICES")).split(",");
 
-            variables.add("IP,"+(String) properties.get("IP"));
-
-            variables.add("PORT0," + port[0]);
-            variables.add("SERVICE0," + service[0]);
-            variables.add("JSON-PATH," + properties.getProperty("JSON-PATH"));
+            variables.add((String) properties.get("IP"));
+            variables.add(port[0]);
+            variables.add(service[0]);
+            variables.add(properties.getProperty("JSON-PATH"));
+            variables.add(port[1]);
+            variables.add(service[1]);
         } catch (Exception exception) {
             Logger.getLogger("Server").log(Level.WARNING, exception.getMessage(), exception);
         }
@@ -43,6 +44,6 @@ public class Environment {
         return Environment.instance;
     }
 
-    public Map<String, String> getVariables() { return variables; }
+    public ArrayList<String> getVariables() { return variables; }
 }
 

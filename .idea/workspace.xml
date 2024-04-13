@@ -5,40 +5,188 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b180b4c-d39a-467e-8543-d8013a39a8a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/EmployeeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/PassengerContactEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/PassengerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/StationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/TrainEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/EmployeeRepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerContactRepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerRepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/UserRepoInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/LoginInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/test/java/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModuloGestionCentral/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SistemaAE/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Graph/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/PriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/TicketSearchInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/TrainManagerClientInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/UserManagerClientInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToServer/TicketBuyInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToServer/TrainManagerServerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToServer/UserManagerServerInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/LoginModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/TrainManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/UserManagerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/TrainModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/TrainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/TrainsManagerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/employees.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/trains.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/test/java/Model/Interfaces/Communication/SendToClient/LoginInterfaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModAdmin/src/test/java/Model/Interfaces/Communication/SendToClient/TrainManagerInterfaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModTicket/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModTicket/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModValidation/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ModValidation/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Entities/UserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONTrain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/JSONUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/ArrayInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/ArrayInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Collection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/StackInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Stack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/EmployeeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractVagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractVagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Classe.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Classe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Luggage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Luggage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerVagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerVagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Server/RMIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Server/RMIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/LogInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/LogInService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/src/test/java/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/src/main/java/com/astralexpress/controlador/BusquedaBoletoControlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/src/main/java/com/astralexpress/model/BusquedaBoletoModelo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/src/main/java/com/astralexpress/view/BusquedaBoletoVista.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/src/main/java/com/astralexpress/view/BusquedaBoletoVista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/controlador/BusquedaBoletoControlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/model/BoletoJDBC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/view/BusquedaBoletoVista$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/view/BusquedaBoletoVista$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/view/BusquedaBoletoVista$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/classes/com/astralexpress/view/BusquedaBoletoVista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloBusquedaBoleto/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/ModuloGestionCentral.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/controlador/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/controlador/ModuloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/controlador/TrainsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/controlador/UsersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/AbstractModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/LoginModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/ModuloModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/RMISettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/TrainsModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/UsersModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/messenger/Messenger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/modelo/observer/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/LoginView.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/LoginView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/ModuloView.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/ModuloView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/TrainsView.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/TrainsView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/UsersView.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloGestionCentral/src/main/java/org/astralexpress/vista/UsersView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloMostrarRutas/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloMostrarRutas/src/main/java/com/mycompany/modulomostrarrutas/ModuloMostrarRutas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloVentaBoleto/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuloVentaBoleto/src/main/java/com/mycompany/ModuloVentaBoleto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/SistemaAE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/artifacts/SistemaAE_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/out/artifacts/SistemaAE_jar/SistemaAE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/controlador/AstralExpressController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/chargeVagon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/employee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/idTrain.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/luggage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/passenger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/passengerContact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/passengerVagon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/seat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/trains.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/database/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/AstralExpressModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/AbstractPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/AbstractVagon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Brand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/CentralManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/CentralManagerInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/ChargeVagon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Classe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Luggage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Passenger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/PassengerContact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/PassengersVagon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Seat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Station.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/Train.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/messenger/Messenger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/observer/Observer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/ChargeVagonEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/ChargeVagonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/EmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/LuggageEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/LuggageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengerContactEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengerContactRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengerEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengersVagonEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/PassengersVagonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/SeatEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/SeatRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/StationEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/StationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/TicketEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/TicketRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/TrainEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/TrainRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/modelo/repositorio/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/shared/FileJsonAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/shared/FileJsonInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaAE/src/main/java/org/astralexpress/vista/ServerView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +198,9 @@
       <list>
         <option value="Enum" />
         <option value="package-info" />
-        <option value="Class" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,12 +224,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "JUnit.LoginInterfaceTest.login.executor": "Run",
+    "JUnit.TrainManagerInterfaceTest.addTrain.executor": "Run",
+    "JUnit.TrainManagerInterfaceTest.getTrains.executor": "Run",
+    "JUnit.TrainManagerInterfaceTest.removeTrain.executor": "Run",
+    "JUnit.TrainManagerInterfaceTest.updateTrain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/caman/Downloads/Collage-Al-Paladar-main",
+    "last_opened_file_path": "D:/AstralExpress",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,15 +252,103 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="Model.Interfaces.CRUD" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Model.Interfaces.Communication.SendToClient" />
+      <recent name="Model.Services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ModAdmin" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainManagerInterfaceTest.addTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModAdmin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
+      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
+      <option name="METHOD_NAME" value="addTrain" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainManagerInterfaceTest.getTrains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModAdmin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
+      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
+      <option name="METHOD_NAME" value="getTrains" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainManagerInterfaceTest.removeTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModAdmin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
+      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
+      <option name="METHOD_NAME" value="removeTrain" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainManagerInterfaceTest.updateTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ModAdmin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
+      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
+      <option name="METHOD_NAME" value="updateTrain" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TrainManagerInterfaceTest.updateTrain" />
+        <item itemvalue="JUnit.TrainManagerInterfaceTest.removeTrain" />
+        <item itemvalue="JUnit.TrainManagerInterfaceTest.addTrain" />
+        <item itemvalue="JUnit.TrainManagerInterfaceTest.getTrains" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
       </set>
     </attachedChunks>
   </component>
@@ -124,7 +370,10 @@
       <workItem from="1712861426267" duration="81000" />
       <workItem from="1712861517898" duration="8038000" />
       <workItem from="1712871899060" duration="2862000" />
-      <workItem from="1712880220900" duration="2317000" />
+      <workItem from="1712880220900" duration="11626000" />
+      <workItem from="1712926124528" duration="6878000" />
+      <workItem from="1712949274311" duration="5351000" />
+      <workItem from="1712973472194" duration="746000" />
     </task>
     <servers />
   </component>

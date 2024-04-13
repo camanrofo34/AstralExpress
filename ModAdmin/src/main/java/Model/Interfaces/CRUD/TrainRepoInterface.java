@@ -7,11 +7,11 @@ import Model.Domain.Train;
 import java.rmi.Remote;
 
 public interface TrainRepoInterface extends Remote {
-    Boolean insert(TrainEntity train) throws Exception;
+    Boolean insert(Train train) throws Exception;
 
-    Boolean delete(TrainEntity train) throws Exception;
+    Boolean delete(Train train) throws Exception;
 
-    Boolean update(TrainEntity train) throws Exception;
+    Boolean update(Train train) throws Exception;
 
     Train getTrain(String idTrain) throws Exception;
 

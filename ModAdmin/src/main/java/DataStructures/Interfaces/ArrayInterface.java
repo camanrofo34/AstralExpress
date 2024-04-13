@@ -1,5 +1,6 @@
 package DataStructures.Interfaces;
 
+import java.io.Serializable;
 import java.util.function.Predicate;
 
 public interface ArrayInterface<E> extends Collection<E>{

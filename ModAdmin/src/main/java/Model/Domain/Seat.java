@@ -1,6 +1,8 @@
 package Model.Domain;
 
-public class Seat {
+import java.io.Serializable;
+
+public class Seat implements Serializable {
     private String idSeat;
     private Classe Class;
 

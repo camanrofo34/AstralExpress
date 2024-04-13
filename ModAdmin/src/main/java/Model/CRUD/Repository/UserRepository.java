@@ -27,7 +27,7 @@ public class UserRepository implements UserRepoInterface {
         UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson);
         users.add(userEntity);
         if (idPerson.startsWith("E")) {
-            EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
+            EmployeeRepository employeeRepository = new EmployeeRepository("src/main/resources/Model/JSONFiles/employees.json");
             employeeRepository.insert((Employee) user.getPerson());
         } else if (idPerson.startsWith("PC")) {
             PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
@@ -89,17 +89,17 @@ public class UserRepository implements UserRepoInterface {
         for (int i = 0; i < users.size(); i++) {
             UserEntity userEntity = users.get(i);
             if (userEntity.getUsername().equals(username)) {
-                String idPerson = users.get(i).getIdPerson();
+                String idPerson = userEntity.getIdPerson();
                 if (idPerson.startsWith("E")) {
-                    EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
+                    EmployeeRepository employeeRepository = new EmployeeRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\employees.json");
                     Employee employee = employeeRepository.getEmployee(idPerson);
                     return new User(userEntity.getUsername(), userEntity.getPassword(), employee);
                 } else if (idPerson.startsWith("PC")) {
-                    PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
+                    PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
                     PassengerContact passengerContact = passengerContactRepository.getPassengerContact(idPerson);
                     return new User(userEntity.getUsername(), userEntity.getPassword(), passengerContact);
                 } else if (idPerson.startsWith("P")) {
-                    PassengerRepository passengerRepository = new PassengerRepository("passengers.json");
+                    PassengerRepository passengerRepository = new PassengerRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengers.json");
                     Passenger passenger = passengerRepository.getPassenger(idPerson);
                     return new User(userEntity.getUsername(), userEntity.getPassword(), passenger);
                 }

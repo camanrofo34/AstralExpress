@@ -55,7 +55,7 @@ The Passenger Train Management System automates the control of loading and unloa
   - Java.
 
 - **Design Pattern:**
-  - Model-View-Controller (MVC) for each module.
+  - Model-View-controller (MVC) for each module.
 
 - **Development Methodology:**
   - Extreme Programming.

@@ -38,10 +38,15 @@ public class PassengerContactRepository implements PassengerContactRepoInterface
     @Override
     public Boolean update(PassengerContact passengerContact){
         ArrayList<PassengerContactEntity> passengerContacts = (ArrayList<PassengerContactEntity>) getPassengerContactEntityList();
-        PassengerContactEntity passengerContactEntity = new PassengerContactEntity(passengerContact.getIdPerson(), passengerContact.getNames(), passengerContact.getLastNames(), passengerContact.getPhoneNumbersString());
-        int index = passengerContacts.indexOf(passengerContactEntity);
-        passengerContacts.set(index, passengerContactEntity);
-        return fileJson.writeObjects(pathFile, passengerContacts);
+        PassengerContactEntity passengerContactEntity = new PassengerContactEntity(passengerContact.getIdPerson(),
+                passengerContact.getNames(), passengerContact.getLastNames(), passengerContact.getPhoneNumbersString());
+        for (int i=0; i<passengerContacts.size(); i++){
+            if (passengerContacts.get(i).getIdPassenger().equals(passengerContact.getIdPerson())){
+                passengerContacts.set(i, passengerContactEntity);
+                return fileJson.writeObjects(pathFile, passengerContacts);
+            }
+        }
+        return false;
     }
 
     @Override

@@ -2,7 +2,9 @@ package Model.Domain;
 
 import Model.Domain.AbstractClasses.AbstractVagon;
 
-public class Ticket {
+import java.io.Serializable;
+
+public class Ticket implements Serializable {
     private Train train;
     private AbstractVagon vagon;
     private Seat seat;
@@ -21,15 +23,7 @@ public class Ticket {
         this.Value = Value;
     }
 
-    public static Ticket returnNullTicket() {
-        return new Ticket(Train.getNullTrain(),
-                PassengerVagon.returnNullPassengersVagon(),
-                Seat.returnNullSeat(),
-                Station.returnNullStation(),
-                Station.returnNullStation(),
-                Passenger.returnNullPassenger(),
-                0.0);
-    }
+
 
     public Train getTrain() {
         return train;

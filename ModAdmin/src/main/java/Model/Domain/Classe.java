@@ -1,6 +1,8 @@
 package Model.Domain;
 
-public enum Classe {
+import java.io.Serializable;
+
+public enum Classe implements Serializable {
     Estandar(0), Ejecutivo(1), Premium(2);
 
     private int prioridad;

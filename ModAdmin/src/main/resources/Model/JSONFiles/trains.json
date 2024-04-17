@@ -1,30 +1,16 @@
 [
   {
-    "trainName": "A",
+    "trainName": "The Polar Express",
     "idTrain": "1",
-    "capacity": "20",
+    "capacity": "100",
     "mileage": "0",
     "brand": "Mercedez_Benz"
   },
   {
-    "trainName": "B",
+    "trainName": "T3",
     "idTrain": "2",
-    "capacity": "26",
-    "mileage": "0.0",
-    "brand": "Arnold"
-  },
-  {
-    "trainName": "C",
-    "idTrain": "3",
-    "capacity": "24",
-    "mileage": "0.0",
-    "brand": "Mercedez_Benz"
-  },
-  {
-    "trainName": "T4",
-    "idTrain": "4",
     "capacity": "20",
-    "mileage": "21.2",
+    "mileage": "0.0",
     "brand": "Mercedez_Benz"
   }
 ]

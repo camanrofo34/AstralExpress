@@ -1,9 +1,5 @@
 package Model.CRUD.Repository.Entities;
 
-import DataStructures.ArrayList;
-import Model.Domain.AbstractClasses.AbstractVagon;
-import Model.Domain.Brand;
-
 public class TrainEntity {
     private String trainName;
     private String idTrain;

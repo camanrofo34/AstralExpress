@@ -1,6 +1,6 @@
 package Model.CRUD.Shared;
 
-import DataStructures.Interfaces.List;
+import dataStructures.Interfaces.List;
 
 public interface FileJsonInterface<E>{
 

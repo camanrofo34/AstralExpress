@@ -1,7 +1,7 @@
 package Model.Services;
 
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.List;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.TrainRepository;
 import Model.Domain.Train;
 import Model.Environment.Environment;

@@ -1,7 +1,7 @@
 package Model.Services;
 
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.List;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.List;
 import Model.Domain.User;
 import Model.Environment.Environment;
 import Model.Interfaces.Communication.SendToClient.UserManagerClientInterface;
@@ -25,6 +25,7 @@ public class UserManagerService extends UnicastRemoteObject implements UserManag
         ArrayList<String> properties = Environment.getInstance().getVariables();
         jsonUsersPath = properties.get(3) + "users.json";
     }
+
     @Override
     public List<User> getUsers() throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);

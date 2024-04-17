@@ -1,8 +1,8 @@
 package Model.CRUD.Repository;
 
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.Iterator;
-import DataStructures.Interfaces.List;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.TrainEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;
@@ -31,7 +31,7 @@ public class TrainRepository implements TrainRepoInterface {
     public Boolean delete(Train train){
         List<TrainEntity> trains = fileJson.getObjects(pathFile, TrainEntity[].class);
         TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString());
-        trains.remove(trainEntity);
+        trains.remove(e-> e.getIdTrain().equals(trainEntity.getIdTrain()));
         return fileJson.writeObjects(pathFile, trains);
     }
 

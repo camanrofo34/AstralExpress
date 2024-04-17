@@ -1,5 +1,5 @@
 package Model.Services;
-import DataStructures.ArrayList;
+import dataStructures.ArrayList;
 import Model.CRUD.Repository.UserRepository;
 import Model.Domain.User;
 import Model.Environment.Environment;
@@ -14,6 +14,8 @@ public class LogInService extends UnicastRemoteObject implements LoginInterface 
     @Serial
     private static final long serialVersionUID = 1L;
 
+    public static User loggedUser;
+
     private final String jsonUsersPath;
 
     public LogInService() throws RemoteException {
@@ -25,7 +27,12 @@ public class LogInService extends UnicastRemoteObject implements LoginInterface 
     @Override
     public Boolean login(String user, String password) throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);
-        User userToLogIn = userRepo.getUser(user);
-        return userToLogIn.getPassword().equals(password);
+        loggedUser = userRepo.getUser(user);
+        return loggedUser.getPassword().equals(password);
+    }
+
+    @Override
+    public User getUser() throws Exception {
+        return loggedUser;
     }
 }

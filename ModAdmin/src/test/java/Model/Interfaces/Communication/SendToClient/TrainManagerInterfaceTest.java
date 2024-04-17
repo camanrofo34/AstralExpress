@@ -1,13 +1,11 @@
 package Model.Interfaces.Communication.SendToClient;
 
-import DataStructures.Interfaces.List;
+import dataStructures.Interfaces.List;
 import Model.Domain.Brand;
 import Model.Domain.Train;
 import Model.Interfaces.Communication.SendToServer.TrainManagerServerInterface;
 import Model.Services.TrainManagerService;
 import org.junit.jupiter.api.Test;
-
-import java.rmi.RemoteException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

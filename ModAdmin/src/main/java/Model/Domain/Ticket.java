@@ -13,9 +13,8 @@ public class Ticket implements Serializable {
     private Passenger passenger;
     private double Value;
 
-    public Ticket(Train train, PassengerVagon vagon, Seat seat, Station departureStation, Station arrivalStation, Passenger passenger, double Value) {
+    public Ticket(Train train,  Seat seat, Station departureStation, Station arrivalStation, Passenger passenger, double Value) {
         this.train = train;
-        this.vagon = vagon;
         this.seat = seat;
         this.departureStation = departureStation;
         this.arrivalStation = arrivalStation;

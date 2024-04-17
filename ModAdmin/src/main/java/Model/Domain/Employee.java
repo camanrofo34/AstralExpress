@@ -1,6 +1,6 @@
 package Model.Domain;
 
-import DataStructures.Array;
+import dataStructures.Array;
 import Model.Domain.AbstractClasses.AbstractPerson;
 
 public class Employee extends AbstractPerson {

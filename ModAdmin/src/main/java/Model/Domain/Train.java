@@ -1,8 +1,8 @@
 package Model.Domain;
 
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.Iterator;
-import DataStructures.Interfaces.List;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 import Model.Domain.AbstractClasses.AbstractVagon;
 
 import java.io.IOException;

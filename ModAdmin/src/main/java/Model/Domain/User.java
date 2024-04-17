@@ -9,14 +9,17 @@ public class User implements Serializable {
     private String password;
     private AbstractPerson person;
 
-    public User(String username, String password, AbstractPerson person) {
+    private Boolean isAdmin;
+
+    public User(String username, String password, Boolean isAdmin, AbstractPerson person) {
         this.username = username;
         this.password = password;
+        this.isAdmin = isAdmin;
         this.person = person;
     }
 
     public static User getNullUser() {
-        return new User("", "", new AbstractPerson() {
+        return new User("", "", false, new AbstractPerson() {
         });
     }
 
@@ -42,6 +45,14 @@ public class User implements Serializable {
 
     public void setPerson(AbstractPerson person) {
         this.person = person;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
 }

@@ -1,6 +1,6 @@
 package Model.Interfaces.CRUD;
 
-import DataStructures.Interfaces.List;
+import dataStructures.Interfaces.List;
 import Model.Domain.User;
 
 import java.rmi.Remote;

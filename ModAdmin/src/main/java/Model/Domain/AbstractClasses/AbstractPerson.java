@@ -1,6 +1,6 @@
 package Model.Domain.AbstractClasses;
 
-import DataStructures.Array;
+import dataStructures.Array;
 
 import java.io.Serializable;
 

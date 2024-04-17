@@ -1,7 +1,7 @@
 package Model.CRUD.Repository;
 
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.List;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.UserEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;
@@ -24,7 +24,7 @@ public class UserRepository implements UserRepoInterface {
     public Boolean insert(User user) {
         List<UserEntity> users = getUserEntityList();
         String idPerson = user.getPerson().getIdPerson();
-        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson);
+        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson, user.getIsAdmin());
         users.add(userEntity);
         if (idPerson.startsWith("E")) {
             EmployeeRepository employeeRepository = new EmployeeRepository("src/main/resources/Model/JSONFiles/employees.json");
@@ -44,7 +44,7 @@ public class UserRepository implements UserRepoInterface {
     public Boolean delete(User user) {
         List<UserEntity> users = getUserEntityList();
         String idPerson = user.getPerson().getIdPerson();
-        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson);
+        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson, user.getIsAdmin());
         users.remove(userEntity);
         if (idPerson.startsWith("E")) {
             EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
@@ -63,7 +63,7 @@ public class UserRepository implements UserRepoInterface {
     public Boolean update(User user) {
         ArrayList<UserEntity> users = (ArrayList<UserEntity>) fileJson.getObjects(pathFile, UserEntity[].class);
         String idPerson = user.getPerson().getIdPerson();
-        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson);
+        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson, user.getIsAdmin());
         for (int i = 0; i < users.size(); i++) {
             if (users.get(i).getIdPerson().equals(idPerson)) {
                 users.set(i, userEntity);
@@ -91,17 +91,17 @@ public class UserRepository implements UserRepoInterface {
             if (userEntity.getUsername().equals(username)) {
                 String idPerson = userEntity.getIdPerson();
                 if (idPerson.startsWith("E")) {
-                    EmployeeRepository employeeRepository = new EmployeeRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\employees.json");
+                    EmployeeRepository employeeRepository = new EmployeeRepository("src\\main\\resources\\Model\\JSONFiles\\employees.json");
                     Employee employee = employeeRepository.getEmployee(idPerson);
-                    return new User(userEntity.getUsername(), userEntity.getPassword(), employee);
+                    return new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), employee);
                 } else if (idPerson.startsWith("PC")) {
-                    PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
+                    PassengerContactRepository passengerContactRepository = new PassengerContactRepository("src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
                     PassengerContact passengerContact = passengerContactRepository.getPassengerContact(idPerson);
-                    return new User(userEntity.getUsername(), userEntity.getPassword(), passengerContact);
+                    return new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), passengerContact);
                 } else if (idPerson.startsWith("P")) {
-                    PassengerRepository passengerRepository = new PassengerRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengers.json");
+                    PassengerRepository passengerRepository = new PassengerRepository("src\\main\\resources\\Model\\JSONFiles\\passengers.json");
                     Passenger passenger = passengerRepository.getPassenger(idPerson);
-                    return new User(userEntity.getUsername(), userEntity.getPassword(), passenger);
+                    return new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), passenger);
                 }
             }
         }
@@ -116,17 +116,17 @@ public class UserRepository implements UserRepoInterface {
             UserEntity userEntity = users.get(i);
             String idPerson = userEntity.getIdPerson();
             if (idPerson.startsWith("E")) {
-                EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
+                EmployeeRepository employeeRepository = new EmployeeRepository("src\\main\\resources\\Model\\JSONFiles\\employees.json");
                 Employee employee = employeeRepository.getEmployee(idPerson);
-                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), employee));
+                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), employee));
             } else if (idPerson.startsWith("PC")) {
                 PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
                 PassengerContact passengerContact = passengerContactRepository.getPassengerContact(idPerson);
-                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), passengerContact));
+                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(),userEntity.getIsAdmin(), passengerContact));
             } else if (idPerson.startsWith("P")) {
                 PassengerRepository passengerRepository = new PassengerRepository("passengers.json");
                 Passenger passenger = passengerRepository.getPassenger(idPerson);
-                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), passenger));
+                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), passenger));
             }
         }
         return usersList;

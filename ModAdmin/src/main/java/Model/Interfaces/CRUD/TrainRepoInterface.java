@@ -1,7 +1,6 @@
 package Model.Interfaces.CRUD;
 
-import DataStructures.Interfaces.List;
-import Model.CRUD.Repository.Entities.TrainEntity;
+import dataStructures.Interfaces.List;
 import Model.Domain.Train;
 
 import java.rmi.Remote;

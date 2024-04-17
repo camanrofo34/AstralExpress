@@ -1,9 +1,9 @@
 package Model.CRUD.Shared;
 
-import DataStructures.Array;
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.Iterator;
-import DataStructures.Interfaces.List;
+import dataStructures.Array;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

@@ -1,9 +1,9 @@
 package Model.CRUD.Repository;
 
-import DataStructures.Array;
-import DataStructures.ArrayList;
-import DataStructures.Interfaces.Iterator;
-import DataStructures.Interfaces.List;
+import dataStructures.Array;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.PassengerEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;

@@ -5,9 +5,12 @@ public class UserEntity {
     private String password;
     private String idPerson;
 
-    public UserEntity(String username, String password, String idPerson) {
+    private Boolean isAdmin;
+
+    public UserEntity(String username, String password, String idPerson, Boolean isAdmin) {
         this.username = username;
         this.password = password;
+        this.isAdmin = isAdmin;
         this.idPerson = idPerson;
     }
 
@@ -33,5 +36,13 @@ public class UserEntity {
 
     public void setIdPerson(String idPerson) {
         this.idPerson = idPerson;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

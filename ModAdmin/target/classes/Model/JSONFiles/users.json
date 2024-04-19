@@ -1,20 +1,26 @@
 [
   {
-    "username": "Camilo",
-    "password": "delomejor1",
-    "isAdmin": false,
-    "idPerson": "E1"
-  },
-  {
-    "username": "Diego",
-    "password": "root",
-    "isAdmin": false,
-    "idPerson": "E2"
-  },
-  {
     "username": "root",
     "password": "admin",
-    "isAdmin": true,
-    "idPerson": "E3"
+    "idPerson": "E0",
+    "isAdmin": true
+  },
+  {
+    "username": "camanrofo",
+    "password": "1097096174",
+    "idPerson": "E3",
+    "isAdmin": false
+  },
+  {
+    "username": "drift",
+    "password": "delomejor1",
+    "idPerson": "E4",
+    "isAdmin": false
+  },
+  {
+    "username": "carl",
+    "password": "delomejor34",
+    "idPerson": "E5",
+    "isAdmin": false
   }
 ]

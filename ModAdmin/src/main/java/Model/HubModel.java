@@ -10,10 +10,12 @@ public class HubModel {
 
     private final String uri;
     private Messenger messenger;
+    private User user;
 
-    public HubModel(String uri) throws Exception {
+    public HubModel(String uri, User user) throws Exception {
         this.uri = uri;
         messenger = new Messenger("Bienvenido, " + getUser().getUsername() + " !");
+        this.user = user;
     }
 
     public Messenger getMessenger() {

@@ -18,9 +18,15 @@ public class LoginModel {
         LoginInterface loginInterface = (LoginInterface) Naming.lookup(uri);
         return loginInterface.login(user, password);
     }
+
+    public User getUser() throws Exception {
+        LoginInterface loginInterface = (LoginInterface) Naming.lookup(uri);
+        return loginInterface.getUser();
+    }
     public String retunUri(){
         return uri;
     }
+
     public Messenger getMessenger() {
         return messenger;
     }

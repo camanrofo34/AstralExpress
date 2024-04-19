@@ -103,8 +103,6 @@ public class EmployeeView extends Observer<Messenger> {
         jSearch.setText("SEARCH");
         jSearch.addActionListener(event -> fns.get(3).apply(null));
 
-        jButton5.setText("Go back");
-        jButton5.addActionListener(event -> fns.get(4).apply(null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(layout);
@@ -224,7 +222,11 @@ public class EmployeeView extends Observer<Messenger> {
         return jPassword.getText();
     }
 
-    private void chargeTable(List<User> users){
+    public String getSearched(){
+        return jTextField6.getText();
+    }
+
+    public void chargeTable(List<User> users){
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         Iterator<User> it = users.iterator();
@@ -235,4 +237,15 @@ public class EmployeeView extends Observer<Messenger> {
         jTable1.setModel(model);
     }
 
+    public Array<String> getSelectedRow(){
+        int row = jTable1.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        Array<String> data = new Array<>(6);
+        if (row!=-1){
+            for (int i = 0; i < model.getColumnCount(); i++) {
+                data.add((String) model.getValueAt(row, i));
+            }
+        }
+        return data;
+    }
 }

@@ -4,6 +4,8 @@ import Model.Domain.User;
 import Model.Interfaces.Communication.SendToClient.UserManagerClientInterface;
 import Model.Interfaces.Communication.SendToServer.UserManagerServerInterface;
 import Model.Messenger.Messenger;
+import dataStructures.Array;
+import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
 
 import java.rmi.Naming;
@@ -23,12 +25,14 @@ public class EmployeeModel {
 
     public List<User> getEmployees() throws Exception {
         UserManagerClientInterface userManagerClientInterface = (UserManagerClientInterface) Naming.lookup(uri);
-        return userManagerClientInterface.getUsers();
+        List<User> users = userManagerClientInterface.getUsers();
+        users.remove(User::getIsAdmin);
+        return users;
     }
 
-    public Boolean addEmployee(User user) throws Exception {
+    public Boolean addEmployee(String userName, String password, String names, String lastNames, Array<String> phoneNumbers) throws Exception {
         UserManagerServerInterface userManagerClientInterface = (UserManagerServerInterface) Naming.lookup(uri);
-        return userManagerClientInterface.addUser(user);
+        return userManagerClientInterface.addUser(userName, password, names, lastNames, phoneNumbers);
     }
 
     public Boolean editEmployee(User user) throws Exception {

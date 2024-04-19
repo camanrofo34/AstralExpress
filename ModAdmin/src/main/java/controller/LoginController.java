@@ -1,5 +1,6 @@
 package controller;
 
+import Model.Domain.User;
 import Model.HubModel;
 import Model.LoginModel;
 import View.HubView;
@@ -25,7 +26,8 @@ public class LoginController {
             }
             try {
                 if (loginModel.login(user, password)) {
-                    HubModel hubModel = new HubModel(loginModel.retunUri());
+                    User user1 = loginModel.getUser();
+                    HubModel hubModel = new HubModel(loginModel.retunUri(), user1);
                     HubController hubController = new HubController(hubModel, new HubView(hubModel.getMessenger()));
                     hubController.init();
                     loginModel.getMessenger().setMessage("Login successful");

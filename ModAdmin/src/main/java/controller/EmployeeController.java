@@ -1,9 +1,12 @@
 package controller;
 
+import Model.Domain.Employee;
+import Model.Domain.User;
 import Model.EmployeeModel;
 import View.EmployeeView;
 import dataStructures.Array;
 import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 
 import java.util.function.UnaryOperator;
 
@@ -42,16 +45,74 @@ public class EmployeeController {
                             return null;
                         }
                     }
+                    try {
+                        if (employeeModel.addEmployee(user, password, names, lastNames, contactNumbers)){
+                            employeeModel.getMessenger().setMessage("Employee added successfully");
+                        } else {
+                            employeeModel.getMessenger().setMessage("Username already exists");
+                        }
+                        employeeView.chargeTable(employeeModel.getEmployees());
+                    } catch (Exception e) {
+                        employeeModel.getMessenger().setMessage("An error occurred while adding the employee");
+                        throw new RuntimeException(e);
+                    }
                     return null;
-
                 },
                 event -> {
+                    Array<String> data = employeeView.getSelectedRow();
+                    if (!data.isEmpty()){
+                        String id = data.get(0);
+                        String username= data.get(1);
+                        String password = data.get(2);
+                        String names = data.get(3);
+                        String lastNames = data.get(4);
+                        Array<String> contactNumbers = new Array<>(data.get(5).split(","));
+                        User user = new User(username, password, false, new Employee(id, names, lastNames, contactNumbers));
+                        try {
+                            if (employeeModel.deleteEmployee(user)){
+                                employeeModel.getMessenger().setMessage("Employee deleted successfully");
+                                employeeView.chargeTable(employeeModel.getEmployees());
+                            } else {
+                                employeeModel.getMessenger().setMessage("An error occurred while deleting the employee");
+                            }
+                        } catch (Exception e) {
+                            employeeModel.getMessenger().setMessage("An error occurred while deleting the employee");
+                            throw new RuntimeException(e);
+                        }
+                    }
                     return null;
                 },
                 event -> {
+                    Array<String> data = employeeView.getSelectedRow();
+                    String id = data.get(0);
+                    String username= data.get(1);
+                    String password = data.get(2);
+                    String names = data.get(3);
+                    String lastNames = data.get(4);
+                    Array<String> contactNumbers = new Array<>(data.get(5).split(","));
+                    User user = new User(username, password, false, new Employee(id, names, lastNames, contactNumbers));
+                    try {
+                        if(employeeModel.editEmployee(user)){
+                            employeeModel.getMessenger().setMessage("Employee edited successfully");
+                            employeeView.chargeTable(employeeModel.getEmployees());
+                        } else {
+                            employeeModel.getMessenger().setMessage("An error occurred while editing the employee");
+                        }
+                    } catch (Exception e) {
+                        employeeModel.getMessenger().setMessage("An error occurred while editing the employee");
+                        throw new RuntimeException(e);
+                    }
                     return null;
                 },
                 event -> {
+                    String search = employeeView.getSearched();
+                    try {
+                        List<User> employees = employeeModel.getEmployees();
+                        employees.remove(e -> !e.getPerson().getNames().contains(search) && !e.getPerson().getIdPerson().contains(search));
+                        employeeView.chargeTable(employees);
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
                     return null;
                 }
         }), employeeModel.getEmployees());

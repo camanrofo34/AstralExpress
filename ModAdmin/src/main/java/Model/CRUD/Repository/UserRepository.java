@@ -44,10 +44,9 @@ public class UserRepository implements UserRepoInterface {
     public Boolean delete(User user) {
         List<UserEntity> users = getUserEntityList();
         String idPerson = user.getPerson().getIdPerson();
-        UserEntity userEntity = new UserEntity(user.getUsername(), user.getPassword(), idPerson, user.getIsAdmin());
-        users.remove(userEntity);
+        users.remove(e -> e.getIdPerson().equals(idPerson));
         if (idPerson.startsWith("E")) {
-            EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
+            EmployeeRepository employeeRepository = new EmployeeRepository("src/main/resources/Model/JSONFiles/employees.json");
             employeeRepository.delete((Employee) user.getPerson());
         } else if (idPerson.startsWith("PC")) {
             PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
@@ -71,7 +70,7 @@ public class UserRepository implements UserRepoInterface {
             }
         }
         if (idPerson.startsWith("E")) {
-            EmployeeRepository employeeRepository = new EmployeeRepository("employees.json");
+            EmployeeRepository employeeRepository = new EmployeeRepository("src\\main\\resources\\Model\\JSONFiles\\employees.json");
             employeeRepository.update((Employee) user.getPerson());
         } else if (idPerson.startsWith("PC")) {
             PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");

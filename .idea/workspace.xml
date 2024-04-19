@@ -5,140 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b180b4c-d39a-467e-8543-d8013a39a8a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/RailEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/RailRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/StationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/mapRoute/Rail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/mapRoute/TrainRailsMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/HubModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Messenger/Messenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/EmployeeView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/EmployeeView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/HubView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/HubView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/LoginView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/TrainView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/HubController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/graph/MapEdge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/graph/MapGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/map.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/stations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Graph/Graph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/ArrayInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Interfaces/ArrayInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Interfaces/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Iterable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Interfaces/Iterable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/Iterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Interfaces/Iterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Interfaces/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Interfaces/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/PriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/PriorityQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/DataStructures/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/dataStructures/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/TrainEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/TrainEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/Entities/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/PassengerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/TrainRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/CRUD/Shared/FileJsonInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/AbstractClasses/AbstractPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/ChargeVagon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Luggage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/PassengerVagon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/mapRoute/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Environment/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/EmployeeRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/EmployeeRepoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerContactRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerContactRepoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/PassengerRepoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/TrainRepoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/UserRepoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/CRUD/UserRepoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/LoginInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/LoginInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/TrainManagerClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/TrainManagerClientInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/UserManagerClientInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Interfaces/Communication/SendToClient/UserManagerClientInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/LoginModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/LogInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/LogInService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/TrainManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/TrainManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/UserManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/Services/UserManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/TrainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/Model/TrainModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/View/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/View/TrainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/View/TrainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/TrainsManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/java/controller/TrainsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/trains.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/trains.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/JSONFiles/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModAdmin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/test/java/Model/Interfaces/Communication/SendToClient/TrainManagerInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/test/java/Model/Interfaces/Communication/SendToClient/TrainManagerInterfaceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Graph/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/ArrayInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/ArrayInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Collection.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Collection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Iterable.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Iterable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Iterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/Iterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Interfaces/List.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Queue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/EmployeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/Entities/TrainEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/Entities/TrainEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/Entities/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/Entities/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/PassengerContactRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/PassengerContactRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/PassengerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/PassengerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/TrainRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/TrainRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Shared/FileJsonAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Shared/FileJsonAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Shared/FileJsonInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/CRUD/Shared/FileJsonInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/AbstractClasses/AbstractPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/AbstractClasses/AbstractPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/ChargeVagon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Luggage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Passenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Passenger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/PassengerContact.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/PassengerContact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/PassengerVagon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Route.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Ticket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Train.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/Train.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/User$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/User$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Environment/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Environment/Environment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Environment/Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Environment/Logger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/EmployeeRepoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/EmployeeRepoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/PassengerContactRepoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/PassengerContactRepoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/PassengerRepoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/PassengerRepoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/TrainRepoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/TrainRepoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/UserRepoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/CRUD/UserRepoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/LoginInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/LoginInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/TrainManagerClientInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/TrainManagerClientInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/UserManagerClientInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Interfaces/Communication/SendToClient/UserManagerClientInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/JSONFiles/trains.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/JSONFiles/trains.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/JSONFiles/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/JSONFiles/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/LoginModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/LoginModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/LogInService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/LogInService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/TrainManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/TrainManagerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/UserManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/Services/UserManagerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/TrainModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/TrainModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/View/LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/View/LoginView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/View/TrainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/View/TrainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/controller/TrainsManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/test-classes/Model/Interfaces/Communication/SendToClient/TrainManagerInterfaceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/test-classes/Model/Interfaces/Communication/SendToClient/TrainManagerInterfaceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mintty.2024-04-16_22-15-15.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,6 +211,8 @@
       <workItem from="1713190634116" duration="322000" />
       <workItem from="1713190973343" duration="38000" />
       <workItem from="1713191025573" duration="12000" />
+      <workItem from="1713451979606" duration="58000" />
+      <workItem from="1713460471548" duration="57000" />
     </task>
     <servers />
   </component>

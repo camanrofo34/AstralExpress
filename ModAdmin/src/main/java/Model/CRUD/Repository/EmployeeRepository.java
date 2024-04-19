@@ -29,15 +29,19 @@ public class EmployeeRepository implements EmployeeRepoInterface {
     public Boolean delete(Employee employee){
         List<EmployeeEntity> employees = getEmployeeEntityList();
         EmployeeEntity employeeEntity = new EmployeeEntity(employee.getIdPerson(), employee.getNames(), employee.getLastNames(), employee.getPhoneNumbersString());
-        employees.remove(employeeEntity);
+        employees.remove(e->e.getIdPerson().equals(employeeEntity.getIdPerson()));
         return fileJson.writeObjects(pathFile, employees);
     }
 
     public Boolean update(Employee employee){
         ArrayList<EmployeeEntity> employees = (ArrayList<EmployeeEntity>) getEmployeeEntityList();
         EmployeeEntity employeeEntity = new EmployeeEntity(employee.getIdPerson(), employee.getNames(), employee.getLastNames(), employee.getPhoneNumbersString());
-        int index = employees.indexOf(employeeEntity);
-        employees.set(index, employeeEntity);
+        for (int i = 0; i < employees.size(); i++){
+            if (employees.get(i).getIdPerson().equals(employeeEntity.getIdPerson())){
+                employees.set(i, employeeEntity);
+                break;
+            }
+        }
         return fileJson.writeObjects(pathFile, employees);
     }
 

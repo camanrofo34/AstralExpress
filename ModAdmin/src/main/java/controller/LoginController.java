@@ -20,7 +20,7 @@ public class LoginController {
         {
             String user = loginView.getUser();
             String password = loginView.getPassword();
-            if (user.isBlank() || password.isBlank()){
+            if (user.isBlank() || password.isBlank()) {
                 loginModel.getMessenger().setMessage("User or password is empty");
                 return null;
             }

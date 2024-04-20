@@ -3,8 +3,7 @@ package Model.Interfaces.Communication.SendToClient;
 import Model.Services.LogInService;
 import org.junit.jupiter.api.Test;
 
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LoginInterfaceTest {
 

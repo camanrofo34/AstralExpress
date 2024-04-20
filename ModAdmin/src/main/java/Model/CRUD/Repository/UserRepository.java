@@ -1,7 +1,5 @@
 package Model.CRUD.Repository;
 
-import dataStructures.ArrayList;
-import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.UserEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;
@@ -10,6 +8,8 @@ import Model.Domain.Passenger;
 import Model.Domain.PassengerContact;
 import Model.Domain.User;
 import Model.Interfaces.CRUD.UserRepoInterface;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.List;
 
 public class UserRepository implements UserRepoInterface {
     private final FileJsonInterface<UserEntity> fileJson;
@@ -108,7 +108,7 @@ public class UserRepository implements UserRepoInterface {
     }
 
     @Override
-    public List<User> getUsers(){
+    public List<User> getUsers() {
         ArrayList<UserEntity> users = (ArrayList<UserEntity>) getUserEntityList();
         List<User> usersList = new ArrayList<>(users.size());
         for (int i = 0; i < users.size(); i++) {
@@ -121,7 +121,7 @@ public class UserRepository implements UserRepoInterface {
             } else if (idPerson.startsWith("PC")) {
                 PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
                 PassengerContact passengerContact = passengerContactRepository.getPassengerContact(idPerson);
-                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(),userEntity.getIsAdmin(), passengerContact));
+                usersList.add(new User(userEntity.getUsername(), userEntity.getPassword(), userEntity.getIsAdmin(), passengerContact));
             } else if (idPerson.startsWith("P")) {
                 PassengerRepository passengerRepository = new PassengerRepository("passengers.json");
                 Passenger passenger = passengerRepository.getPassenger(idPerson);

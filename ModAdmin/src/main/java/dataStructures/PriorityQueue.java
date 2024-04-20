@@ -6,7 +6,7 @@ import dataStructures.Interfaces.Iterator;
 import java.util.NoSuchElementException;
 import java.util.function.Function;
 
-public class PriorityQueue<E>{
+public class PriorityQueue<E> {
 
     Array<Queue<E>> prioridad;
     int prioridades;

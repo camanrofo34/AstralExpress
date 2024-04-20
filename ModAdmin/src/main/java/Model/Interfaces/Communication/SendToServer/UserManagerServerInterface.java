@@ -1,8 +1,9 @@
 package Model.Interfaces.Communication.SendToServer;
 
-import java.rmi.Remote;
 import Model.Domain.User;
 import dataStructures.Array;
+
+import java.rmi.Remote;
 
 public interface UserManagerServerInterface extends Remote {
 

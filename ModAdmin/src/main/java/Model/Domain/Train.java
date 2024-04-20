@@ -1,9 +1,7 @@
 package Model.Domain;
 
-import dataStructures.ArrayList;
-import dataStructures.Interfaces.Iterator;
+import dataStructures.Array;
 import dataStructures.Interfaces.List;
-import Model.Domain.AbstractClasses.AbstractVagon;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -14,7 +12,10 @@ public class Train implements Serializable {
     private int capacity;
     private double mileage;
     private Brand brand;
-    private ArrayList<AbstractVagon> vagons;
+    private Boolean inRoute;
+    private Array<PassengerVagon> passengersVagon;
+    private Array<ChargeVagon> chargeVagon;
+
 
     public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand) {
         this.trainName = trainName;
@@ -22,7 +23,18 @@ public class Train implements Serializable {
         this.capacity = capacity;
         this.mileage = mileage;
         this.brand = brand;
-        this.vagons = new ArrayList<>();
+        this.inRoute = false;
+        initVagones();
+    }
+
+    public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand, Boolean inRoute) {
+        this.trainName = trainName;
+        this.idTrain = idTrain;
+        this.capacity = capacity;
+        this.mileage = mileage;
+        this.brand = brand;
+        this.inRoute = inRoute;
+        initVagones();
     }
 
     public Train(String trainName, int capacity, Brand brand) throws IOException {
@@ -30,41 +42,42 @@ public class Train implements Serializable {
         this.capacity = capacity;
         this.mileage = 0.0;
         this.brand = brand;
-        this.vagons = new ArrayList<>();
+        this.inRoute = false;
+        initVagones();
     }
 
 
-    public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand, ArrayList<AbstractVagon> vagons) {
+    public Train(String trainName, String idTrain, int capacity, double mileage, Brand brand, List<PassengerVagon> passengersVagon, List<ChargeVagon> chargeVagon) {
         this.trainName = trainName;
         this.idTrain = idTrain;
         this.capacity = capacity;
         this.mileage = mileage;
         this.brand = brand;
-        this.vagons = vagons;
-    }
-/*
-    private static final String ID_FILE_PATH = "src\\main\\java\\org\\astralexpress\\database\\idTrain.txt";
-
-    private String actualTrainId() {
-        String id = null;
-        try (BufferedReader reader = new BufferedReader(new FileReader(ID_FILE_PATH))) {
-            id = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace(); // Consider handling this error more appropriately
-        }
-
-        if (id != null) {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(ID_FILE_PATH))) {
-                int nextId = Integer.parseInt(id) + 1;
-                writer.write(String.valueOf(nextId));
-            } catch (IOException e) {
-                e.printStackTrace(); // Consider handling this error more appropriately
-            }
-        }
-        return id;
+        this.passengersVagon = new Array<>(passengersVagon.toArray());
+        this.chargeVagon = new Array<>(chargeVagon.toArray());
     }
 
- */
+    public Train(String trainName, int i, double v, Brand brandByName) {
+        this.trainName = trainName;
+        this.idTrain = "";
+        this.capacity = i;
+        this.mileage = v;
+        this.brand = brandByName;
+        this.inRoute = false;
+        initVagones();
+    }
+
+    public Train(String trainName, String idTrain, int i, float v, Brand brand, Boolean inRoute, List<PassengerVagon> passengerVagons, List<ChargeVagon> chargeVagons) {
+        this.trainName = trainName;
+        this.idTrain = idTrain;
+        this.capacity = i;
+        this.mileage = v;
+        this.brand = brand;
+        this.inRoute = inRoute;
+        this.passengersVagon = new Array<>(passengerVagons.toArray());
+        this.chargeVagon = new Array<>(chargeVagons.toArray());
+    }
+
     public static Train getNullTrain() {
         return new Train("", "", 0, 0.0, Brand.getBrandByName(""));
     }
@@ -109,34 +122,40 @@ public class Train implements Serializable {
         this.brand = brand;
     }
 
-    public List<AbstractVagon> getVagons() {
-        return vagons;
+    public Boolean getInRoute() {
+        return inRoute;
     }
 
-    public void setVagons(ArrayList<AbstractVagon> vagons) {
-        this.vagons = vagons;
+    public void setInRoute(Boolean inRoute) {
+        this.inRoute = inRoute;
     }
 
-    public AbstractVagon consultVagon(String idVagon) {
-        Iterator<AbstractVagon> iterator = vagons.iterator();
-        while (iterator.hasNext()) {
-            AbstractVagon vagon = iterator.next();
-            if (vagon.getIdVagon().equals(idVagon)) return vagon;
+    public Array<PassengerVagon> getPassengersVagon() {
+        return passengersVagon;
+    }
+
+    public void setPassengersVagon(Array<PassengerVagon> passengersVagon) {
+        this.passengersVagon = passengersVagon;
+    }
+
+    public Array<ChargeVagon> getChargeVagon() {
+        return chargeVagon;
+    }
+
+    public void setChargeVagon(Array<ChargeVagon> chargeVagon) {
+        this.chargeVagon = chargeVagon;
+    }
+
+    private void initVagones() {
+        int count = capacity / 3;
+        passengersVagon = new Array<>(count * 2);
+        for (int i = 0; i < count*2 ; i++) {
+            passengersVagon.add(new PassengerVagon(idTrain + "-P" + i));
         }
-        return new AbstractVagon() {
-        };
-    }
-
-    public boolean addVagon(AbstractVagon vagon) {
-        return vagons.add(vagon);
-    }
-
-    public boolean removeVagon(String idVagon) {
-        return vagons.remove(vagon -> vagon.getIdVagon().equals(idVagon));
-    }
-
-    public void initVagones() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        chargeVagon = new Array<>(count);
+        for (int i = 0; i < count; i++) {
+            chargeVagon.add(new ChargeVagon(idTrain + "-C" + i));
+        }
     }
 
 }

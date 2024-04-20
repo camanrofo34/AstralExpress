@@ -37,7 +37,7 @@ public class RoutesManagerService implements RouteManagerClientInterface {
         List<Route> routes = routeRepository.getRoutes();
         for (int i = 0; i < stations.size() - 1; i++) {
             Station stationOrigin = stations.get(i);
-            if (i+1<stations.size()) {
+            if (i + 1 < stations.size()) {
                 stationDestination = stations.get(i + 1);
 
             }

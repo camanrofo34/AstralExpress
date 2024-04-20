@@ -1,10 +1,11 @@
 package Model.Services;
-import dataStructures.ArrayList;
+
 import Model.CRUD.Repository.UserRepository;
 import Model.Domain.User;
 import Model.Environment.Environment;
 import Model.Interfaces.CRUD.UserRepoInterface;
 import Model.Interfaces.Communication.SendToClient.LoginInterface;
+import dataStructures.ArrayList;
 
 import java.io.Serial;
 import java.rmi.RemoteException;

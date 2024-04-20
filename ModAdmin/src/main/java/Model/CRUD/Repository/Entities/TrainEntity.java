@@ -6,13 +6,15 @@ public class TrainEntity {
     private String capacity;
     private String mileage;
     private String brand;
+    private String inRoute;
 
-    public TrainEntity(String trainName, String idTrain, String capacity, String mileage, String brand) {
+    public TrainEntity(String trainName, String idTrain, String capacity, String mileage, String brand, String inRoute) {
         this.trainName = trainName;
         this.idTrain = idTrain;
         this.capacity = capacity;
         this.mileage = mileage;
         this.brand = brand;
+        this.inRoute = inRoute;
     }
 
     public String getTrainName() {
@@ -53,5 +55,13 @@ public class TrainEntity {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public String getInRoute() {
+        return inRoute;
+    }
+
+    public void setInRoute(String inRoute) {
+        this.inRoute = inRoute;
     }
 }

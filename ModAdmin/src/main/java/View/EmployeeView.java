@@ -1,12 +1,11 @@
 package View;
 
-import Model.Domain.Train;
 import Model.Domain.User;
 import Model.Messenger.Messenger;
 import Model.Observer.Observer;
 import dataStructures.Array;
-import dataStructures.Interfaces.List;
 import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -59,17 +58,17 @@ public class EmployeeView extends Observer<Messenger> {
         subject.attach(this);
     }
 
-    public void initComponents(Array<UnaryOperator<Void>> fns, List<User> users){
+    public void initComponents(Array<UnaryOperator<Void>> fns, List<User> users) {
         jFrame1.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
+                new Object[][]{
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null}
                 },
-                new String [] {
+                new String[]{
                         "ID", "USER", "PASSWORD", "NAMES", "LAST NAMES", " C. NUMBERS"
                 }
         ));
@@ -202,46 +201,46 @@ public class EmployeeView extends Observer<Messenger> {
         JOptionPane.showMessageDialog(null, subject.getMessage());
     }
 
-    public String getNames(){
+    public String getNames() {
         return jNames.getText();
     }
 
-    public String getLastNames(){
+    public String getLastNames() {
         return jLastNames.getText();
     }
 
-    public String getContactNumber(){
+    public String getContactNumber() {
         return jContactNumber.getText();
     }
 
-    public String getUser(){
+    public String getUser() {
         return jUser.getText();
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return jPassword.getText();
     }
 
-    public String getSearched(){
+    public String getSearched() {
         return jTextField6.getText();
     }
 
-    public void chargeTable(List<User> users){
+    public void chargeTable(List<User> users) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         Iterator<User> it = users.iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             User user = it.next();
             model.addRow(new Object[]{user.getPerson().getIdPerson(), user.getUsername(), user.getPassword(), user.getPerson().getNames(), user.getPerson().getLastNames(), user.getPerson().getPhoneNumbersString()});
         }
         jTable1.setModel(model);
     }
 
-    public Array<String> getSelectedRow(){
+    public Array<String> getSelectedRow() {
         int row = jTable1.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         Array<String> data = new Array<>(6);
-        if (row!=-1){
+        if (row != -1) {
             for (int i = 0; i < model.getColumnCount(); i++) {
                 data.add((String) model.getValueAt(row, i));
             }

@@ -1,7 +1,7 @@
 package Model.Interfaces.Communication.SendToClient;
 
-import dataStructures.Interfaces.List;
 import Model.Domain.Train;
+import dataStructures.Interfaces.List;
 
 import java.rmi.Remote;
 

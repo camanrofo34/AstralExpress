@@ -1,16 +1,10 @@
 [
   {
-    "trainName": "The Polar Express",
-    "idTrain": "1",
-    "capacity": "100",
-    "mileage": "0",
-    "brand": "Mercedez_Benz"
-  },
-  {
-    "trainName": "T3",
-    "idTrain": "2",
+    "trainName": "No edit",
+    "idTrain": "T9",
     "capacity": "20",
     "mileage": "0.0",
-    "brand": "Mercedez_Benz"
+    "brand": "Mercedez_Benz",
+    "inRoute": "false"
   }
 ]

@@ -3,7 +3,7 @@ package dataStructures.Interfaces;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 
-public interface List<E> extends Collection<E>{
+public interface List<E> extends Collection<E> {
     /**
      * Appends the specified element to the end of this list.
      *
@@ -231,7 +231,6 @@ public interface List<E> extends Collection<E>{
     /**
      * Retains only the elements in this list that are contained in the specified collection.
      *
-     *
      * @param array
      * @return 'true' if the list was retained successfully, otherwise 'false'.
      */
@@ -239,7 +238,6 @@ public interface List<E> extends Collection<E>{
 
     /**
      * Retains only the elements in this list that are contained in the specified collection.
-     *
      *
      * @param collection
      * @return 'true' if the list was retained successfully, otherwise 'false'.

@@ -1,14 +1,14 @@
 package Model.CRUD.Repository;
 
-import dataStructures.Array;
-import dataStructures.ArrayList;
-import dataStructures.Interfaces.Iterator;
-import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.PassengerContactEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;
 import Model.Domain.PassengerContact;
 import Model.Interfaces.CRUD.PassengerContactRepoInterface;
+import dataStructures.Array;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 
 public class PassengerContactRepository implements PassengerContactRepoInterface {
     private final FileJsonInterface<PassengerContactEntity> fileJson;
@@ -20,7 +20,7 @@ public class PassengerContactRepository implements PassengerContactRepoInterface
     }
 
     @Override
-    public Boolean insert(PassengerContact passengerContact){
+    public Boolean insert(PassengerContact passengerContact) {
         List<PassengerContactEntity> passengerContacts = getPassengerContactEntityList();
         PassengerContactEntity passengerContactEntity = new PassengerContactEntity(passengerContact.getIdPerson(), passengerContact.getNames(), passengerContact.getLastNames(), passengerContact.getPhoneNumbersString());
         passengerContacts.add(passengerContactEntity);
@@ -28,7 +28,7 @@ public class PassengerContactRepository implements PassengerContactRepoInterface
     }
 
     @Override
-    public Boolean delete(PassengerContact passengerContact){
+    public Boolean delete(PassengerContact passengerContact) {
         List<PassengerContactEntity> passengerContacts = getPassengerContactEntityList();
         PassengerContactEntity passengerContactEntity = new PassengerContactEntity(passengerContact.getIdPerson(), passengerContact.getNames(), passengerContact.getLastNames(), passengerContact.getPhoneNumbersString());
         passengerContacts.remove(passengerContactEntity);
@@ -36,12 +36,12 @@ public class PassengerContactRepository implements PassengerContactRepoInterface
     }
 
     @Override
-    public Boolean update(PassengerContact passengerContact){
+    public Boolean update(PassengerContact passengerContact) {
         ArrayList<PassengerContactEntity> passengerContacts = (ArrayList<PassengerContactEntity>) getPassengerContactEntityList();
         PassengerContactEntity passengerContactEntity = new PassengerContactEntity(passengerContact.getIdPerson(),
                 passengerContact.getNames(), passengerContact.getLastNames(), passengerContact.getPhoneNumbersString());
-        for (int i=0; i<passengerContacts.size(); i++){
-            if (passengerContacts.get(i).getIdPassenger().equals(passengerContact.getIdPerson())){
+        for (int i = 0; i < passengerContacts.size(); i++) {
+            if (passengerContacts.get(i).getIdPassenger().equals(passengerContact.getIdPerson())) {
                 passengerContacts.set(i, passengerContactEntity);
                 return fileJson.writeObjects(pathFile, passengerContacts);
             }
@@ -50,28 +50,28 @@ public class PassengerContactRepository implements PassengerContactRepoInterface
     }
 
     @Override
-    public PassengerContact getPassengerContact(String idPassenger){
+    public PassengerContact getPassengerContact(String idPassenger) {
         List<PassengerContactEntity> passengerContacts = getPassengerContactEntityList();
         Iterator<PassengerContactEntity> it = passengerContacts.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             PassengerContactEntity passengerContactEntity = it.next();
-            if (passengerContactEntity.getIdPassenger().equals(idPassenger)){
+            if (passengerContactEntity.getIdPassenger().equals(idPassenger)) {
                 return new PassengerContact(passengerContactEntity.getIdPassenger(), passengerContactEntity.getNames(), passengerContactEntity.getLastNames(),
-                        new Array<String> (passengerContactEntity.getPhoneNumbers().split(",")));
+                        new Array<String>(passengerContactEntity.getPhoneNumbers().split(",")));
             }
         }
         return PassengerContact.returnNullPassengerContact();
     }
 
     @Override
-    public List<PassengerContact> getPassengerContacts(){
+    public List<PassengerContact> getPassengerContacts() {
         List<PassengerContactEntity> passengerContacts = getPassengerContactEntityList();
         List<PassengerContact> passengerContactsList = new ArrayList<>();
         Iterator<PassengerContactEntity> it = passengerContacts.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             PassengerContactEntity passengerContactEntity = it.next();
             passengerContactsList.add(new PassengerContact(passengerContactEntity.getIdPassenger(), passengerContactEntity.getNames(), passengerContactEntity.getLastNames(),
-                    new Array<String> (passengerContactEntity.getPhoneNumbers().split(","))));
+                    new Array<String>(passengerContactEntity.getPhoneNumbers().split(","))));
         }
         return passengerContactsList;
     }

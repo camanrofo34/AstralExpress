@@ -1,11 +1,11 @@
 package Model.CRUD.Shared;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,15 +1,15 @@
 package Model.CRUD.Repository;
 
-import dataStructures.Array;
-import dataStructures.ArrayList;
-import dataStructures.Interfaces.Iterator;
-import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.Entities.PassengerEntity;
 import Model.CRUD.Shared.FileJsonAdapter;
 import Model.CRUD.Shared.FileJsonInterface;
 import Model.Domain.Passenger;
 import Model.Domain.PassengerContact;
 import Model.Interfaces.CRUD.PassengerRepoInterface;
+import dataStructures.Array;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.Iterator;
+import dataStructures.Interfaces.List;
 
 public class PassengerRepository implements PassengerRepoInterface {
     private final FileJsonInterface<PassengerEntity> fileJson;
@@ -21,7 +21,7 @@ public class PassengerRepository implements PassengerRepoInterface {
     }
 
     @Override
-    public Boolean insert(Passenger passenger){
+    public Boolean insert(Passenger passenger) {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
         PassengerContact passengerContact = passenger.getPassengerContact();
@@ -32,7 +32,7 @@ public class PassengerRepository implements PassengerRepoInterface {
     }
 
     @Override
-    public Boolean delete(Passenger passenger){
+    public Boolean delete(Passenger passenger) {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
         PassengerContact passengerContact = passenger.getPassengerContact();
@@ -48,8 +48,8 @@ public class PassengerRepository implements PassengerRepoInterface {
         PassengerEntity passengerEntity = new PassengerEntity(passenger.getIdPerson(), passenger.getIdType(), passenger.getNames(), passenger.getLastNames(), passenger.getPhoneNumbersString(), passenger.getHomeAdress());
         PassengerContactRepository passengerContactRepository = new PassengerContactRepository("ModAdmin\\src\\main\\resources\\Model\\JSONFiles\\passengerContacts.json");
         passengerContactRepository.update(passenger.getPassengerContact());
-        for (int i=0; i<passengers.size(); i++){
-            if (passengers.get(i).getIdPassenger().equals(passenger.getIdPerson())){
+        for (int i = 0; i < passengers.size(); i++) {
+            if (passengers.get(i).getIdPassenger().equals(passenger.getIdPerson())) {
                 passengers.set(i, passengerEntity);
                 return fileJson.writeObjects(pathFile, passengers);
             }
@@ -58,12 +58,12 @@ public class PassengerRepository implements PassengerRepoInterface {
     }
 
     @Override
-    public Passenger getPassenger(String idPassenger){
+    public Passenger getPassenger(String idPassenger) {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         Iterator<PassengerEntity> it = passengers.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             PassengerEntity passengerEntity = it.next();
-            if (passengerEntity.getIdPassenger().equals(idPassenger)){
+            if (passengerEntity.getIdPassenger().equals(idPassenger)) {
                 PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
                 PassengerContact passengerContact = passengerContactRepository.getPassengerContact(passengerEntity.getIdPassenger());
                 return new Passenger(passengerEntity.getIdPassenger(), passengerEntity.getIdType(), passengerEntity.getNames(), passengerContact,
@@ -74,11 +74,11 @@ public class PassengerRepository implements PassengerRepoInterface {
     }
 
     @Override
-    public List<Passenger> getPassengers(){
+    public List<Passenger> getPassengers() {
         List<PassengerEntity> passengers = fileJson.getObjects(pathFile, PassengerEntity[].class);
         List<Passenger> passengersList = new ArrayList<>();
         Iterator<PassengerEntity> it = passengers.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             PassengerEntity passengerEntity = it.next();
             PassengerContactRepository passengerContactRepository = new PassengerContactRepository("passengerContacts.json");
             PassengerContact passengerContact = passengerContactRepository.getPassengerContact(passengerEntity.getIdPassenger());

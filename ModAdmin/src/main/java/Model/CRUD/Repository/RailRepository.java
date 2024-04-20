@@ -22,7 +22,7 @@ public class RailRepository {
         StationsRepoInterface stationRepository = new StationRepository("src/main/java/Model/CRUD/Repository/Files/stations.json");
         ArrayList<RailEntity> rails = (ArrayList<RailEntity>) fileJson.getObjects(pathFile, RailEntity[].class);
         List<Rail> railsList = new ArrayList<>();
-        for (int i=0; i<rails.size(); i++){
+        for (int i = 0; i < rails.size(); i++) {
             RailEntity railEntity = rails.get(i);
             Station station1 = stationRepository.getStation(railEntity.getIdOriginStation());
             Station station2 = stationRepository.getStation(railEntity.getIdDestinationStation());

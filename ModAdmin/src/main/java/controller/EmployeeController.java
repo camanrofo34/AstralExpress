@@ -46,7 +46,7 @@ public class EmployeeController {
                         }
                     }
                     try {
-                        if (employeeModel.addEmployee(user, password, names, lastNames, contactNumbers)){
+                        if (employeeModel.addEmployee(user, password, names, lastNames, contactNumbers)) {
                             employeeModel.getMessenger().setMessage("Employee added successfully");
                         } else {
                             employeeModel.getMessenger().setMessage("Username already exists");
@@ -60,16 +60,16 @@ public class EmployeeController {
                 },
                 event -> {
                     Array<String> data = employeeView.getSelectedRow();
-                    if (!data.isEmpty()){
+                    if (!data.isEmpty()) {
                         String id = data.get(0);
-                        String username= data.get(1);
+                        String username = data.get(1);
                         String password = data.get(2);
                         String names = data.get(3);
                         String lastNames = data.get(4);
                         Array<String> contactNumbers = new Array<>(data.get(5).split(","));
                         User user = new User(username, password, false, new Employee(id, names, lastNames, contactNumbers));
                         try {
-                            if (employeeModel.deleteEmployee(user)){
+                            if (employeeModel.deleteEmployee(user)) {
                                 employeeModel.getMessenger().setMessage("Employee deleted successfully");
                                 employeeView.chargeTable(employeeModel.getEmployees());
                             } else {
@@ -85,14 +85,14 @@ public class EmployeeController {
                 event -> {
                     Array<String> data = employeeView.getSelectedRow();
                     String id = data.get(0);
-                    String username= data.get(1);
+                    String username = data.get(1);
                     String password = data.get(2);
                     String names = data.get(3);
                     String lastNames = data.get(4);
                     Array<String> contactNumbers = new Array<>(data.get(5).split(","));
                     User user = new User(username, password, false, new Employee(id, names, lastNames, contactNumbers));
                     try {
-                        if(employeeModel.editEmployee(user)){
+                        if (employeeModel.editEmployee(user)) {
                             employeeModel.getMessenger().setMessage("Employee edited successfully");
                             employeeView.chargeTable(employeeModel.getEmployees());
                         } else {

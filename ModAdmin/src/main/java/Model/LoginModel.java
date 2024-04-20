@@ -9,6 +9,7 @@ import java.rmi.Naming;
 public class LoginModel {
     private final String uri;
     private Messenger messenger;
+
     public LoginModel(String uri) {
         this.uri = uri;
         messenger = new Messenger("");
@@ -23,7 +24,8 @@ public class LoginModel {
         LoginInterface loginInterface = (LoginInterface) Naming.lookup(uri);
         return loginInterface.getUser();
     }
-    public String retunUri(){
+
+    public String retunUri() {
         return uri;
     }
 

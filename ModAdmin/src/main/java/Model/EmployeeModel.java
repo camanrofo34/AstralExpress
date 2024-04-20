@@ -5,7 +5,6 @@ import Model.Interfaces.Communication.SendToClient.UserManagerClientInterface;
 import Model.Interfaces.Communication.SendToServer.UserManagerServerInterface;
 import Model.Messenger.Messenger;
 import dataStructures.Array;
-import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
 
 import java.rmi.Naming;

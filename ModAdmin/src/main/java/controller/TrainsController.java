@@ -5,7 +5,6 @@ import Model.Domain.Train;
 import Model.TrainModel;
 import View.TrainView;
 import dataStructures.Array;
-import dataStructures.ArrayList;
 import dataStructures.Interfaces.List;
 
 import javax.swing.*;
@@ -26,7 +25,6 @@ public class TrainsController {
                     try {
                         String trainSearh = trainView.getTrainSearch();
                         List<Train> trains = trainModel.getTrains();
-                        List<Train> auxiliarTrains = trains;
                         trains.remove(e -> !e.getTrainName().startsWith(trainSearh));
                         trainView.chargeVagons(trains);
                     } catch (Exception e) {
@@ -40,10 +38,8 @@ public class TrainsController {
                     String trainType = trainView.getTrainBrand();
                     String trainWagons = trainView.getTrainWagons();
                     String trainMileage = trainView.getTrainMilleage();
-                    Train train = new Train(trainName, "2", Integer.parseInt(trainWagons), Double.parseDouble(trainMileage), Brand.getBrandByName(trainType));
-                    JOptionPane.showMessageDialog(null, train);
                     try {
-                        trainModel.addTrain(train);
+                        trainModel.addTrain(trainName, Integer.parseInt(trainWagons), Double.parseDouble(trainMileage), Brand.getBrandByName(trainType));
                         List<Train> trains = trainModel.getTrains();
                         trainView.chargeVagons(trains);
                         JOptionPane.showMessageDialog(null, "Train added successfully");
@@ -56,12 +52,17 @@ public class TrainsController {
                 event -> {
                     try {
                         Array<String> trainData = trainView.getTrainData();
-                        if (!trainData.isEmpty()){
-                            Train train = new Train(trainData.get(1), trainData.get(0), Integer.parseInt( trainData.get(2)), Double.parseDouble(trainData.get(3)), Brand.getBrandByName(trainData.get(4)));
-                            trainModel.editTrain(train);
+                        JOptionPane.showMessageDialog(null, trainData.get(5));
+                        if (!trainData.isEmpty()) {
+                            Train train = new Train(trainData.get(1), trainData.get(0), Integer.parseInt(trainData.get(2)), Double.parseDouble(trainData.get(3)), Brand.getBrandByName(trainData.get(4)), Boolean.parseBoolean(trainData.get(5)));
+                            JOptionPane.showMessageDialog(null, train.getInRoute());
+                            if (trainModel.editTrain(train)){
+                                JOptionPane.showMessageDialog(null, "Train edited successfully");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Train is in route");
+                            }
                             List<Train> trains = trainModel.getTrains();
                             trainView.chargeVagons(trains);
-                            JOptionPane.showMessageDialog(null, "Train edited successfully");
                         } else {
                             JOptionPane.showMessageDialog(null, "Not selected train to edit");
                         }
@@ -74,12 +75,17 @@ public class TrainsController {
                 event -> {
                     try {
                         Array<String> trainData = trainView.getTrainData();
-                        if (!trainData.isEmpty()){
-                            Train train = new Train(trainData.get(1), trainData.get(0), Integer.parseInt( trainData.get(2)), Double.parseDouble(trainData.get(3)), Brand.getBrandByName(trainData.get(4)));
-                            trainModel.deleteTrain(train);
+
+                        if (!trainData.isEmpty()) {
+                            Train train = new Train(trainData.get(1), trainData.get(0), Integer.parseInt(trainData.get(2)), Double.parseDouble(trainData.get(3)), Brand.getBrandByName(trainData.get(4)), Boolean.parseBoolean(trainData.get(5)));
+                            JOptionPane.showMessageDialog(null, train.getInRoute());
+                            if (trainModel.deleteTrain(train)){
+                                JOptionPane.showMessageDialog(null, "Train deleted successfully");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Train is in route");
+                            }
                             List<Train> trains = trainModel.getTrains();
                             trainView.chargeVagons(trains);
-                            JOptionPane.showMessageDialog(null, "Train edited successfully");
                         } else {
                             JOptionPane.showMessageDialog(null, "Not selected train to edit");
                         }

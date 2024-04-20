@@ -1,17 +1,17 @@
 package Model.Services;
 
+import Model.CRUD.Repository.UserRepository;
 import Model.Domain.Employee;
+import Model.Domain.User;
+import Model.Environment.Environment;
 import Model.Environment.IdGenerator;
+import Model.Interfaces.CRUD.UserRepoInterface;
+import Model.Interfaces.Communication.SendToClient.UserManagerClientInterface;
+import Model.Interfaces.Communication.SendToServer.UserManagerServerInterface;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
-import Model.Domain.User;
-import Model.Environment.Environment;
-import Model.Interfaces.Communication.SendToClient.UserManagerClientInterface;
-import Model.Interfaces.Communication.SendToServer.UserManagerServerInterface;
-import Model.Interfaces.CRUD.UserRepoInterface;
-import Model.CRUD.Repository.UserRepository;
 
 import java.io.Serial;
 import java.rmi.RemoteException;
@@ -40,7 +40,7 @@ public class UserManagerService extends UnicastRemoteObject implements UserManag
     public Boolean addUser(String userName, String password, String names, String lastNames, Array<String> phoneNumbers) throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);
         String id = IdGenerator.generateEmployeeId();
-        User user = new User(userName, password, false, new Employee("E"+id, names, lastNames, phoneNumbers));
+        User user = new User(userName, password, false, new Employee("E" + id, names, lastNames, phoneNumbers));
         List<User> users = userRepo.getUsers();
         Iterator<User> iterator = users.iterator();
         while (iterator.hasNext()) {

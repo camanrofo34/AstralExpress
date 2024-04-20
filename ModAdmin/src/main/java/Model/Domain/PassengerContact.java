@@ -1,7 +1,7 @@
 package Model.Domain;
 
-import dataStructures.Array;
 import Model.Domain.AbstractClasses.AbstractPerson;
+import dataStructures.Array;
 
 public class PassengerContact extends AbstractPerson {
     public PassengerContact(String idPerson, String names, String lastNames, Array<String> phoneNumbers) {

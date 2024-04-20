@@ -64,7 +64,7 @@ public class Graph {
         if (distancia.get(destiny) < Integer.MAX_VALUE) {
             int current = destiny;
             while (current != src) {
-                path.addFirst( current);
+                path.addFirst(current);
                 current = predecessor.get(current);
             }
             path.addFirst(src);

@@ -18,25 +18,25 @@ public class RouteRepository {
         this.fileJson = FileJsonAdapter.getInstance();
     }
 
-    public Boolean insert(Route route){
+    public Boolean insert(Route route) {
         RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         routes.add(routeEntity);
         return fileJson.writeObjects(pathFile, routes);
     }
 
-    public Boolean delete(Route route){
+    public Boolean delete(Route route) {
         RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         routes.remove(routeEntity);
         return fileJson.writeObjects(pathFile, routes);
     }
 
-    public Boolean update(Route route){
+    public Boolean update(Route route) {
         RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
         ArrayList<RouteEntity> routes = (ArrayList<RouteEntity>) fileJson.getObjects(pathFile, RouteEntity[].class);
-        for (int i=0; i<routes.size(); i++){
-            if (routes.get(i).getIdTrain().equals(route.getTrain().getIdTrain())){
+        for (int i = 0; i < routes.size(); i++) {
+            if (routes.get(i).getIdTrain().equals(route.getTrain().getIdTrain())) {
                 routes.set(i, routeEntity);
                 return fileJson.writeObjects(pathFile, routes);
             }
@@ -44,12 +44,12 @@ public class RouteRepository {
         return false;
     }
 
-    public Route getRoute(String idTrain){
+    public Route getRoute(String idTrain) {
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         Iterator<RouteEntity> it = routes.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             RouteEntity routeEntity = it.next();
-            if (routeEntity.getIdTrain().equals(idTrain)){
+            if (routeEntity.getIdTrain().equals(idTrain)) {
                 TrainRepository trainRepository = new TrainRepository("src/main/resources/Model/JSONFiles/trains.json");
                 Train train = trainRepository.getTrain(routeEntity.getIdTrain());
                 return new Route(routeEntity.getRails(), train);
@@ -61,7 +61,7 @@ public class RouteRepository {
     public List<Route> getRoutes() throws Exception {
         ArrayList<RouteEntity> routes = (ArrayList<RouteEntity>) fileJson.getObjects(pathFile, RouteEntity[].class);
         List<Route> routesList = new ArrayList<>();
-        for (int i=0; i<routes.size(); i++){
+        for (int i = 0; i < routes.size(); i++) {
             RouteEntity routeEntity = routes.get(i);
             TrainRepository trainRepository = new TrainRepository("src/main/resources/Model/JSONFiles/trains.json");
             Train train = trainRepository.getTrain(routeEntity.getIdTrain());

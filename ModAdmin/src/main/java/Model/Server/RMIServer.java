@@ -16,7 +16,7 @@ public class RMIServer {
     private final String serviceName;
     private final Remote service;
 
-    public RMIServer(String ip, String port, String serviceName, Remote service)  {
+    public RMIServer(String ip, String port, String serviceName, Remote service) {
         this.ip = ip;
         this.port = port;
         this.serviceName = serviceName;

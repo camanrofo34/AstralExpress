@@ -13,7 +13,7 @@ public class Ticket implements Serializable {
     private Passenger passenger;
     private double Value;
 
-    public Ticket(Train train,  Seat seat, Station departureStation, Station arrivalStation, Passenger passenger, double Value) {
+    public Ticket(Train train, Seat seat, Station departureStation, Station arrivalStation, Passenger passenger, double Value) {
         this.train = train;
         this.seat = seat;
         this.departureStation = departureStation;
@@ -21,7 +21,6 @@ public class Ticket implements Serializable {
         this.passenger = passenger;
         this.Value = Value;
     }
-
 
 
     public Train getTrain() {

@@ -1,13 +1,14 @@
 package Model.Interfaces.Communication.SendToClient;
 
-import dataStructures.Interfaces.List;
 import Model.Domain.Brand;
 import Model.Domain.Train;
 import Model.Interfaces.Communication.SendToServer.TrainManagerServerInterface;
 import Model.Services.TrainManagerService;
+import dataStructures.Interfaces.List;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrainManagerInterfaceTest {
 

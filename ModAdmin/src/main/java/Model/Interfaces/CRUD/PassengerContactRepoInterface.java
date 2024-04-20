@@ -1,7 +1,7 @@
 package Model.Interfaces.CRUD;
 
-import dataStructures.Interfaces.List;
 import Model.Domain.PassengerContact;
+import dataStructures.Interfaces.List;
 
 import java.rmi.Remote;
 

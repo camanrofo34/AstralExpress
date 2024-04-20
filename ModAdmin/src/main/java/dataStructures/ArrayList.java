@@ -25,7 +25,7 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
         this.size = 0;
     }
 
-    public ArrayList(E[] elements){
+    public ArrayList(E[] elements) {
         this.arrayList = elements;
         this.size = elements.length;
     }
@@ -33,7 +33,9 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
     private void ensureMoreCapacity() {
         if (size == arrayList.length) {
             int newCapacity = arrayList.length * 2;
-            System.arraycopy(arrayList, 0, arrayList, 0, newCapacity);
+            E[] newArray = (E[]) new Object[newCapacity];
+            System.arraycopy(arrayList, 0, newArray, 0, size);
+            arrayList = newArray;
         }
     }
 
@@ -143,7 +145,9 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
     @Override
     public boolean add(E element) {
         try {
-            ensureMoreCapacity();
+            while (size()  == arrayList.length) {
+                ensureMoreCapacity();
+            }
             arrayList[size++] = element;
             return true;
         } catch (Exception e) {
@@ -305,7 +309,7 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
 
     @Override
     public List<E> pollCollection(int n) {
-        List<E> list = new  ArrayList<E>();
+        List<E> list = new ArrayList<E>();
         list.add(pollArray(n));
         return list;
     }
@@ -362,7 +366,7 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
                 removed = true;
             }
         }
-        for (E element: array){
+        for (E element : array) {
             remove(element);
         }
         return removed;

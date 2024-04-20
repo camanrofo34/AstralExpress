@@ -15,6 +15,12 @@ public class Environment {
         variables = new ArrayList<>();
         loadVariables(getPathProperties());
     }
+
+    public static Environment getInstance() {
+        if (Environment.instance == null) Environment.instance = new Environment();
+        return Environment.instance;
+    }
+
     private String getPathProperties() {
         return "src\\main\\resources\\Model\\server.properties";
     }
@@ -38,11 +44,8 @@ public class Environment {
         }
     }
 
-    public static Environment getInstance() {
-        if (Environment.instance == null) Environment.instance = new Environment();
-        return Environment.instance;
+    public ArrayList<String> getVariables() {
+        return variables;
     }
-
-    public ArrayList<String> getVariables() { return variables; }
 }
 

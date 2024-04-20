@@ -15,7 +15,7 @@ public interface Collection<E> extends Iterable<E>, Cloneable, Serializable {
      *
      * @param element the element to search for.
      * @return 'true' if the collection contains the specified element, otherwise
-     *         'false'.
+     * 'false'.
      */
     boolean contains(E element);
 
@@ -25,7 +25,7 @@ public interface Collection<E> extends Iterable<E>, Cloneable, Serializable {
      * @param array the array containing elements to be searched for in this
      *              collection.
      * @return 'true' if the collection contains the specified elements in the
-     *         array, otherwise 'false'.
+     * array, otherwise 'false'.
      */
     boolean contains(E[] array);
 
@@ -35,7 +35,7 @@ public interface Collection<E> extends Iterable<E>, Cloneable, Serializable {
      * @param collection the collection containing elements to be searched for in
      *                   this collection.
      * @return 'true' if the collection contains the specified elements, otherwise
-     *         'false'.
+     * 'false'.
      */
     boolean contains(Collection<E> collection);
 
@@ -50,7 +50,7 @@ public interface Collection<E> extends Iterable<E>, Cloneable, Serializable {
      * Redistributes the elements in the collection in reverse order.
      *
      * @return 'true' if the collection was reversed successfully, otherwise
-     *         'false'.
+     * 'false'.
      */
     boolean reverse();
 

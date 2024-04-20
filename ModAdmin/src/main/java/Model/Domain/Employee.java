@@ -1,7 +1,7 @@
 package Model.Domain;
 
-import dataStructures.Array;
 import Model.Domain.AbstractClasses.AbstractPerson;
+import dataStructures.Array;
 
 public class Employee extends AbstractPerson {
     public Employee(String idPerson, String names, String lastNames, Array<String> phoneNumbers) {
@@ -15,7 +15,6 @@ public class Employee extends AbstractPerson {
     public static Employee getNullEmployee() {
         return new Employee();
     }
-
 
 
 }

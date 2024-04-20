@@ -1,7 +1,7 @@
 package Model.Domain;
 
-import dataStructures.Array;
 import Model.Domain.AbstractClasses.AbstractPerson;
+import dataStructures.Array;
 
 public class Passenger extends AbstractPerson {
     private String idType;

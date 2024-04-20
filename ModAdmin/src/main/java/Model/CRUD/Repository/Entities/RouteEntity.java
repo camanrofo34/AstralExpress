@@ -6,7 +6,7 @@ public class RouteEntity {
     private String idTrain;
     private Rail[] rails;
 
-    public RouteEntity(String idTrain, Rail[] rails){
+    public RouteEntity(String idTrain, Rail[] rails) {
         this.idTrain = idTrain;
         this.rails = rails;
     }

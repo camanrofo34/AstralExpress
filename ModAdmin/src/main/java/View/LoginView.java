@@ -47,7 +47,7 @@ public class LoginView extends Observer<Messenger> {
 
         PanelLight.setBackground(new java.awt.Color(30, 33, 38));
 
-        jLabel2.setIcon(new ImageIcon ("src/main/resources/View/AstralExpressTrain.png")); // NOI18N
+        jLabel2.setIcon(new ImageIcon("src/main/resources/View/AstralExpressTrain.png")); // NOI18N
 
         javax.swing.GroupLayout PanelLightLayout = new javax.swing.GroupLayout(PanelLight);
         PanelLight.setLayout(PanelLightLayout);
@@ -89,7 +89,7 @@ public class LoginView extends Observer<Messenger> {
         LogInButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 255), null, null));
         LogInButton.setBorderPainted(false);
         LogInButton.addActionListener(event -> fns.apply(null));
-        jLabel1.setIcon(new ImageIcon ("src/main/resources/View/LogoAE.png")); // NOI18N
+        jLabel1.setIcon(new ImageIcon("src/main/resources/View/LogoAE.png")); // NOI18N
 
         javax.swing.GroupLayout PanelDarkLayout = new javax.swing.GroupLayout(PanelDark);
         PanelDark.setLayout(PanelDarkLayout);
@@ -149,15 +149,15 @@ public class LoginView extends Observer<Messenger> {
     }
 
 
-    public String getUser(){
+    public String getUser() {
         return UserField.getText();
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return PasswordField.getText();
     }
 
-    public void close(){
+    public void close() {
         jFrame1.dispose();
     }
 

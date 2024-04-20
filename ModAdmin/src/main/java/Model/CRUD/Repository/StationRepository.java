@@ -19,7 +19,7 @@ public class StationRepository implements StationsRepoInterface {
     }
 
     @Override
-    public Boolean insert(Station station){
+    public Boolean insert(Station station) {
         List<StationEntity> stations = fileJson.getObjects(pathFile, StationEntity[].class);
         StationEntity stationEntity = new StationEntity(station.getIdStation(), station.getStationName());
         stations.add(stationEntity);
@@ -27,7 +27,7 @@ public class StationRepository implements StationsRepoInterface {
     }
 
     @Override
-    public Boolean delete(Station station){
+    public Boolean delete(Station station) {
         List<StationEntity> stations = fileJson.getObjects(pathFile, StationEntity[].class);
         StationEntity stationEntity = new StationEntity(station.getIdStation(), station.getStationName());
         stations.remove(stationEntity);
@@ -35,11 +35,11 @@ public class StationRepository implements StationsRepoInterface {
     }
 
     @Override
-    public Boolean update(Station station){
+    public Boolean update(Station station) {
         ArrayList<StationEntity> stations = (ArrayList<StationEntity>) fileJson.getObjects(pathFile, StationEntity[].class);
         StationEntity stationEntity = new StationEntity(station.getIdStation(), station.getStationName());
-        for (int i=0; i<stations.size(); i++){
-            if (stations.get(i).getIdStation().equals(station.getIdStation())){
+        for (int i = 0; i < stations.size(); i++) {
+            if (stations.get(i).getIdStation().equals(station.getIdStation())) {
                 stations.set(i, stationEntity);
                 return fileJson.writeObjects(pathFile, stations);
             }
@@ -51,9 +51,9 @@ public class StationRepository implements StationsRepoInterface {
     public Station getStation(String idStation) {
         List<StationEntity> stations = fileJson.getObjects(pathFile, StationEntity[].class);
         Iterator<StationEntity> it = stations.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             StationEntity stationEntity = it.next();
-            if (stationEntity.getIdStation().equals(idStation)){
+            if (stationEntity.getIdStation().equals(idStation)) {
                 return new Station(stationEntity.getIdStation(), stationEntity.getStationName());
             }
         }
@@ -65,7 +65,7 @@ public class StationRepository implements StationsRepoInterface {
         List<StationEntity> stations = fileJson.getObjects(pathFile, StationEntity[].class);
         List<Station> stationsList = new ArrayList<>();
         Iterator<StationEntity> it = stations.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             StationEntity stationEntity = it.next();
             stationsList.add(new Station(stationEntity.getIdStation(), stationEntity.getStationName()));
         }

@@ -1,13 +1,15 @@
 package Model.Services;
 
-import dataStructures.ArrayList;
-import dataStructures.Interfaces.List;
 import Model.CRUD.Repository.TrainRepository;
+import Model.Domain.Brand;
 import Model.Domain.Train;
 import Model.Environment.Environment;
+import Model.Environment.IdGenerator;
 import Model.Interfaces.CRUD.TrainRepoInterface;
 import Model.Interfaces.Communication.SendToClient.TrainManagerClientInterface;
 import Model.Interfaces.Communication.SendToServer.TrainManagerServerInterface;
+import dataStructures.ArrayList;
+import dataStructures.Interfaces.List;
 
 import java.io.Serial;
 import java.rmi.RemoteException;
@@ -33,20 +35,27 @@ public class TrainManagerService extends UnicastRemoteObject implements TrainMan
     }
 
     @Override
-    public Boolean addTrain(Train train) throws Exception {
+    public Boolean addTrain(String trainName, int i, double v, Brand brandByName) throws Exception {
         TrainRepoInterface trainRepo = new TrainRepository(jsonTrainsPath);
+        Train train = new Train(trainName, "T"+ IdGenerator.generateTrainId(), i, v, brandByName);
         return trainRepo.insert(train);
     }
 
     @Override
     public Boolean removeTrain(Train train) throws Exception {
         TrainRepository trainRepo = new TrainRepository(jsonTrainsPath);
+        if (train.getInRoute()){
+            return false;
+        }
         return trainRepo.delete(train);
     }
 
     @Override
     public Boolean updateTrain(Train train) throws Exception {
         TrainRepository trainRepo = new TrainRepository(jsonTrainsPath);
+        if (train.getInRoute()){
+            return false;
+        }
         return trainRepo.update(train);
     }
 }

@@ -1,11 +1,11 @@
 package Model;
 
-import Model.Interfaces.Communication.SendToServer.TrainManagerServerInterface;
-import Model.Messenger.Messenger;
-import Model.Services.TrainManagerService;
-import dataStructures.Interfaces.List;
+import Model.Domain.Brand;
 import Model.Domain.Train;
 import Model.Interfaces.Communication.SendToClient.TrainManagerClientInterface;
+import Model.Interfaces.Communication.SendToServer.TrainManagerServerInterface;
+import Model.Messenger.Messenger;
+import dataStructures.Interfaces.List;
 
 import java.rmi.Naming;
 
@@ -19,14 +19,14 @@ public class TrainModel {
         this.uri = uri;
     }
 
-    public List<Train> getTrains () throws Exception{
+    public List<Train> getTrains() throws Exception {
         TrainManagerClientInterface trainManagerClientInterface = (TrainManagerClientInterface) Naming.lookup(uri);
         return trainManagerClientInterface.getTrains();
     }
 
-    public Boolean addTrain(Train train) throws Exception {
+    public Boolean addTrain(String trainName, int i, double v, Brand brandByName) throws Exception {
         TrainManagerServerInterface trainManagerClientInterface = (TrainManagerServerInterface) Naming.lookup(uri);
-        return trainManagerClientInterface.addTrain(train);
+        return trainManagerClientInterface.addTrain(trainName, i, v, brandByName);
     }
 
     public Boolean editTrain(Train train) throws Exception {

@@ -1,14 +1,12 @@
-import Model.Services.TrainManagerService;
-import controller.LoginController;
-import dataStructures.ArrayList;
 import Model.Environment.Environment;
 import Model.LoginModel;
 import Model.Server.RMIServer;
 import Model.Services.LogInService;
 import View.LoginView;
+import controller.LoginController;
+import dataStructures.ArrayList;
 
-public class Start
-{
+public class Start {
     public static Environment environment = Environment.getInstance();
     public static ArrayList<String> properties = environment.getVariables();
     public static RMIServer rmiServerLogin;

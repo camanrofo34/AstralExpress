@@ -11,19 +11,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Array<E> implements ArrayInterface<E> {
-    private E[] elements;
     int size;
+    private E[] elements;
 
     /**
-     *
      * @param dimension
      */
     public Array(int dimension) {
         this.elements = (E[]) new Object[dimension];
-        this.size=0;
-    }
-
-    public Array() {
+        this.size = 0;
     }
 
     public Array(E[] array) {
@@ -32,7 +28,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param element
      * @return
      */
@@ -53,7 +48,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param index
      * @param array
      * @return
@@ -83,7 +77,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param index
      * @param collection
      * @return
@@ -116,7 +109,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param index
      * @return
      */
@@ -133,7 +125,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param element
      * @return
      */
@@ -154,7 +145,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param element
      * @return
      */
@@ -175,7 +165,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param index
      * @return
      */
@@ -192,7 +181,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param filter
      * @return
      */
@@ -213,7 +201,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param from
      * @param to
      * @return
@@ -235,7 +222,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param index
      * @param element
      * @return
@@ -252,7 +238,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @return
      */
     @Override
@@ -261,7 +246,7 @@ public class Array<E> implements ArrayInterface<E> {
             for (int i = 0; i < elements.length; i++) {
                 elements[i] = null;
             }
-            size=0;
+            size = 0;
             return true;
         } catch (Exception e) {
             Logger.getLogger(this.getClass().getName()).log(Level.WARNING, e.getMessage(), e);
@@ -270,7 +255,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param element
      * @return
      */
@@ -289,7 +273,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param array
      * @return
      */
@@ -308,7 +291,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param collection
      * @return
      */
@@ -329,16 +311,14 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @return
      */
     @Override
     public boolean isEmpty() {
-        return size==0;
+        return size == 0;
     }
 
     /**
-     *
      * @return
      */
     @Override
@@ -357,7 +337,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @return
      */
     @Override
@@ -366,7 +345,6 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @return
      */
     @Override
@@ -387,17 +365,18 @@ public class Array<E> implements ArrayInterface<E> {
     }
 
     /**
-     *
      * @param action
      */
     @Override
     public void forEach(Function<E, Void> action) {
-        for (int i = 0; i<size; i++){
+        for (int i = 0; i < size; i++) {
             action.apply(elements[i]);
         }
     }
 
-    public E[] toPrimitiveArray(){
-        return elements;
+    public E[] toPrimitiveArray() {
+        return this.elements;
     }
+
+
 }

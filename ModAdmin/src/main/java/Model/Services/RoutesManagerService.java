@@ -61,7 +61,7 @@ public class RoutesManagerService extends UnicastRemoteObject implements RouteMa
         }
         TrainRepoInterface trainRepository = new TrainRepository("src/main/resources/Model/JSONFiles/trains.json");
         Train train = trainRepository.getTrain(idTrain);
-        Route route = new Route(routes.toArray(new Rail[]{}), train);
+        Route route = new Route("00:00", "00:00", routes.toArray(new Rail[]{}), train, 0);
         RouteRepository routeRepository = new RouteRepository("src/main/resources/Model/JSONFiles/routes.json");
         return routeRepository.insert(route);
     }

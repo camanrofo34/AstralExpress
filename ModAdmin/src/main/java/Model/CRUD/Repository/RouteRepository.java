@@ -19,21 +19,21 @@ public class RouteRepository {
     }
 
     public Boolean insert(Route route) {
-        RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
+        RouteEntity routeEntity = new RouteEntity(route.getDepartureTime(), route.getArrivalTime(), route.getTrain().getIdTrain(), route.getRails(), route.getTotalDistance());
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         routes.add(routeEntity);
         return fileJson.writeObjects(pathFile, routes);
     }
 
     public Boolean delete(Route route) {
-        RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
+        RouteEntity routeEntity = new RouteEntity(route.getDepartureTime(), route.getArrivalTime(), route.getTrain().getIdTrain(), route.getRails(), route.getTotalDistance());
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
-        routes.remove(routeEntity);
+        routes.remove(e->e.getIdTrain().equals(routeEntity.getIdTrain()));
         return fileJson.writeObjects(pathFile, routes);
     }
 
     public Boolean update(Route route) {
-        RouteEntity routeEntity = new RouteEntity(route.getTrain().getIdTrain(), route.getRails());
+        RouteEntity routeEntity = new RouteEntity(route.getDepartureTime(), route.getArrivalTime(), route.getTrain().getIdTrain(), route.getRails(), route.getTotalDistance());
         ArrayList<RouteEntity> routes = (ArrayList<RouteEntity>) fileJson.getObjects(pathFile, RouteEntity[].class);
         for (int i = 0; i < routes.size(); i++) {
             if (routes.get(i).getIdTrain().equals(route.getTrain().getIdTrain())) {
@@ -52,7 +52,7 @@ public class RouteRepository {
             if (routeEntity.getIdTrain().equals(idTrain)) {
                 TrainRepository trainRepository = new TrainRepository("src/main/resources/Model/JSONFiles/trains.json");
                 Train train = trainRepository.getTrain(routeEntity.getIdTrain());
-                return new Route(routeEntity.getRails(), train);
+                return new Route(routeEntity.getDepartureHour(), routeEntity.getArrivalHour(), routeEntity.getRails(), train, routeEntity.getDistance());
             }
         }
         return null;
@@ -65,7 +65,7 @@ public class RouteRepository {
             RouteEntity routeEntity = routes.get(i);
             TrainRepository trainRepository = new TrainRepository("src/main/resources/Model/JSONFiles/trains.json");
             Train train = trainRepository.getTrain(routeEntity.getIdTrain());
-            routesList.add(new Route(routeEntity.getRails(), train));
+            routesList.add(new Route(routeEntity.getDepartureHour(), routeEntity.getArrivalHour(), routeEntity.getRails(), train, routeEntity.getDistance()));
         }
         return routesList;
     }

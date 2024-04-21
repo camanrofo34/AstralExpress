@@ -13,9 +13,12 @@ public class Route {
 
     int totalDistance;
 
-    public Route(Rail[] rails, Train train) {
+    public Route(String departureTime, String arrivalTime, Rail[] rails, Train train, int totalDistance) {
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
         this.rails = new ArrayList<>(rails);
         this.train = train;
+        this.totalDistance = totalDistance;
     }
 
     public Rail[] getRails() {
@@ -34,12 +37,20 @@ public class Route {
         this.train = train;
     }
 
-    public void setTime(String time) {
+    public void setDepartureTime(String time) {
         this.departureTime = time;
     }
 
-    public String getTime() {
+    public String getDepartureTime() {
         return departureTime;
+    }
+
+    public void setArrivalTime(String time) {
+        this.arrivalTime = time;
+    }
+
+    public String getArrivalTime() {
+        return arrivalTime;
     }
 
     public int getTotalDistance(){

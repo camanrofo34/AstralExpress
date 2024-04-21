@@ -1,10 +1,10 @@
 package controller;
 
-import Model.Domain.User;
-import Model.HubModel;
-import Model.LoginModel;
-import View.HubView;
-import View.LoginView;
+import model.domain.User;
+import model.HubModel;
+import model.LoginModel;
+import view.HubView;
+import view.LoginView;
 
 public class LoginController {
     private LoginModel loginModel;

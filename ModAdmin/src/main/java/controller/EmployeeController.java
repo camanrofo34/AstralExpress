@@ -1,9 +1,9 @@
 package controller;
 
-import Model.Domain.Employee;
-import Model.Domain.User;
-import Model.EmployeeModel;
-import View.EmployeeView;
+import model.domain.Employee;
+import model.domain.User;
+import model.EmployeeModel;
+import view.EmployeeView;
 import dataStructures.Array;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;

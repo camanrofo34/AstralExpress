@@ -1,8 +1,8 @@
-import Model.Environment.Environment;
-import Model.LoginModel;
-import Model.Server.RMIServer;
-import Model.Services.LogInService;
-import View.LoginView;
+import model.environment.Environment;
+import model.LoginModel;
+import model.server.RMIServer;
+import model.services.LogInService;
+import view.LoginView;
 import controller.LoginController;
 import dataStructures.ArrayList;
 

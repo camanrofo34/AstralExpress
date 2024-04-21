@@ -1,11 +1,12 @@
 package controller;
 
-import Model.RoutesModel;
-import View.RoutesView;
-import dataStructures.Interfaces.Iterator;
+import dataStructures.Array;
+import model.RoutesModel;
+import view.RoutesView;
 import dataStructures.Interfaces.List;
 
 import javax.swing.*;
+import java.util.function.UnaryOperator;
 
 public class RoutesController {
 
@@ -18,23 +19,40 @@ public class RoutesController {
     }
 
     public void init() throws Exception {
-        routesView.initComponents (event -> {
+        routesView.initComponents (new Array<>(new UnaryOperator[] {event -> {
             try {
                 List<String> list = routesView.stationsSelected();
                 if (list.size() < 2) {
                     JOptionPane.showMessageDialog(null, "Select at least two stations");
                     return null;
                 }
-                if (routesModel.createRoute(list, routesView.getSelectedTrain())){
+                if (routesModel.createRoute(list, routesView.getSelectedTrain(), routesView.getDepartureTime())) {
                     JOptionPane.showMessageDialog(null, "Route created successfully");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Error creating route");
+                    JOptionPane.showMessageDialog(null, "Error creating route, Train is already in an assigned route");
                 }
-
+                routesView.setRoutes(routesModel.getRoutes());
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;
-        }, routesModel.getTrains());
+        }, event -> {
+            try {
+                Array<String> trains = routesView.getSelectedRow();
+                if (trains.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Select a route to delete");
+                    return null;
+                }
+                if (routesModel.deleteRoute(trains.get(4))) {
+                    JOptionPane.showMessageDialog(null, "Route deleted successfully");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error deleting route");
+                }
+                routesView.setRoutes(routesModel.getRoutes());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }}), routesModel.getTrains(), routesModel.getRoutes());
     }
 }

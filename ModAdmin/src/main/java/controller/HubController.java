@@ -1,17 +1,16 @@
 package controller;
 
-import Model.*;
-import Model.Environment.Environment;
-import Model.Server.RMIServer;
-import Model.Services.LogInService;
-import Model.Services.RoutesManagerService;
-import Model.Services.TrainManagerService;
-import Model.Services.UserManagerService;
-import View.*;
+import model.*;
+import model.environment.Environment;
+import model.server.RMIServer;
+import model.services.LogInService;
+import model.services.RoutesManagerService;
+import model.services.TrainManagerService;
+import model.services.UserManagerService;
+import view.*;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 
-import java.rmi.RemoteException;
 import java.util.function.UnaryOperator;
 
 public class HubController {

@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "departureHour": "10:20",
+    "arrivalHour": "10:52",
+    "idTrain": "T9",
+    "rails": [
+      {
+        "station1": {
+          "idStation": "0",
+          "stationName": "A"
+        },
+        "station2": {
+          "idStation": "3",
+          "stationName": "D"
+        },
+        "distance": 50
+      }
+    ],
+    "distance": 50
+  },
+  {
+    "departureHour": "15:15",
+    "arrivalHour": "16:11",
+    "idTrain": "T13",
+    "rails": [
+      {
+        "station1": {
+          "idStation": "0",
+          "stationName": "A"
+        },
+        "station2": {
+          "idStation": "3",
+          "stationName": "D"
+        },
+        "distance": 50
+      },
+      {
+        "station1": {
+          "idStation": "3",
+          "stationName": "D"
+        },
+        "station2": {
+          "idStation": "4",
+          "stationName": "E"
+        },
+        "distance": 20
+      }
+    ],
+    "distance": 70
+  }
+]

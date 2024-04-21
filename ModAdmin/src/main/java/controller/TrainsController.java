@@ -1,9 +1,9 @@
 package controller;
 
-import Model.Domain.Brand;
-import Model.Domain.Train;
-import Model.TrainModel;
-import View.TrainView;
+import model.domain.Brand;
+import model.domain.Train;
+import model.TrainModel;
+import view.TrainView;
 import dataStructures.Array;
 import dataStructures.Interfaces.List;
 

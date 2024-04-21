@@ -275,6 +275,6 @@ public interface List<E> extends Collection<E> {
      *
      * @return an array containing all of the elements in this list.
      */
-    public E[] toArray();
+    public E[] toArray(E[] a);
 
 }

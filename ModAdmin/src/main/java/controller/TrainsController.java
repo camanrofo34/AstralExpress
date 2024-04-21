@@ -38,6 +38,32 @@ public class TrainsController {
                     String trainType = trainView.getTrainBrand();
                     String trainWagons = trainView.getTrainWagons();
                     String trainMileage = trainView.getTrainMilleage();
+                    if (trainName.isEmpty() || trainType.isEmpty() || trainWagons.isEmpty() || trainMileage.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "All fields are required");
+                        return null;
+                    }
+                    if (!trainWagons.matches("^[0-9]+$") || !trainMileage.matches("^[0-9]+(\\.[0-9]+)?$")) {
+                        JOptionPane.showMessageDialog(null, "Wagons and mileage must be numeric");
+                        return null;
+                    }
+                    if (Integer.parseInt(trainWagons) < 1 || Double.parseDouble(trainMileage) < 0) {
+                        JOptionPane.showMessageDialog(null, "Wagons and mileage must be greater than 0");
+                        return null;
+                    }
+                    if (trainType.equals("Choose")) {
+                        JOptionPane.showMessageDialog(null, "Select a brand");
+                        return null;
+                    } else if (trainType.equals("Arnold")){
+                        if (Integer.parseInt(trainWagons) > 32) {
+                            JOptionPane.showMessageDialog(null, "Arnold trains can't have more than 32 wagons");
+                            return null;
+                        }
+                    }else if (trainType.equals("Mercedez_Benz")){
+                        if (Integer.parseInt(trainWagons) > 28) {
+                            JOptionPane.showMessageDialog(null, "Mercedez_Benz trains can't have more than 28 wagons");
+                            return null;
+                        }
+                    }
                     try {
                         trainModel.addTrain(trainName, Integer.parseInt(trainWagons), Double.parseDouble(trainMileage), Brand.getBrandByName(trainType));
                         List<Train> trains = trainModel.getTrains();

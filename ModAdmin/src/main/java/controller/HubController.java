@@ -1,18 +1,13 @@
 package controller;
 
-import Model.EmployeeModel;
+import Model.*;
 import Model.Environment.Environment;
-import Model.HubModel;
-import Model.LoginModel;
 import Model.Server.RMIServer;
 import Model.Services.LogInService;
+import Model.Services.RoutesManagerService;
 import Model.Services.TrainManagerService;
 import Model.Services.UserManagerService;
-import Model.TrainModel;
-import View.EmployeeView;
-import View.HubView;
-import View.LoginView;
-import View.TrainView;
+import View.*;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 
@@ -27,23 +22,24 @@ public class HubController {
     private RMIServer rmiServerTLogin = new RMIServer(properties.get(0), properties.get(1), properties.get(2), new LogInService());
     private RMIServer rmiServerTrain = new RMIServer(properties.get(0), properties.get(4), properties.get(5), new TrainManagerService());
     private RMIServer rmiServerEmployee = new RMIServer(properties.get(0), properties.get(6), properties.get(7), new UserManagerService());
-    private RMIServer rmiServerRoute;
+    private RMIServer rmiServerRoute = new RMIServer(properties.get(0), properties.get(8), properties.get(9), new RoutesManagerService());
 
-    public HubController(HubModel hubModel, HubView hubView) throws RemoteException {
+    public HubController(HubModel hubModel, HubView hubView) throws Exception {
         this.hubModel = hubModel;
         this.hubView = hubView;
         rmiServerTrain.deploy();
         rmiServerEmployee.deploy();
+        rmiServerRoute.deploy();
     }
 
     public void init() {
         hubView.update();
         hubView.initComponents(new Array<>(new UnaryOperator[]{
                 event -> {
+                    try {
                     TrainModel trainModel = new TrainModel(rmiServerTrain.getUrl());
                     TrainsController trainsManagerController = new TrainsController(trainModel, new TrainView(trainModel.getMessenger()));
-                    try {
-                        trainsManagerController.init();
+                    trainsManagerController.init();
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
@@ -67,9 +63,14 @@ public class HubController {
                     }
                 },
                 event -> {
-                    hubModel.getMessenger().setMessage("Routes Management");
-                    hubView.update();
-                    return null;
+                    try{
+                        RoutesModel routesModel = new RoutesModel(rmiServerRoute.getUrl());
+                        RoutesController routesController = new RoutesController(routesModel, new RoutesView(routesModel.getMessenger()));
+                        routesController.init();
+                        return null;
+                    }catch(Exception e){
+                        throw new RuntimeException(e);
+                    }
                 },
                 event -> {
                     LoginModel loginModel = new LoginModel(rmiServerTLogin.getUrl());

@@ -39,6 +39,8 @@ public class Environment {
             variables.add(service[1]);
             variables.add(port[2]);
             variables.add(service[2]);
+            variables.add(port[3]);
+            variables.add(service[3]);
         } catch (Exception exception) {
             Logger.getLogger("Server").log(Level.WARNING, exception.getMessage(), exception);
         }

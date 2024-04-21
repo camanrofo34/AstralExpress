@@ -5,6 +5,7 @@ import dataStructures.Interfaces.Collection;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
 
+import java.util.Arrays;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
@@ -487,9 +488,13 @@ public class ArrayList<E> implements List<E>, ArrayInterface<E> {
         return list;
     }
 
-    @Override
-    public E[] toArray() {
-        return arrayList;
+    public E[] toArray(E[] a) {
+        int size = size();
+        if (a.length < size) {
+            a = (E[]) Arrays.copyOf(a, size, a.getClass());
+        }
+        System.arraycopy(arrayList, 0, a, 0, size);
+        return a;
     }
 
     @Override

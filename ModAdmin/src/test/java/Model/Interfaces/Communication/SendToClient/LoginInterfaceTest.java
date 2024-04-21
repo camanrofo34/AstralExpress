@@ -10,6 +10,6 @@ class LoginInterfaceTest {
     @Test
     void login() throws Exception {
         LoginInterface loginInterface = new LogInService();
-        assertTrue(loginInterface.login("admin1", "admin"));
+        assertTrue(loginInterface.login("root", "admin"));
     }
 }

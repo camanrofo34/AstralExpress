@@ -33,10 +33,10 @@ public class LoginController {
                     loginModel.getMessenger().setMessage("Login successful");
                     loginView.close();
                 } else {
-                    loginModel.getMessenger().setMessage("Login failed");
+                    loginModel.getMessenger().setMessage("1");
                 }
             } catch (Exception e) {
-                loginModel.getMessenger().setMessage("Login failed");
+                loginModel.getMessenger().setMessage("2");
             }
             return null;
         });

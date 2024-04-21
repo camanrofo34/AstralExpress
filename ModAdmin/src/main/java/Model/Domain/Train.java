@@ -53,8 +53,8 @@ public class Train implements Serializable {
         this.capacity = capacity;
         this.mileage = mileage;
         this.brand = brand;
-        this.passengersVagon = new Array<>(passengersVagon.toArray());
-        this.chargeVagon = new Array<>(chargeVagon.toArray());
+        this.passengersVagon = new Array<>(passengersVagon.toArray(new PassengerVagon[] {}));
+        this.chargeVagon = new Array<>(chargeVagon.toArray(new ChargeVagon[] {}));
     }
 
     public Train(String trainName, int i, double v, Brand brandByName) {
@@ -74,8 +74,8 @@ public class Train implements Serializable {
         this.mileage = v;
         this.brand = brand;
         this.inRoute = inRoute;
-        this.passengersVagon = new Array<>(passengerVagons.toArray());
-        this.chargeVagon = new Array<>(chargeVagons.toArray());
+        this.passengersVagon = new Array<>(passengerVagons.toArray(new PassengerVagon[] {}));
+        this.chargeVagon = new Array<>(chargeVagons.toArray(new ChargeVagon[] {}));
     }
 
     public static Train getNullTrain() {

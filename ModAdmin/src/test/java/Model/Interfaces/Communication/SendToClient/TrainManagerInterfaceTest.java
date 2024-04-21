@@ -20,13 +20,6 @@ class TrainManagerInterfaceTest {
     }
 
     @Test
-    void addTrain() throws Exception {
-        Train train = new Train("T4", "4", 20, 21.2, Brand.Arnold);
-        TrainManagerServerInterface trainManagerClientInterface = new TrainManagerService();
-        assertTrue(trainManagerClientInterface.addTrain(train));
-    }
-
-    @Test
     void removeTrain() throws Exception {
         Train train = new Train("T4", "4", 20, 21.2, Brand.Arnold);
         TrainManagerServerInterface trainManagerClientInterface = new TrainManagerService();

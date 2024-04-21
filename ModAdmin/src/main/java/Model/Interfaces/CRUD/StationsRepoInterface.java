@@ -14,5 +14,7 @@ public interface StationsRepoInterface extends Remote {
 
     Station getStation(String idStation) throws Exception;
 
+    Station getStationById(String idStation) throws Exception;
+
     List<Station> getAllStations() throws Exception;
 }

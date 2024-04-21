@@ -1,2 +1,18 @@
 [
+  {
+    "idTrain": "T9",
+    "rails": [
+      {
+        "station1": {
+          "idStation": "0",
+          "stationName": "A"
+        },
+        "station2": {
+          "idStation": "1",
+          "stationName": "B"
+        },
+        "distance": 30
+      }
+    ]
+  }
 ]

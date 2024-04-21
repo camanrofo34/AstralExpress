@@ -132,7 +132,7 @@ public class TrainView extends Observer<Messenger> {
 
         BrandBox.setBackground(new java.awt.Color(20, 24, 27));
         BrandBox.setForeground(new java.awt.Color(255, 255, 255));
-        BrandBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "Mercedes benz", "Arnold" }));
+        BrandBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "Mercedez_Benz", "Arnold" }));
 
         AddButton.setText("ADD");
         AddButton.addActionListener(event -> fns.get(1).apply(null));
@@ -281,7 +281,7 @@ public class TrainView extends Observer<Messenger> {
 
     public Array<String> getTrainData() {
         int row = jTable1.getSelectedRow();
-        Array<String> data = new Array<>(5);
+        Array<String> data = new Array<>(6);
         if (row != -1) {
             data.add((String) jTable1.getValueAt(row, 0));
             data.add((String) jTable1.getValueAt(row, 1));
@@ -289,7 +289,6 @@ public class TrainView extends Observer<Messenger> {
             data.add((String) jTable1.getValueAt(row, 3));
             data.add((String) jTable1.getValueAt(row, 4));
             data.add((String) jTable1.getValueAt(row, 5));
-            JOptionPane.showMessageDialog(null, data.get(5));
         }
         return data;
     }

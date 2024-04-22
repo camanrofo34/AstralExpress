@@ -55,7 +55,6 @@ public class TicketManagerService extends UnicastRemoteObject implements TicketB
         TicketRepository ticketRepository = new TicketRepository("src/main/resources/model/JSONFiles/tickets.json");
         return ticketRepository.insert(ticket);
     }
-    }
 
     /**
      * This method is used to get the shortest path

@@ -8,8 +8,9 @@ import dataStructures.Array;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
+import model.interfaces.crud.PassengerVagonRepoInterface;
 
-public class PassengerVagonRepository {
+public class PassengerVagonRepository implements PassengerVagonRepoInterface {
 
     private final FileJsonInterface<PassengerVagonEntity> fileJson;
     private final String pathFile;
@@ -19,6 +20,7 @@ public class PassengerVagonRepository {
         this.fileJson = FileJsonAdapter.getInstance();
     }
 
+    @Override
     public List<PassengerVagon> getPassengerVagons() {
         List<PassengerVagonEntity> passengerVagonEntities = fileJson.getObjects(pathFile, PassengerVagonEntity[].class);
         List<PassengerVagon> passengerVagons = new ArrayList<>();
@@ -30,6 +32,7 @@ public class PassengerVagonRepository {
         return passengerVagons;
     }
 
+    @Override
     public Boolean insert(PassengerVagon passengerVagon) {
         List<PassengerVagonEntity> passengerVagonEntities = fileJson.getObjects(pathFile, PassengerVagonEntity[].class);
         Boolean[] premiumSeats = new Boolean[passengerVagon.getPremium().size()];
@@ -49,6 +52,7 @@ public class PassengerVagonRepository {
         return fileJson.writeObjects(pathFile, passengerVagonEntities);
     }
 
+    @Override
     public Boolean delete(PassengerVagon passengerVagon) {
         List<PassengerVagonEntity> passengerVagonEntities = fileJson.getObjects(pathFile, PassengerVagonEntity[].class);
         Boolean[] premiumSeats = new Boolean[passengerVagon.getPremium().size()];
@@ -68,6 +72,7 @@ public class PassengerVagonRepository {
         return fileJson.writeObjects(pathFile, passengerVagonEntities);
     }
 
+    @Override
     public Boolean update(PassengerVagon passengerVagon) {
         ArrayList<PassengerVagonEntity> passengerVagonEntities = (ArrayList<PassengerVagonEntity>) fileJson.getObjects(pathFile, PassengerVagonEntity[].class);
         Boolean[] premiumSeats = new Boolean[passengerVagon.getPremium().size()];
@@ -92,6 +97,7 @@ public class PassengerVagonRepository {
         return false;
     }
 
+    @Override
     public PassengerVagon getPassengerVagon(String idVagon) {
         List<PassengerVagonEntity> passengerVagonEntities = fileJson.getObjects(pathFile, PassengerVagonEntity[].class);
         Iterator<PassengerVagonEntity> it = passengerVagonEntities.iterator();

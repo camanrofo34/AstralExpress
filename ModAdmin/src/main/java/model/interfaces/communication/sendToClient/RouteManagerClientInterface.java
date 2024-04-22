@@ -8,10 +8,18 @@ import dataStructures.Interfaces.List;
 
 import java.rmi.Remote;
 
-public interface RouteManagerClientInterface extends Remote { ;
+public interface RouteManagerClientInterface extends Remote {
+    /**
+     * Get the Trains Id
+     * @return
+     * @throws Exception
+     */
     List<String> getTrainsId() throws Exception;
 
-    List<Train> getTrainsFromThePath(ArrayList<Station> stations) throws Exception;
-
+    /**
+     * Get the Routes
+     * @return
+     * @throws Exception
+     */
     List<Route> getRoutes() throws Exception;
 }

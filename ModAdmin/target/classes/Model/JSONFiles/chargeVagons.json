@@ -1,5 +1,209 @@
 [
   {
+    "idVagon": "T1-C0"
+  },
+  {
+    "idVagon": "T1-C1"
+  },
+  {
+    "idVagon": "T1-C2"
+  },
+  {
+    "idVagon": "T1-C3"
+  },
+  {
+    "idVagon": "T1-C4"
+  },
+  {
+    "idVagon": "T1-C5"
+  },
+  {
+    "idVagon": "T2-C0"
+  },
+  {
+    "idVagon": "T2-C1"
+  },
+  {
+    "idVagon": "T2-C2"
+  },
+  {
+    "idVagon": "T2-C3"
+  },
+  {
+    "idVagon": "T2-C4"
+  },
+  {
+    "idVagon": "T2-C5"
+  },
+  {
+    "idVagon": "T2-C6"
+  },
+  {
+    "idVagon": "T2-C7"
+  },
+  {
+    "idVagon": "T3-C0"
+  },
+  {
+    "idVagon": "T3-C1"
+  },
+  {
+    "idVagon": "T3-C2"
+  },
+  {
+    "idVagon": "T3-C3"
+  },
+  {
+    "idVagon": "T3-C4"
+  },
+  {
+    "idVagon": "T3-C5"
+  },
+  {
+    "idVagon": "T3-C6"
+  },
+  {
+    "idVagon": "T3-C7"
+  },
+  {
+    "idVagon": "T4-C0"
+  },
+  {
+    "idVagon": "T4-C1"
+  },
+  {
+    "idVagon": "T4-C2"
+  },
+  {
+    "idVagon": "T4-C3"
+  },
+  {
+    "idVagon": "T4-C4"
+  },
+  {
+    "idVagon": "T4-C5"
+  },
+  {
+    "idVagon": "T4-C6"
+  },
+  {
+    "idVagon": "T4-C7"
+  },
+  {
+    "idVagon": "T5-C0"
+  },
+  {
+    "idVagon": "T5-C1"
+  },
+  {
+    "idVagon": "T5-C2"
+  },
+  {
+    "idVagon": "T5-C3"
+  },
+  {
+    "idVagon": "T5-C4"
+  },
+  {
+    "idVagon": "T5-C5"
+  },
+  {
+    "idVagon": "T5-C6"
+  },
+  {
+    "idVagon": "T5-C7"
+  },
+  {
+    "idVagon": "T6-C0"
+  },
+  {
+    "idVagon": "T6-C1"
+  },
+  {
+    "idVagon": "T6-C2"
+  },
+  {
+    "idVagon": "T6-C3"
+  },
+  {
+    "idVagon": "T6-C4"
+  },
+  {
+    "idVagon": "T6-C5"
+  },
+  {
+    "idVagon": "T6-C6"
+  },
+  {
+    "idVagon": "T6-C7"
+  },
+  {
+    "idVagon": "T6-C8"
+  },
+  {
+    "idVagon": "T6-C9"
+  },
+  {
+    "idVagon": "T7-C0"
+  },
+  {
+    "idVagon": "T7-C1"
+  },
+  {
+    "idVagon": "T7-C2"
+  },
+  {
+    "idVagon": "T7-C3"
+  },
+  {
+    "idVagon": "T7-C4"
+  },
+  {
+    "idVagon": "T7-C5"
+  },
+  {
+    "idVagon": "T7-C6"
+  },
+  {
+    "idVagon": "T7-C7"
+  },
+  {
+    "idVagon": "T7-C8"
+  },
+  {
+    "idVagon": "T7-C9"
+  },
+  {
+    "idVagon": "T8-C0"
+  },
+  {
+    "idVagon": "T8-C1"
+  },
+  {
+    "idVagon": "T8-C2"
+  },
+  {
+    "idVagon": "T8-C3"
+  },
+  {
+    "idVagon": "T8-C4"
+  },
+  {
+    "idVagon": "T8-C5"
+  },
+  {
+    "idVagon": "T8-C6"
+  },
+  {
+    "idVagon": "T8-C7"
+  },
+  {
+    "idVagon": "T8-C8"
+  },
+  {
+    "idVagon": "T8-C9"
+  },
+  {
     "idVagon": "T9-C0"
   },
   {
@@ -18,30 +222,45 @@
     "idVagon": "T9-C5"
   },
   {
-    "idVagon": "T13-C0"
+    "idVagon": "T9-C6"
   },
   {
-    "idVagon": "T13-C1"
+    "idVagon": "T9-C7"
   },
   {
-    "idVagon": "T13-C2"
+    "idVagon": "T9-C8"
   },
   {
-    "idVagon": "T13-C3"
+    "idVagon": "T9-C9"
   },
   {
-    "idVagon": "T13-C4"
+    "idVagon": "T10-C0"
   },
   {
-    "idVagon": "T13-C5"
+    "idVagon": "T10-C1"
   },
   {
-    "idVagon": "T13-C6"
+    "idVagon": "T10-C2"
   },
   {
-    "idVagon": "T13-C7"
+    "idVagon": "T10-C3"
   },
   {
-    "idVagon": "T13-C8"
+    "idVagon": "T10-C4"
+  },
+  {
+    "idVagon": "T10-C5"
+  },
+  {
+    "idVagon": "T10-C6"
+  },
+  {
+    "idVagon": "T10-C7"
+  },
+  {
+    "idVagon": "T10-C8"
+  },
+  {
+    "idVagon": "T10-C9"
   }
 ]

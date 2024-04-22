@@ -22,5 +22,17 @@
     "names": "Carlos",
     "lastNames": "Quintero",
     "phoneNumbers": "3245678901"
+  },
+  {
+    "idPerson": "E1",
+    "names": "Camilo",
+    "lastNames": "Rodriguez",
+    "phoneNumbers": "3133475336,6895478"
+  },
+  {
+    "idPerson": "E2",
+    "names": "Diego",
+    "lastNames": "Suarez",
+    "phoneNumbers": "3229146551"
   }
 ]

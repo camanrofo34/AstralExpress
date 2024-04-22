@@ -8,19 +8,13 @@
   {
     "username": "camanrofo",
     "password": "1097096174",
-    "idPerson": "E3",
+    "idPerson": "E1",
     "isAdmin": false
   },
   {
     "username": "drift",
     "password": "delomejor1",
-    "idPerson": "E4",
-    "isAdmin": false
-  },
-  {
-    "username": "carl",
-    "password": "delomejor34",
-    "idPerson": "E5",
+    "idPerson": "E2",
     "isAdmin": false
   }
 ]

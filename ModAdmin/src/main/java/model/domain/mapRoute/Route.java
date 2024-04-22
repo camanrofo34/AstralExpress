@@ -1,5 +1,6 @@
 package model.domain.mapRoute;
 
+import model.domain.Station;
 import model.domain.Train;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
@@ -34,8 +35,13 @@ public class Route implements Serializable {
         return rails.toArray(new Rail[]{});
     }
 
-    public Boolean containRail(Rail rail) {
-        return rails.contains(rail);
+    public Boolean containRail(Station station1, Station station2) {
+        for (int i = 0; i < rails.size(); i++) {
+            if (rails.get(i).getStation1().getIdStation().equals(station1.getIdStation()) && rails.get(i).getStation2().getIdStation().equals(station2.getIdStation())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public Train getTrain() {

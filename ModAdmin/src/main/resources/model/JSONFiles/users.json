@@ -4,5 +4,17 @@
     "password": "admin",
     "idPerson": "E0",
     "isAdmin": true
+  },
+  {
+    "username": "camanrofo",
+    "password": "1097096174",
+    "idPerson": "E1",
+    "isAdmin": false
+  },
+  {
+    "username": "drift",
+    "password": "delomejor1",
+    "idPerson": "E2",
+    "isAdmin": false
   }
 ]

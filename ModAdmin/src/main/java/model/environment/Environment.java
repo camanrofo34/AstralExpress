@@ -15,7 +15,10 @@ public class Environment {
         variables = new ArrayList<>();
         loadVariables(getPathProperties());
     }
-
+    /**
+     * Get the instance of the Environment
+     * @return
+     */
     public static Environment getInstance() {
         if (Environment.instance == null) Environment.instance = new Environment();
         return Environment.instance;
@@ -25,6 +28,10 @@ public class Environment {
         return "src\\main\\resources\\Model\\server.properties";
     }
 
+    /**
+     * Load the variables from the properties file
+     * @param path
+     */
     private void loadVariables(String path) {
         Properties properties = new Properties();
         try (FileInputStream fileInputStream = new FileInputStream(path)) {
@@ -41,11 +48,17 @@ public class Environment {
             variables.add(service[2]);
             variables.add(port[3]);
             variables.add(service[3]);
+            variables.add(port[4]);
+            variables.add(service[4]);
         } catch (Exception exception) {
             Logger.getLogger("Server").log(Level.WARNING, exception.getMessage(), exception);
         }
     }
 
+    /**
+     * Get the variables
+     * @return
+     */
     public ArrayList<String> getVariables() {
         return variables;
     }

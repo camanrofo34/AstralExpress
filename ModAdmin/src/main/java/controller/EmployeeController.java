@@ -19,6 +19,10 @@ public class EmployeeController {
         this.employeeView = employeeView;
     }
 
+    /**
+     * Initializes the components of the view and adds the actions to the buttons
+     * @throws Exception
+     */
     public void init() throws Exception {
         employeeView.initComponents(new Array<>(new UnaryOperator[]{
                 event -> {

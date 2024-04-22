@@ -12,187 +12,228 @@ import javax.swing.table.DefaultTableModel;
 import java.util.function.UnaryOperator;
 
 public class EmployeeView extends Observer<Messenger> {
-    private javax.swing.JButton jAdd;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JTextField jContactNumber;
-    private javax.swing.JButton jDelete;
-    private javax.swing.JButton jEdit;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jLastNames;
-    private javax.swing.JTextField jNames;
-    private javax.swing.JTextField jPassword;
+    private javax.swing.JButton AddButton;
+    private javax.swing.JButton DeleteButton;
+    private javax.swing.JButton EditButton;
+    private javax.swing.JLabel Header;
+    private javax.swing.JTextField LastNameField;
+    private javax.swing.JLabel LastNameLabel;
+    private javax.swing.JLabel Logo;
+    private javax.swing.JTextField NameField;
+    private javax.swing.JLabel NameLabel;
+    private javax.swing.JTextField NumberField;
+    private javax.swing.JLabel NumerLabel;
+    private javax.swing.JTextField PasswordField;
+    private javax.swing.JLabel PasswordLabel;
+    private javax.swing.JButton SearchButton;
+    private javax.swing.JTextField SearchField;
+    private javax.swing.JTextField UserField;
+    private javax.swing.JLabel UserLabel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton jSearch;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jUser;
     private javax.swing.JFrame jFrame1;
 
     public EmployeeView(Messenger subject) {
         super(subject);
-        jAdd = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jContactNumber = new javax.swing.JTextField();
-        jDelete = new javax.swing.JButton();
-        jEdit = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLastNames = new javax.swing.JTextField();
-        jNames = new javax.swing.JTextField();
-        jPassword = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        Logo = new javax.swing.JLabel();
+        Header = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jSearch = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
-        jUser = new javax.swing.JTextField();
+        UserLabel = new javax.swing.JLabel();
+        UserField = new javax.swing.JTextField();
+        PasswordLabel = new javax.swing.JLabel();
+        PasswordField = new javax.swing.JTextField();
+        NameLabel = new javax.swing.JLabel();
+        NameField = new javax.swing.JTextField();
+        LastNameLabel = new javax.swing.JLabel();
+        LastNameField = new javax.swing.JTextField();
+        NumerLabel = new javax.swing.JLabel();
+        NumberField = new javax.swing.JTextField();
+        AddButton = new javax.swing.JButton();
+        EditButton = new javax.swing.JButton();
+        DeleteButton = new javax.swing.JButton();
+        SearchField = new javax.swing.JTextField();
+        SearchButton = new javax.swing.JButton();
         jFrame1 = new javax.swing.JFrame();
         subject.attach(this);
     }
 
     public void initComponents(Array<UnaryOperator<Void>> fns, List<User> users) {
         jFrame1.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        jFrame1.getContentPane().setLayout(new java.awt.CardLayout());
+        jPanel1.setBackground(new java.awt.Color(20, 24, 27));
 
+        jPanel2.setBackground(new java.awt.Color(30, 33, 38));
+
+        Logo.setIcon(new javax.swing.ImageIcon("src/main/resources/view/LogoAEResized.png")); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+
+        Header.setFont(new java.awt.Font("DINBEK", 0, 24)); // NOI18N
+        Header.setForeground(new java.awt.Color(204, 204, 204));
+        Header.setText("EMPLOYEE MANAGER");
+
+        jTable1.setBackground(new java.awt.Color(62, 60, 60));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{
+                new Object [][] {
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null}
                 },
-                new String[]{
-                        "ID", "USER", "PASSWORD", "NAMES", "LAST NAMES", " C. NUMBERS"
+                new String [] {
+                        "ID", "USER", "PASSWORD", "NAMES", "LAST NAMES", "C. NUMBER"
                 }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("DINBEK", 0, 24)); // NOI18N
-        jLabel1.setText("EMPLOYEE MANAGER");
+        UserLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        UserLabel.setForeground(new java.awt.Color(255, 255, 255));
+        UserLabel.setText("USER");
 
-        jLabel2.setText("USER");
+        UserField.setBackground(new java.awt.Color(30, 33, 38));
+        UserField.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setText("PASSWORD");
+        PasswordLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PasswordLabel.setForeground(new java.awt.Color(255, 255, 255));
+        PasswordLabel.setText("PASSWORD");
 
-        jLabel4.setText("NAMES");
+        PasswordField.setBackground(new java.awt.Color(30, 33, 38));
+        PasswordField.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel5.setText("LAST NAMES");
+        NameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        NameLabel.setText("NAMES");
 
-        jLabel6.setText("CONTACT NUMBER");
+        NameField.setBackground(new java.awt.Color(30, 33, 38));
+        NameField.setForeground(new java.awt.Color(255, 255, 255));
 
-        jAdd.setText("ADD");
-        jAdd.addActionListener(event -> fns.get(0).apply(null));
+        LastNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        LastNameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        LastNameLabel.setText("LAST NAMES");
 
-        jDelete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jDelete.setForeground(new java.awt.Color(255, 51, 51));
-        jDelete.setText("DELETE");
-        jDelete.addActionListener(event -> fns.get(1).apply(null));
+        LastNameField.setBackground(new java.awt.Color(30, 33, 38));
+        LastNameField.setForeground(new java.awt.Color(255, 255, 255));
 
-        jEdit.setText("EDIT");
-        jEdit.addActionListener(event -> fns.get(2).apply(null));
+        NumerLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NumerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        NumerLabel.setText("CONTACT NUMBER");
 
+        NumberField.setBackground(new java.awt.Color(30, 33, 38));
+        NumberField.setForeground(new java.awt.Color(255, 255, 255));
 
-        jSearch.setText("SEARCH");
-        jSearch.addActionListener(event -> fns.get(3).apply(null));
+        AddButton.setText("ADD");
 
+        EditButton.setText("EDIT");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(45, 45, 45)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jLabel1)
-                                                        .addComponent(jLabel2)
-                                                        .addComponent(jUser, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
-                                                        .addComponent(jLabel3)
-                                                        .addComponent(jLabel4)
-                                                        .addComponent(jLabel5)
-                                                        .addComponent(jLabel6)
-                                                        .addComponent(jPassword)
-                                                        .addComponent(jNames)
-                                                        .addComponent(jLastNames)
-                                                        .addComponent(jContactNumber)))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(72, 72, 72)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(jAdd)
-                                                                .addGap(130, 130, 130)
-                                                                .addComponent(jEdit))
-                                                        .addGroup(layout.createSequentialGroup()
-                                                                .addGap(99, 99, 99)
-                                                                .addComponent(jDelete)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 269, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jSearch))
-                                                .addGap(209, 209, 209))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(17, 17, 17))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jButton5)
-                                                .addContainerGap())))
+        DeleteButton.setBackground(new java.awt.Color(220, 27, 27));
+        DeleteButton.setText("DELETE");
+
+        SearchButton.setText("SEARCH");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(NumerLabel)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                .addComponent(NumberField, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(UserLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(NameLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(NameField, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                        .addComponent(AddButton)
+                                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                                                                        .addComponent(EditButton))
+                                                                .addComponent(UserField, javax.swing.GroupLayout.Alignment.LEADING))
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGap(94, 94, 94)
+                                                                .addComponent(DeleteButton)))
+                                                .addGap(80, 80, 80)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(SearchButton)
+                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                .addComponent(LastNameLabel)
+                                                                .addComponent(PasswordLabel)
+                                                                .addComponent(PasswordField)
+                                                                .addComponent(LastNameField)
+                                                                .addComponent(SearchField, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE))))
+                                        .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15))
         );
-        layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(32, 32, 32)
-                                                .addComponent(jLabel1)
-                                                .addGap(37, 37, 37)
-                                                .addComponent(jLabel2)
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                        .addComponent(UserLabel)
+                                                                        .addComponent(PasswordLabel))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                        .addComponent(UserField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(NameLabel))
+                                                        .addComponent(LastNameLabel))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jLabel3)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(NameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(LastNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addComponent(NumerLabel)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jLabel4)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jNames, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jLabel5)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLastNames, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jLabel6)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jContactNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(25, 25, 25)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jSearch))
-                                        .addComponent(jButton5)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jAdd)
-                                                        .addComponent(jEdit))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jDelete)))
-                                .addContainerGap(65, Short.MAX_VALUE))
+                                                .addComponent(NumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(40, 40, 40)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(AddButton)
+                                                        .addComponent(EditButton)
+                                                        .addComponent(SearchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(DeleteButton)
+                                                        .addComponent(SearchButton)))
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 68, Short.MAX_VALUE))
         );
 
-        jFrame1.pack();
+        jFrame1.getContentPane().add(jPanel1, "card2");
         chargeTable(users);
+        jFrame1.pack();
         jFrame1.setVisible(true);
     }
 
@@ -202,29 +243,32 @@ public class EmployeeView extends Observer<Messenger> {
     }
 
     public String getNames() {
-        return jNames.getText();
+        return NameField.getText();
     }
 
     public String getLastNames() {
-        return jLastNames.getText();
+        return LastNameField.getText();
     }
 
     public String getContactNumber() {
-        return jContactNumber.getText();
+        return NumberField.getText();
     }
 
     public String getUser() {
-        return jUser.getText();
+        return UserField.getText();
     }
 
     public String getPassword() {
-        return jPassword.getText();
+        return PasswordField.getText();
     }
 
     public String getSearched() {
-        return jTextField6.getText();
+        return SearchField.getText();
     }
-
+    /**
+     * Method to charge the table
+     * @param users
+     */
     public void chargeTable(List<User> users) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
@@ -235,7 +279,10 @@ public class EmployeeView extends Observer<Messenger> {
         }
         jTable1.setModel(model);
     }
-
+    /**
+     * Method to get the selected row
+     * @return
+     */
     public Array<String> getSelectedRow() {
         int row = jTable1.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

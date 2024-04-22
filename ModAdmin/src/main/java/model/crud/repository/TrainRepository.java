@@ -7,7 +7,9 @@ import model.domain.Brand;
 import model.domain.ChargeVagon;
 import model.domain.PassengerVagon;
 import model.domain.Train;
-import model.interfaces.CRUD.TrainRepoInterface;
+import model.interfaces.crud.ChargeVagonRepoInterface;
+import model.interfaces.crud.PassengerVagonRepoInterface;
+import model.interfaces.crud.TrainRepoInterface;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
@@ -24,8 +26,8 @@ public class TrainRepository implements TrainRepoInterface {
     @Override
     public Boolean insert(Train train) throws Exception {
         List<TrainEntity> trains = fileJson.getObjects(pathFile, TrainEntity[].class);
-        PassengerVagonRepository passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
-        ChargeVagonRepository chargeVagonRepository = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
+        PassengerVagonRepoInterface passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
+        ChargeVagonRepoInterface chargeVagonRepoInterface = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
         TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString(), Boolean.toString(train.getInRoute()));
         trains.add(trainEntity);
         Iterator<PassengerVagon> it = train.getPassengersVagon().iterator();
@@ -36,7 +38,7 @@ public class TrainRepository implements TrainRepoInterface {
         Iterator<ChargeVagon> it2 = train.getChargeVagon().iterator();
         while (it2.hasNext()) {
             ChargeVagon chargeVagon = it2.next();
-            chargeVagonRepository.insert(chargeVagon);
+            chargeVagonRepoInterface.insert(chargeVagon);
         }
         return fileJson.writeObjects(pathFile, trains);
     }
@@ -46,8 +48,8 @@ public class TrainRepository implements TrainRepoInterface {
         List<TrainEntity> trains = fileJson.getObjects(pathFile, TrainEntity[].class);
         TrainEntity trainEntity = new TrainEntity(train.getTrainName(), train.getIdTrain(), String.valueOf(train.getCapacity()), String.valueOf(train.getMileage()), train.getBrand().toString(), Boolean.toString(train.getInRoute()));
         trains.remove(e -> e.getIdTrain().equals(trainEntity.getIdTrain()));
-        PassengerVagonRepository passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
-        ChargeVagonRepository chargeVagonRepository = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
+        PassengerVagonRepoInterface passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
+        ChargeVagonRepoInterface chargeVagonRepoInterface = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
         Iterator<PassengerVagon> it = train.getPassengersVagon().iterator();
         while (it.hasNext()) {
             PassengerVagon passengerVagon = it.next();
@@ -56,7 +58,7 @@ public class TrainRepository implements TrainRepoInterface {
         Iterator<ChargeVagon> it2 = train.getChargeVagon().iterator();
         while (it2.hasNext()) {
             ChargeVagon chargeVagon = it2.next();
-            chargeVagonRepository.delete(chargeVagon);
+            chargeVagonRepoInterface.delete(chargeVagon);
         }
         return fileJson.writeObjects(pathFile, trains);
     }
@@ -71,8 +73,8 @@ public class TrainRepository implements TrainRepoInterface {
                 return fileJson.writeObjects(pathFile, trains);
             }
         }
-        PassengerVagonRepository passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
-        ChargeVagonRepository chargeVagonRepository = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
+        PassengerVagonRepoInterface passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
+        ChargeVagonRepoInterface chargeVagonRepoInterface = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
         Iterator<PassengerVagon> it = train.getPassengersVagon().iterator();
         while (it.hasNext()) {
             PassengerVagon passengerVagon = it.next();
@@ -81,7 +83,7 @@ public class TrainRepository implements TrainRepoInterface {
         Iterator<ChargeVagon> it2 = train.getChargeVagon().iterator();
         while (it2.hasNext()) {
             ChargeVagon chargeVagon = it2.next();
-            chargeVagonRepository.update(chargeVagon);
+            chargeVagonRepoInterface.update(chargeVagon);
         }
         return false;
     }
@@ -93,11 +95,11 @@ public class TrainRepository implements TrainRepoInterface {
         while (it.hasNext()) {
             TrainEntity trainEntity = it.next();
             if (trainEntity.getIdTrain().equals(idTrain)) {
-                PassengerVagonRepository passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
-                ChargeVagonRepository chargeVagonRepository = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
+                PassengerVagonRepoInterface passengerVagonRepository = new PassengerVagonRepository("src/main/resources/Model/JSONFiles/passengerVagons.json");
+                ChargeVagonRepoInterface chargeVagonRepoInterface = new ChargeVagonRepository("src/main/resources/Model/JSONFiles/chargeVagons.json");
                 List<PassengerVagon> passengerVagons = passengerVagonRepository.getPassengerVagons();
                 passengerVagons.remove(e -> !e.getIdVagon().startsWith(idTrain + "-"));
-                List<ChargeVagon> chargeVagons = chargeVagonRepository.getChargeVagons();
+                List<ChargeVagon> chargeVagons = chargeVagonRepoInterface.getChargeVagons();
                 chargeVagons.remove(e -> !e.getIdVagon().startsWith(idTrain + "-"));
                 return new Train(trainEntity.getTrainName(), trainEntity.getIdTrain(), Integer.parseInt(trainEntity.getCapacity()), Float.parseFloat(trainEntity.getMileage()),
                         Brand.valueOf(trainEntity.getBrand()), Boolean.parseBoolean(trainEntity.getInRoute()) ,passengerVagons, chargeVagons);

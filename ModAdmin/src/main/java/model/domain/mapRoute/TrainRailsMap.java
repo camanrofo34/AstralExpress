@@ -14,7 +14,7 @@ public class TrainRailsMap implements Serializable {
         map = new Graph(vertices);
         ArrayList<Rail> rails = (ArrayList<Rail>) stations;
         for (int i = 0; i < rails.size(); i++) {
-            map.agregarAristaNoDirigida(Integer.parseInt(rails.get(i).getStation1().getIdStation()), Integer.parseInt(rails.get(i).getStation2().getIdStation()), rails.get(i).getDistance());
+            map.addNonDirectedEdge(Integer.parseInt(rails.get(i).getStation1().getIdStation()), Integer.parseInt(rails.get(i).getStation2().getIdStation()), rails.get(i).getDistance());
         }
     }
 

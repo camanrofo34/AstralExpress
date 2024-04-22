@@ -4,7 +4,7 @@ import model.crud.repository.entities.StationEntity;
 import model.crud.shared.FileJsonAdapter;
 import model.crud.shared.FileJsonInterface;
 import model.domain.Station;
-import model.interfaces.CRUD.StationsRepoInterface;
+import model.interfaces.crud.StationsRepoInterface;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;

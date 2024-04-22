@@ -7,7 +7,7 @@ import model.domain.Employee;
 import model.domain.Passenger;
 import model.domain.PassengerContact;
 import model.domain.User;
-import model.interfaces.CRUD.UserRepoInterface;
+import model.interfaces.crud.UserRepoInterface;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.List;
 

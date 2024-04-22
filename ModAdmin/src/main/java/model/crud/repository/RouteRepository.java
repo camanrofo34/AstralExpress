@@ -9,7 +9,7 @@ import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
 
-public class RouteRepository {
+public class RouteRepository implements model.interfaces.crud.RouteRepoInterface {
     private final FileJsonInterface<RouteEntity> fileJson;
     private final String pathFile;
 
@@ -18,6 +18,7 @@ public class RouteRepository {
         this.fileJson = FileJsonAdapter.getInstance();
     }
 
+    @Override
     public Boolean insert(Route route) {
         RouteEntity routeEntity = new RouteEntity(route.getDepartureTime(), route.getArrivalTime(), route.getTrain().getIdTrain(), route.getRails(), route.getTotalDistance());
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
@@ -25,12 +26,14 @@ public class RouteRepository {
         return fileJson.writeObjects(pathFile, routes);
     }
 
+    @Override
     public Boolean delete(String idTrain) {
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         routes.remove(e->e.getIdTrain().equals(idTrain));
         return fileJson.writeObjects(pathFile, routes);
     }
 
+    @Override
     public Boolean update(Route route) {
         RouteEntity routeEntity = new RouteEntity(route.getDepartureTime(), route.getArrivalTime(), route.getTrain().getIdTrain(), route.getRails(), route.getTotalDistance());
         ArrayList<RouteEntity> routes = (ArrayList<RouteEntity>) fileJson.getObjects(pathFile, RouteEntity[].class);
@@ -43,6 +46,7 @@ public class RouteRepository {
         return false;
     }
 
+    @Override
     public Route getRoute(String idTrain) {
         List<RouteEntity> routes = fileJson.getObjects(pathFile, RouteEntity[].class);
         Iterator<RouteEntity> it = routes.iterator();
@@ -57,6 +61,7 @@ public class RouteRepository {
         return null;
     }
 
+    @Override
     public List<Route> getRoutes() throws Exception {
         ArrayList<RouteEntity> routes = (ArrayList<RouteEntity>) fileJson.getObjects(pathFile, RouteEntity[].class);
         List<Route> routesList = new ArrayList<>();

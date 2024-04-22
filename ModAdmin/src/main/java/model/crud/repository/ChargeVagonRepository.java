@@ -7,8 +7,9 @@ import model.domain.ChargeVagon;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
+import model.interfaces.crud.ChargeVagonRepoInterface;
 
-public class ChargeVagonRepository {
+public class ChargeVagonRepository implements ChargeVagonRepoInterface {
 
     private final FileJsonInterface<ChargeVagonEntity> fileJson;
     private final String pathFile;
@@ -18,6 +19,7 @@ public class ChargeVagonRepository {
         this.fileJson = FileJsonAdapter.getInstance();
     }
 
+    @Override
     public Boolean insert(ChargeVagon chargeVagon) {
         List<ChargeVagonEntity> chargeVagonEntities = fileJson.getObjects(pathFile, ChargeVagonEntity[].class);
         ChargeVagonEntity chargeVagonEntity = new ChargeVagonEntity(chargeVagon.getIdVagon());
@@ -25,6 +27,7 @@ public class ChargeVagonRepository {
         return fileJson.writeObjects(pathFile, chargeVagonEntities);
     }
 
+    @Override
     public Boolean delete(ChargeVagon chargeVagon) {
         List<ChargeVagonEntity> chargeVagonEntities = fileJson.getObjects(pathFile, ChargeVagonEntity[].class);
         ChargeVagonEntity chargeVagonEntity = new ChargeVagonEntity(chargeVagon.getIdVagon());
@@ -32,6 +35,7 @@ public class ChargeVagonRepository {
         return fileJson.writeObjects(pathFile, chargeVagonEntities);
     }
 
+    @Override
     public Boolean update(ChargeVagon chargeVagon) {
         ArrayList<ChargeVagonEntity> chargeVagonEntities = (ArrayList<ChargeVagonEntity>) fileJson.getObjects(pathFile, ChargeVagonEntity[].class);
         ChargeVagonEntity chargeVagonEntity = new ChargeVagonEntity(chargeVagon.getIdVagon());
@@ -44,6 +48,7 @@ public class ChargeVagonRepository {
         return false;
     }
 
+    @Override
     public ChargeVagon getChargeVagon(String idVagon) {
         List<ChargeVagonEntity> chargeVagonEntities = fileJson.getObjects(pathFile, ChargeVagonEntity[].class);
         Iterator<ChargeVagonEntity> it = chargeVagonEntities.iterator();
@@ -56,6 +61,7 @@ public class ChargeVagonRepository {
         return null;
     }
 
+    @Override
     public List<ChargeVagon> getChargeVagons() {
         List<ChargeVagonEntity> chargeVagonEntities = fileJson.getObjects(pathFile, ChargeVagonEntity[].class);
         List<ChargeVagon> chargeVagons = new ArrayList<>();

@@ -18,12 +18,24 @@ public class RoutesController {
         this.routesView = routesView;
     }
 
+    /**
+     * Initialize the components of the view
+     * @throws Exception
+     */
     public void init() throws Exception {
         routesView.initComponents (new Array<>(new UnaryOperator[] {event -> {
             try {
                 List<String> list = routesView.stationsSelected();
                 if (list.size() < 2) {
                     JOptionPane.showMessageDialog(null, "Select at least two stations");
+                    return null;
+                }
+                if (routesView.getSelectedTrain().isBlank()) {
+                    JOptionPane.showMessageDialog(null, "Select a train");
+                    return null;
+                }
+                if (routesView.getDepartureTime().isBlank()) {
+                    JOptionPane.showMessageDialog(null, "Select a departure time");
                     return null;
                 }
                 if (routesModel.createRoute(list, routesView.getSelectedTrain(), routesView.getDepartureTime())) {

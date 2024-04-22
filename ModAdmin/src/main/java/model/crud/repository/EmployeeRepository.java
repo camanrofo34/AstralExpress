@@ -4,7 +4,7 @@ import model.crud.repository.entities.EmployeeEntity;
 import model.crud.shared.FileJsonAdapter;
 import model.crud.shared.FileJsonInterface;
 import model.domain.Employee;
-import model.interfaces.CRUD.EmployeeRepoInterface;
+import model.interfaces.crud.EmployeeRepoInterface;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;

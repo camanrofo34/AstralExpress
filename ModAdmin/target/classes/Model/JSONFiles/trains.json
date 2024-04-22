@@ -1,18 +1,82 @@
 [
   {
-    "trainName": "No edit",
-    "idTrain": "T9",
+    "trainName": "Tren 1",
+    "idTrain": "T1",
     "capacity": "20",
     "mileage": "0.0",
     "brand": "Mercedez_Benz",
     "inRoute": "true"
   },
   {
-    "trainName": "Trenj 1",
-    "idTrain": "T13",
-    "capacity": "28",
+    "trainName": "Tren 2",
+    "idTrain": "T2",
+    "capacity": "25",
     "mileage": "0.0",
     "brand": "Mercedez_Benz",
     "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 3",
+    "idTrain": "T3",
+    "capacity": "25",
+    "mileage": "0.0",
+    "brand": "Mercedez_Benz",
+    "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 4",
+    "idTrain": "T4",
+    "capacity": "25",
+    "mileage": "0.0",
+    "brand": "Mercedez_Benz",
+    "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 5",
+    "idTrain": "T5",
+    "capacity": "25",
+    "mileage": "0.0",
+    "brand": "Mercedez_Benz",
+    "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 6",
+    "idTrain": "T6",
+    "capacity": "30",
+    "mileage": "0.0",
+    "brand": "Arnold",
+    "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 7",
+    "idTrain": "T7",
+    "capacity": "30",
+    "mileage": "0.0",
+    "brand": "Arnold",
+    "inRoute": "true"
+  },
+  {
+    "trainName": "Tren 8",
+    "idTrain": "T8",
+    "capacity": "30",
+    "mileage": "0.0",
+    "brand": "Arnold",
+    "inRoute": "false"
+  },
+  {
+    "trainName": "Tren 9",
+    "idTrain": "T9",
+    "capacity": "30",
+    "mileage": "0.0",
+    "brand": "Arnold",
+    "inRoute": "false"
+  },
+  {
+    "trainName": "Tren 10",
+    "idTrain": "T10",
+    "capacity": "30",
+    "mileage": "0.0",
+    "brand": "Arnold",
+    "inRoute": "false"
   }
 ]

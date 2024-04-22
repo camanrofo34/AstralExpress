@@ -8,7 +8,7 @@ import model.domain.Station;
 import java.io.Serializable;
 
 public class TrainRailsMap implements Serializable {
-    Graph map;
+    private Graph map;
 
     public TrainRailsMap(int vertices, ArrayList<Rail> rails) {
         map = new Graph(vertices);

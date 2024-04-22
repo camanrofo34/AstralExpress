@@ -15,7 +15,13 @@ public class RMIServer {
     private final String url;
     private final String serviceName;
     private final Remote service;
-
+    /**
+     * Constructor
+     * @param ip
+     * @param port
+     * @param serviceName
+     * @param service
+     */
     public RMIServer(String ip, String port, String serviceName, Remote service) {
         this.ip = ip;
         this.port = port;
@@ -23,11 +29,17 @@ public class RMIServer {
         this.service = service;
         this.url = "//" + ip + ":" + port + "/" + serviceName;
     }
-
+    /**
+     * Method to get the url
+     * @return
+     */
     public String getUrl() {
         return url;
     }
-
+    /**
+     * Method to deploy the service
+     * @return
+     */
     public boolean deploy() {
         if (ip == null || port == null || serviceName == null) return false;
 
@@ -44,7 +56,10 @@ public class RMIServer {
 
         return false;
     }
-
+    /**
+     * Method to undeploy the service
+     * @return
+     */
     public boolean undeploy() {
         try {
             Naming.unbind(url);

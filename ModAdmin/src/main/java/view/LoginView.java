@@ -148,11 +148,18 @@ public class LoginView extends Observer<Messenger> {
         jFrame1.setVisible(true);
     }
 
-
+    /**
+     * Method to get the user
+     * @return
+     */
     public String getUser() {
         return UserField.getText();
     }
 
+    /**
+     * Method to get the password
+     * @return
+     */
     public String getPassword() {
         return PasswordField.getText();
     }

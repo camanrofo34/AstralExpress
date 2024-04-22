@@ -3,7 +3,11 @@ package model.environment;
 import java.io.*;
 
 public class IdGenerator {
-
+    /**
+     * Generate id for employee
+     * @return
+     * @throws Exception
+     */
     public static String generateEmployeeId() throws Exception {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("src/main/resources/Model/IdFiles/idEmployees.txt")));
         String id = bufferedReader.readLine();
@@ -14,7 +18,11 @@ public class IdGenerator {
         bufferedReader.close();
         return id;
     }
-
+    /**
+     * Generate id for train
+     * @return
+     * @throws Exception
+     */
     public static String generateTrainId() throws Exception {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("src/main/resources/Model/IdFiles/idTrains.txt")));
         String id = bufferedReader.readLine();
@@ -25,7 +33,11 @@ public class IdGenerator {
         bufferedReader.close();
         return id;
     }
-
+    /**
+     * Generate id for ticket
+     * @return
+     * @throws Exception
+     */
     public static String generateTicketId() throws Exception {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("src/main/resources/Model/IdFiles/idTickets.txt")));
         String id = bufferedReader.readLine();

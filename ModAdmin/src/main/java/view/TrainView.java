@@ -279,6 +279,10 @@ public class TrainView extends Observer<Messenger> {
         return BrandBox.getSelectedItem().toString();
     }
 
+    /**
+     * Method to get the data of the train
+     * @return
+     */
     public Array<String> getTrainData() {
         int row = jTable1.getSelectedRow();
         Array<String> data = new Array<>(6);

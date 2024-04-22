@@ -222,7 +222,10 @@ public class RoutesView extends Observer<Messenger> {
     public String getSelectedTrain() {
         return jComboBox1.getSelectedItem().toString();
     }
-
+    /**
+     * This method is used to set the routes
+     * @param routes - List of routes
+     */
     public void setRoutes(List<Route> routes) {
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
@@ -236,7 +239,10 @@ public class RoutesView extends Observer<Messenger> {
         }
         jTable1.setModel(model);
     }
-
+    /**
+     * This method is used to get the selected row
+     * @return Array<String> - Array of strings
+     */
     public Array<String> getSelectedRow() {
         int row = jTable1.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

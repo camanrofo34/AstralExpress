@@ -5,7 +5,7 @@ import model.domain.Employee;
 import model.domain.User;
 import model.environment.Environment;
 import model.environment.IdGenerator;
-import model.interfaces.CRUD.UserRepoInterface;
+import model.interfaces.crud.UserRepoInterface;
 import model.interfaces.communication.sendToClient.UserManagerClientInterface;
 import model.interfaces.communication.sendToServer.UserManagerServerInterface;
 import dataStructures.Array;
@@ -23,19 +23,35 @@ public class UserManagerService extends UnicastRemoteObject implements UserManag
     private static final long serialVersionUID = 1L;
 
     private final String jsonUsersPath;
-
+    /**
+     * Constructor
+     * @throws RemoteException
+     */
     public UserManagerService() throws RemoteException {
         super();
         ArrayList<String> properties = Environment.getInstance().getVariables();
         jsonUsersPath = properties.get(3) + "users.json";
     }
-
+    /**
+     * Method to get the users
+     * @return
+     * @throws Exception
+     */
     @Override
     public List<User> getUsers() throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);
         return userRepo.getUsers();
     }
-
+    /**
+     * Method to add a user
+     * @param userName
+     * @param password
+     * @param names
+     * @param lastNames
+     * @param phoneNumbers
+     * @return
+     * @throws Exception
+     */
     @Override
     public Boolean addUser(String userName, String password, String names, String lastNames, Array<String> phoneNumbers) throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);
@@ -51,13 +67,23 @@ public class UserManagerService extends UnicastRemoteObject implements UserManag
         }
         return userRepo.insert(user);
     }
-
+    /**
+     * Method to remove a user
+     * @param user
+     * @return
+     * @throws Exception
+     */
     @Override
     public Boolean removeUser(User user) throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);
         return userRepo.delete(user);
     }
-
+    /**
+     * Method to update a user
+     * @param user
+     * @return
+     * @throws Exception
+     */
     @Override
     public Boolean updateUser(User user) throws Exception {
         UserRepoInterface userRepo = new UserRepository(jsonUsersPath);

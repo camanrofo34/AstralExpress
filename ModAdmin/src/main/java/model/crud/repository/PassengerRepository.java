@@ -5,7 +5,7 @@ import model.crud.shared.FileJsonAdapter;
 import model.crud.shared.FileJsonInterface;
 import model.domain.Passenger;
 import model.domain.PassengerContact;
-import model.interfaces.CRUD.PassengerRepoInterface;
+import model.interfaces.crud.PassengerRepoInterface;
 import dataStructures.Array;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;

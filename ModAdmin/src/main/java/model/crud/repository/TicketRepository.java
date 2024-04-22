@@ -3,13 +3,12 @@ package model.crud.repository;
 import dataStructures.ArrayList;
 import dataStructures.Interfaces.Iterator;
 import dataStructures.Interfaces.List;
-import model.crud.repository.entities.StationEntity;
 import model.crud.repository.entities.TicketEntity;
 import model.crud.shared.FileJsonAdapter;
 import model.crud.shared.FileJsonInterface;
 import model.domain.*;
 
-public class TicketRepository {
+public class TicketRepository implements model.interfaces.crud.TicketRepoInterface {
 
     private final FileJsonInterface<TicketEntity> fileJson;
     private final String pathFile;
@@ -19,6 +18,7 @@ public class TicketRepository {
         this.fileJson = FileJsonAdapter.getInstance();
     }
 
+    @Override
     public Boolean insert(Ticket ticket){
         List<TicketEntity> tickets = fileJson.getObjects(pathFile, TicketEntity[].class);
         TicketEntity ticketEntity = new TicketEntity(ticket.getIdTicket(), ticket.getDateOfPurchase(), ticket.getDepartureTime(),
@@ -29,6 +29,7 @@ public class TicketRepository {
         return fileJson.writeObjects(pathFile, tickets);
     }
 
+    @Override
     public List<Ticket> getTickets() {
         List<TicketEntity> tickets = fileJson.getObjects(pathFile, TicketEntity[].class);
         List<Ticket> ticketsList = new dataStructures.ArrayList<>();

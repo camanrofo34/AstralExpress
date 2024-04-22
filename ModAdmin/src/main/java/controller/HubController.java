@@ -30,7 +30,9 @@ public class HubController {
         rmiServerEmployee.deploy();
         rmiServerRoute.deploy();
     }
-
+    /**
+     * Initializes the components of the view and adds the actions to the buttons
+     */
     public void init() {
         hubView.update();
         hubView.initComponents(new Array<>(new UnaryOperator[]{

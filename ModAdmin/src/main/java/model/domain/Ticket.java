@@ -13,13 +13,13 @@ public class Ticket implements Serializable {
     private PassengerContact passengerContact;
     private String idPassenger;
     private IdType idType;
-    private float price;
+    private Double price;
     private Classe classe;
     private Luggage luggage;
     private List<Train> trains;
     private List<Station> stations;
 
-    public Ticket(String idTicket, String dateOfPurchase, String departureTime, String arrivalTime, Passenger passenger, PassengerContact passengerContact, String idPassenger, IdType idType, float price, Classe classe, Luggage luggage, List<Train> trains, List<Station> stations) {
+    public Ticket(String idTicket, String dateOfPurchase, String departureTime, String arrivalTime, Passenger passenger, PassengerContact passengerContact, String idPassenger, IdType idType, Double price, Classe classe, Luggage luggage, List<Train> trains, List<Station> stations) {
         this.idTicket = idTicket;
         this.dateOfPurchase = dateOfPurchase;
         this.departureTime = departureTime;
@@ -91,11 +91,11 @@ public class Ticket implements Serializable {
         this.idType = idType;
     }
 
-    public float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

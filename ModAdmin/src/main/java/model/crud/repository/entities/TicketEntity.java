@@ -11,13 +11,13 @@ public class TicketEntity {
     private PassengerContact passengerContact;
     private String idPassenger;
     private String idType;
-    private float price;
+    private Double price;
     private String classe;
     private Luggage luggage;
     private Train[] trains;
     private Station[] stations;
 
-    public TicketEntity(String idTicket, String dateOfPurchase, String departureTime, String arrivalTime, Passenger passenger, PassengerContact passengerContact, String idPassenger, String idType, float price, String classe, Luggage luggage, Train[] trains, Station[] stations) {
+    public TicketEntity(String idTicket, String dateOfPurchase, String departureTime, String arrivalTime, Passenger passenger, PassengerContact passengerContact, String idPassenger, String idType, Double price, String classe, Luggage luggage, Train[] trains, Station[] stations) {
         this.idTicket = idTicket;
         this.dateOfPurchase = dateOfPurchase;
         this.departureTime = departureTime;
@@ -89,11 +89,11 @@ public class TicketEntity {
         this.idType = idType;
     }
 
-    public float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

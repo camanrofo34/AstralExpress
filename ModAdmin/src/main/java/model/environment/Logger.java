@@ -12,7 +12,10 @@ public class Logger {
         this.summoner = summoner;
         packages = "M.s.";
     }
-
+    /**
+     * Log a warning message
+     * @param message
+     */
     public void info(String message) {
         String fileName = getFileName();
         String date = getDateOfTheCall();
@@ -24,12 +27,20 @@ public class Logger {
         }
     }
 
+    /**
+     * Log a warning message
+     * @return
+     */
     private String getFileName() {
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         return date.format(formatter) + ".txt";
     }
 
+    /**
+     * Get the date of the call
+     * @return
+     */
     private String getDateOfTheCall() {
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");

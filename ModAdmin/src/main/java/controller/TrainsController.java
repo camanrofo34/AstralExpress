@@ -19,6 +19,10 @@ public class TrainsController {
         this.trainView = trainView;
     }
 
+    /**
+     * Initialize the components of the view
+     * @throws Exception
+     */
     public void init() throws Exception {
         trainView.init(new Array<>(new UnaryOperator[]{
                 event -> {

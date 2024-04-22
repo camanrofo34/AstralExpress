@@ -15,6 +15,10 @@ public class LoginController {
         this.loginView = loginView;
     }
 
+    /**
+     * Initialize the login view
+     * @throws Exception
+     */
     public void init() throws Exception {
         loginView.initComponents(event ->
         {

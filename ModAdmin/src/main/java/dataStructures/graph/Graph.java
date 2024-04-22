@@ -18,15 +18,34 @@ public class Graph {
         }
     }
 
-    public void agregarAristaDirigida(int origen, int destino, int peso) {
-        listaAdyacencia.get(origen).add(new Edge(destino, peso));
+    /**
+     * Add an edge from origin to destiny with a weight in one direction
+     * @param origin
+     * @param destiny
+     * @param weight
+     */
+    public void addDirectedEdge(int origin, int destiny, int weight) {
+        listaAdyacencia.get(origin).add(new Edge(destiny, weight));
     }
 
-    public void agregarAristaNoDirigida(int origen, int destino, int peso) {
-        agregarAristaDirigida(origen, destino, peso);
-        agregarAristaDirigida(destino, origen, peso);
+    /**
+     * Add an edge from origin to destiny with a weight in both directions
+     * @param origin
+     * @param destiny
+     * @param weight
+     */
+    public void addNonDirectedEdge(int origin, int destiny, int weight) {
+        addDirectedEdge(origin, destiny, weight);
+        addDirectedEdge(destiny, origin, weight);
     }
 
+
+    /**
+     * Dijkstra algorithm to find the shortest path from src to destiny
+     * @param src
+     * @param destiny
+     * @return
+     */
     public List<Integer> dijkstraWithPath(int src, int destiny) {
         Array<Integer> distancia = new Array<>(vertices); // Distance from src to each vertex
         Array<Boolean> visitado = new Array<>(vertices); // Visited flag for each vertex
@@ -70,7 +89,7 @@ public class Graph {
             path.addFirst(src);
         }
 
-        // **This is the path:**
+        //The path
         return path;
     }
 }

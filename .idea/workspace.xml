@@ -1,72 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'AstralExpressFinalProject'" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b180b4c-d39a-467e-8543-d8013a39a8a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/src/main/resources/Model/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/Array$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/ArrayList$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/DataStructures/PriorityQueue$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModAdmin/target/classes/Model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ModAdmin/target/classes/Model/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mintty.2024-04-16_22-15-15.png" beforeDir="false" />
+    <list default="true" id="618282f9-e80e-436c-b6b2-682ff598fb1b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/AdminMod/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/controller/HubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/controller/HubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/controller/RoutesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/controller/RoutesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/controller/TrainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/controller/TrainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/ArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/Interfaces/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/Interfaces/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/dataStructures/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/RoutesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/RoutesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/TrainModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/TrainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/ChargeVagonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/ChargeVagonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerVagonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/PassengerVagonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/RailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/RailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/RouteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/RouteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/StationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/TrainRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/TrainRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/entities/TicketEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/crud/repository/entities/TicketEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Luggage.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Luggage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/domain/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/RoutesManagerServiceToClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/RoutesManagerServiceToClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/TrainManagerServiceToClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/TrainManagerServiceToClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/UserManagerServiceToClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toClient/UserManagerServiceToClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/LogInServiceToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/LogInServiceToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/RoutesManagerServiceToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/RoutesManagerServiceToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/TrainManagerServiceToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/TrainManagerServiceToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/UserManagerServiceToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/interfaces/communication/toServer/UserManagerServiceToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/LogInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/LogInService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/RoutesManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/RoutesManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/TicketManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/TicketManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/TrainManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/TrainManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/UserManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/model/services/UserManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/view/RoutesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/view/RoutesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/java/view/TrainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/java/view/TrainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/idFiles/idEmployees.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/idFiles/idEmployees.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/idFiles/idTrains.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/idFiles/idTrains.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/chargeVagons.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/chargeVagons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/employees.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/employees.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/passengerVagons.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/passengerVagons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/trains.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/trains.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/jsonFiles/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminMod/src/main/resources/model/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AdminMod/src/main/resources/model/server.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="package-info" />
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/AdminMod" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2ehA3akZ49yc0iCuj85fQ4Eu4cm" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2g1dk7H6qc02dOll0agR3TZO2GR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.Start.executor": "Run",
-    "Application.TrainRailsMap.executor": "Run",
-    "JUnit.LoginInterfaceTest.login.executor": "Run",
-    "JUnit.TrainManagerInterfaceTest.addTrain.executor": "Run",
-    "JUnit.TrainManagerInterfaceTest.getTrains.executor": "Run",
-    "JUnit.TrainManagerInterfaceTest.removeTrain.executor": "Run",
-    "JUnit.TrainManagerInterfaceTest.updateTrain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/AstralExpress/ModAdmin",
+    "last_opened_file_path": "C:/Users/PC 4060TI/Desktop/FinalProyectTrainSantanderSAS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,161 +94,36 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="Model.Interfaces.CRUD" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="Model.Interfaces.Communication.SendToClient" />
-      <recent name="Model.Services" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Start">
-    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Start" />
-      <module name="ModAdmin" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainRailsMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Model.Domain.mapRoute.TrainRailsMap" />
-      <module name="ModAdmin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Domain.mapRoute.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainManagerInterfaceTest.addTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModAdmin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
-      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
-      <option name="METHOD_NAME" value="addTrain" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainManagerInterfaceTest.removeTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModAdmin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
-      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
-      <option name="METHOD_NAME" value="removeTrain" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainManagerInterfaceTest.updateTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ModAdmin" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Interfaces.Communication.SendToServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model.Interfaces.Communication.SendToClient" />
-      <option name="MAIN_CLASS_NAME" value="Model.Interfaces.Communication.SendToClient.TrainManagerInterfaceTest" />
-      <option name="METHOD_NAME" value="updateTrain" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Start" />
-        <item itemvalue="JUnit.TrainManagerInterfaceTest.addTrain" />
-        <item itemvalue="Application.TrainRailsMap" />
-        <item itemvalue="JUnit.TrainManagerInterfaceTest.updateTrain" />
-        <item itemvalue="JUnit.TrainManagerInterfaceTest.removeTrain" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="jdk-22-openjdk-22-f644763e9732-8c5c9ae5" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3b180b4c-d39a-467e-8543-d8013a39a8a4" name="Changes" comment="" />
-      <created>1712346238102</created>
+      <changelist id="618282f9-e80e-436c-b6b2-682ff598fb1b" name="Changes" comment="" />
+      <created>1714869157953</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712346238102</updated>
-      <workItem from="1712600463352" duration="15138000" />
-      <workItem from="1712668265839" duration="1864000" />
-      <workItem from="1712670201746" duration="2917000" />
-      <workItem from="1712682582089" duration="7878000" />
-      <workItem from="1712692618336" duration="7818000" />
-      <workItem from="1712793439267" duration="1257000" />
-      <workItem from="1712854520200" duration="232000" />
-      <workItem from="1712861426267" duration="81000" />
-      <workItem from="1712861517898" duration="8038000" />
-      <workItem from="1712871899060" duration="2862000" />
-      <workItem from="1712880220900" duration="11626000" />
-      <workItem from="1712926124528" duration="6878000" />
-      <workItem from="1712949274311" duration="5351000" />
-      <workItem from="1712973472194" duration="746000" />
-      <workItem from="1713010100456" duration="17066000" />
-      <workItem from="1713046387018" duration="5617000" />
-      <workItem from="1713103054073" duration="5373000" />
-      <workItem from="1713119204697" duration="4899000" />
-      <workItem from="1713126977912" duration="1632000" />
-      <workItem from="1713132438516" duration="363000" />
-      <workItem from="1713141424427" duration="3029000" />
-      <workItem from="1713186868968" duration="3697000" />
-      <workItem from="1713190634116" duration="322000" />
-      <workItem from="1713190973343" duration="38000" />
-      <workItem from="1713191025573" duration="12000" />
-      <workItem from="1713451979606" duration="58000" />
-      <workItem from="1713460471548" duration="57000" />
+      <updated>1714869157953</updated>
+      <workItem from="1714869159134" duration="84000" />
+      <workItem from="1714870125115" duration="5520000" />
+      <workItem from="1714915524693" duration="11553000" />
+      <workItem from="1714945625265" duration="85000" />
+      <workItem from="1714947277323" duration="1744000" />
+      <workItem from="1714949981521" duration="225000" />
+      <workItem from="1714950223536" duration="692000" />
+      <workItem from="1714953933085" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
